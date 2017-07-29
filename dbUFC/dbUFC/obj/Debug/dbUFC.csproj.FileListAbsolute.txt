@@ -1,1 +1,2 @@
 c:\users\pptr\documents\visual studio 2015\Projects\dbUFC\dbUFC\bin\Debug\dbUFC.exe.config
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\bin\Debug\dbUFC.exe.config
