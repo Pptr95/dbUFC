@@ -1,2 +1,11 @@
 c:\users\pptr\documents\visual studio 2015\Projects\dbUFC\dbUFC\bin\Debug\dbUFC.exe.config
 C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\bin\Debug\dbUFC.exe.config
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\bin\Debug\dbUFC.exe
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\bin\Debug\dbUFC.pdb
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.csprojResolveAssemblyReference.cache
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.Form1.resources
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.Properties.Resources.resources
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.csproj.GenerateResource.Cache
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.exe
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.pdb
