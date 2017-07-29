@@ -18,11 +18,14 @@ namespace dbUFC
         {
             InitializeComponent();
             this.dc = new dbUFCDataContext();
+           
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+     
     }
 }
