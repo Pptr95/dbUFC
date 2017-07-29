@@ -124,6 +124,48 @@
     <value>69</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuImageButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAR3SURBVGhDzZrPixVHEMd3NZrgJSJ6MniKggfBP2ERLwtq3Ogz+/btbpYIi+DBo4fk8AQRjb+J
+        4kXQBCTiut4E/4mQS4I/4q6JXhRJzCbxB8pu/HyHHpgtet6bmdczswVfpmaqu6q6u7q7ut/rW0rUaDRW
+        jo6ONlut1hSYAX85zIyMjNwErcHBwQ9d8aVJNGAXDv8G/u+CWRr0uau2dKjdbi/DuWNgIeFsV9DwM4zg
+        cqemfsKpU9bJHDjv1NRLzWZzJ87kGgmDBelw6uohTVocmTWOFcFsrQsADuw1DhUGk7/h1FZPOHDdOtQD
+        rjm11RO9eN/jUFHcc2qrJ4z/Z5zpBXNObTU0OTm5QvuGeIy/Ns70gn8iA2XTxMTER4TSYQw+A1v0jecj
+        50QIlBtaagA78CEMPYmN0qBhyfh+I/4WAOVM9oGBgQ9Q/iXOPjQG1ZBzKgM/YmVFEXz5TYzAY2ssgRfM
+        lVWaL76GFsAvqTmX23VHwTRIptO/g1vqAfW6K670ezlOjSN7AHzGFoH6+1UPfsjKckLpzY7ICUsItON2
+        nYiuN4dctX7eL9syHfD3+Pj4elWE7yVpPBJZT5J6VfHrKdwRNOAk1fsVKrzfsfIOmHYh0Q9/wsiy4Kjq
+        yvdFRCNOewpnxQnpIBNdC//cyDphKg5R7H/G+x9G7kP6wYpe3e2pkAuxcviDVpYCbYjnWSBWR05Ampvo
+        aeHPj8iUGb915X4FV8EXqZkuw6tzcojV44mMaOWC/9PIkpjDXluj51wIQ/TAsMdYIeBgUzrhL1kZdt7w
+        vAA+iQyHJhQHS6cVEtLJc1/i+0vejwcfAUsYyrT2ZwEOP3Q6t4CoAYTuushQ2YTBf2NHAuCVdGqusE9s
+        iAxURRgPeS6otSHBQgvMSCcTeyv8PKF1gwZtigyVTRgMeXa+Lp1mJYwaxLeNkcGyKOTyK13SCX/RI3sD
+        votzrOAUcEN8pHxLKTr8nJElod36B2x+6lwIR/SU8pxebvzmx8bGtkkX/AEjS0OUotCRH0dOQO5I3AI3
+        kelUmf82nsJHgc9gV2i/kA6FDe+dRsPiItWiDBZeZ5NOB7IYXW/jlU7rVtxXOQ0LKP1GdZXF0qDbnjJp
+        mI5vVKSD97C38RTYQ8EsNxwqE53OpBD+VkLWDU+ps0Z14QtHAvhWOlJJcUgvDYPvKawUWvH8DmjopyRL
+        xqp6lm+IWveAz6DFV6pHne3w80aWB6XdxvdLMQZ+MgaTeKaVUh0Bn+Ug1Q0PtFo6+2FJoUaI6jLC91Pa
+        WZXhqcsNKysERrbc23iFnBuhnxOG90rGUz94LnKoB1RzG+/mUAODd9lvNusbvK6WfE4Vwd3IUFWkWE4s
+        uTox+pwqgmousS2pMTJunOkF9TREhHEt6z6niqDa0EoSxq8ZZ3pBfT+9uQzC51RulL78diL300OI8Eq/
+        ja+K6EkdH3zOZUX6bXzVRIi1jXN58LVTUz9pKaYxx3Eq78HOfxtfNynMaFCWI/fS/JtTkpQV0xhdt14B
+        8fEhw218X997T2G9jbZzyr0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuImageButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAK0SURBVGhD7ZrLihNBFIYz7kScZ1DxORREZ/Cui2Cum4CvILgLgnhZi3sXgwvBYbwhuBERF+LS
+        UQQfQBAlosyoC/Ur/RtCdfWYdJ1KZ0J++EhI1/nPOenq7upOanPNNeVqt9uLcAKuw6NOp/Oe18/DuM/g
+        Ie+v8Xq81+vtVni16vf7O1qt1mlYpbgf8HsciPvO612aOuW8ZDtZUcA5WM+KMuA1jdVln14k20fSJ14R
+        ljzudrt7lS6NSHIeNoaSpuIrdJTWVAvsiUtesuRw7PSV30YY3gwlmhA3VEacMLriGU8cZsNllVNO7iwS
+        Mq6AX3BWZY0nptN+gr8MmVXNoMzZbIHAZ55R5fDlPnW1/StxBFlOKVm6Yy24fVxo5owst5ZbKhDw1jco
+        i2zNGoH1kZYz7I1jgeDSyNayEXcWW5ZtsRjkFoBBgzLI1rQRuCPbsBiwSCNuRRoKLoWsrRvZ4Ay2S9Z5
+        McDdT4QCSyNr60YcR2WdF2eEq4GAKGRt3ggzp/hqz4AHfkAssk6xR9ZknRddvgsERCHrFI28kXVebPzk
+        DY5G1ika+SjrvNg48n23QswVylXApkLyYuNPb3AhCjFXKFcId5lQSF4MmI2pNTMHO9eRe4GAKGRt3ghf
+        +qqs85qlC+KSHxCLrM0bYa11SNZ5uYUYg0yfW8naupFv9Xp9p6zDYtCKFxSFbE0bYVrdkm2xGDT1N1aw
+        JNutxcBXXmBpZGnZyEtZ/l/sle3/8CETQfd9kymgeOleJDqfiQd0f2U5xSIp/8g0EwYXhwyr4oLKiRPT
+        bPv/rCDNxg89mZrN5kkSmN+zBPjAF3dYadOIBO7H0JSn5rVGo7FH6dKLhpZJ+sIrIobnTKUjsp+8mG4H
+        KeA2jZV51LoJK8QekF31oqDQXzgGkBU9cJ/B9P2FY665ilSr/QFcrNKBdRHohQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="bunifuImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -145,5 +187,8 @@
   </metadata>
   <metadata name="bunifuDragControl3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>539, 17</value>
+  </metadata>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>728, 17</value>
   </metadata>
 </root>
