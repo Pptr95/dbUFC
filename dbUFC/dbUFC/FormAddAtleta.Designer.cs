@@ -452,6 +452,7 @@
             this.bunifuCustomLabel13.Size = new System.Drawing.Size(99, 21);
             this.bunifuCustomLabel13.TabIndex = 49;
             this.bunifuCustomLabel13.Text = "Nuovo team";
+            this.bunifuCustomLabel13.Click += new System.EventHandler(this.bunifuCustomLabel13_Click);
             // 
             // bunifuImageButton1
             // 
@@ -465,6 +466,7 @@
             this.bunifuImageButton1.TabIndex = 48;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // bunifuCustomLabel15
             // 

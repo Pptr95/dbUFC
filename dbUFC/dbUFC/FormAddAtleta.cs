@@ -28,11 +28,27 @@ namespace dbUFC
         {
             SetVisibleAddCategoryButton(true);
         }
+
         private void SetVisibleAddCategoryButton(bool value)
         {
             FormAddCategoria cat = new FormAddCategoria();
             cat.Visible = true;
         }
-        
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            SetVisibleAddTeamButton(true);
+        }
+
+        private void bunifuCustomLabel13_Click(object sender, EventArgs e)
+        {
+            SetVisibleAddTeamButton(true);
+        }
+
+        private void SetVisibleAddTeamButton(bool value)
+        {
+            FormAddTeam team = new FormAddTeam();
+            team.Visible = true;
+        }
     }
 }
