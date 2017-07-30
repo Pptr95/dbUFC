@@ -12,24 +12,9 @@ namespace dbUFC
 {
     public partial class Form1 : Form
     {
-        private dbUFCDataContext dc;
-
         public Form1()
         {
             InitializeComponent();
-            this.dc = new dbUFCDataContext();
-            Console.WriteLine("Test");
-            Console.Read();
-
-
-           
         }
-
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-     
     }
 }
