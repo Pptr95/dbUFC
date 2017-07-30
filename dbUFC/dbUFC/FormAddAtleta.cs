@@ -10,18 +10,13 @@ using System.Windows.Forms;
 
 namespace dbUFC
 {
-    public partial class Form1 : Form
+    public partial class FormAddAtleta : Form
     {
-        public Form1()
+        public FormAddAtleta()
         {
             InitializeComponent();
         }
 
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-       
+      
     }
 }
