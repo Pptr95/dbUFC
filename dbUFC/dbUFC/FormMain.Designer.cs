@@ -116,7 +116,7 @@
             this.AddAtletaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.AddAtletaButton.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddAtletaButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AddAtletaButton.Location = new System.Drawing.Point(142, 84);
+            this.AddAtletaButton.Location = new System.Drawing.Point(139, 84);
             this.AddAtletaButton.Name = "AddAtletaButton";
             this.AddAtletaButton.Size = new System.Drawing.Size(119, 24);
             this.AddAtletaButton.TabIndex = 2;
@@ -156,7 +156,7 @@
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(456, 173);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(456, 169);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(176, 24);
             this.bunifuCustomLabel2.TabIndex = 6;

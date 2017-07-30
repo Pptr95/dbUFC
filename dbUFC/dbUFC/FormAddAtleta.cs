@@ -49,5 +49,21 @@ namespace dbUFC
             FormAddTeam team = new FormAddTeam();
             team.Visible = true;
         }
+
+        private void bunifuCustomLabel18_Click(object sender, EventArgs e)
+        {
+            SetVisibleAddRecordButton(true);
+        }
+
+        private void bunifuImageButton7_Click(object sender, EventArgs e)
+        {
+            SetVisibleAddRecordButton(true);
+        }
+
+        private void SetVisibleAddRecordButton(bool value)
+        {
+            FormAddRecord rec = new FormAddRecord();
+            rec.Visible = true;
+        }
     }
 }
