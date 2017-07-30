@@ -125,7 +125,6 @@
             this.bunifuTextbox1.Size = new System.Drawing.Size(228, 33);
             this.bunifuTextbox1.TabIndex = 26;
             this.bunifuTextbox1.text = "";
-            this.bunifuTextbox1.OnTextChange += new System.EventHandler(this.bunifuTextbox1_OnTextChange);
             // 
             // bunifuCustomLabel3
             // 

@@ -20,7 +20,6 @@ namespace dbUFC
         private void AddAtletaButton_Click(object sender, EventArgs e)
         {
             SetVisibleAddCategoryButton(true);
-
         }
         
 

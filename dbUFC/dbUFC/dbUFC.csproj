@@ -93,6 +93,12 @@
     <Compile Include="FormAddTrainer.Designer.cs">
       <DependentUpon>FormAddTrainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEntrataUscita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEntrataUscita.Designer.cs">
+      <DependentUpon>FormEntrataUscita.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddTrainer.resx">
       <DependentUpon>FormAddTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEntrataUscita.resx">
+      <DependentUpon>FormEntrataUscita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace dbUFC
 {
-    public partial class FormAddCategoria : Form
+    public partial class FormEntrataUscita : Form
     {
-        public FormAddCategoria()
+        public FormEntrataUscita()
         {
             InitializeComponent();
         }
