@@ -476,9 +476,9 @@
             this.bunifuCustomLabel15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuCustomLabel15.Location = new System.Drawing.Point(266, 437);
             this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
-            this.bunifuCustomLabel15.Size = new System.Drawing.Size(81, 21);
+            this.bunifuCustomLabel15.Size = new System.Drawing.Size(93, 21);
             this.bunifuCustomLabel15.TabIndex = 53;
-            this.bunifuCustomLabel15.Text = "Categorie";
+            this.bunifuCustomLabel15.Text = "Categorie...";
             // 
             // bunifuImageButton4
             // 
@@ -501,9 +501,9 @@
             this.bunifuCustomLabel14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuCustomLabel14.Location = new System.Drawing.Point(755, 448);
             this.bunifuCustomLabel14.Name = "bunifuCustomLabel14";
-            this.bunifuCustomLabel14.Size = new System.Drawing.Size(49, 21);
+            this.bunifuCustomLabel14.Size = new System.Drawing.Size(61, 21);
             this.bunifuCustomLabel14.TabIndex = 55;
-            this.bunifuCustomLabel14.Text = "Team";
+            this.bunifuCustomLabel14.Text = "Team...";
             // 
             // bunifuImageButton3
             // 
