@@ -69,6 +69,12 @@
     <Compile Include="FormAddCategoria.Designer.cs">
       <DependentUpon>FormAddCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddPersonale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddPersonale.Designer.cs">
+      <DependentUpon>FormAddPersonale.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddSponsor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </None>
     <EmbeddedResource Include="FormAddCategoria.resx">
       <DependentUpon>FormAddCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddPersonale.resx">
+      <DependentUpon>FormAddPersonale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddSponsor.resx">
       <DependentUpon>FormAddSponsor.cs</DependentUpon>

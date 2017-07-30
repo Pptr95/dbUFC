@@ -14,3 +14,4 @@ C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormAddCategoria.resourc
 C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormAddTeam.resources
 C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormAddSponsor.resources
 C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormAddTrainer.resources
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormAddPersonale.resources

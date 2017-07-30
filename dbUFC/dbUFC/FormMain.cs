@@ -48,5 +48,21 @@ namespace dbUFC
             FormAddSponsor sponsor = new FormAddSponsor();
             sponsor.Visible = value;
         }
+
+        private void bunifuCustomLabel2_Click(object sender, EventArgs e)
+        {
+            SetVisibleAddPersonaleButton(true);
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            SetVisibleAddPersonaleButton(true);
+        }
+
+        private void SetVisibleAddPersonaleButton(bool value)
+        {
+            FormAddPersonale personale = new FormAddPersonale();
+            personale.Visible = value;
+        }
     }
 }
