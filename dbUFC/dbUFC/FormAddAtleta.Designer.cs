@@ -474,7 +474,7 @@
             this.bunifuCustomLabel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel15.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel15.Location = new System.Drawing.Point(266, 437);
+            this.bunifuCustomLabel15.Location = new System.Drawing.Point(254, 437);
             this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
             this.bunifuCustomLabel15.Size = new System.Drawing.Size(93, 21);
             this.bunifuCustomLabel15.TabIndex = 53;
@@ -499,7 +499,7 @@
             this.bunifuCustomLabel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel14.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel14.Location = new System.Drawing.Point(755, 448);
+            this.bunifuCustomLabel14.Location = new System.Drawing.Point(747, 448);
             this.bunifuCustomLabel14.Name = "bunifuCustomLabel14";
             this.bunifuCustomLabel14.Size = new System.Drawing.Size(61, 21);
             this.bunifuCustomLabel14.TabIndex = 55;

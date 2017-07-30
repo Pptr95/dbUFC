@@ -16,5 +16,21 @@ namespace dbUFC
         {
             InitializeComponent();
         }
+
+        private void AddAtletaButton_Click(object sender, EventArgs e)
+        {
+            SetVisibleAddTrainerButton(true);
+        }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            SetVisibleAddTrainerButton(true);
+        }
+
+        private void SetVisibleAddTrainerButton(bool value)
+        {
+            FormAddTrainer team = new FormAddTrainer();
+            team.Visible = true;
+        }
     }
 }

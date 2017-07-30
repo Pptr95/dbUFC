@@ -205,6 +205,7 @@
             this.AddAtletaButton.Size = new System.Drawing.Size(151, 23);
             this.AddAtletaButton.TabIndex = 58;
             this.AddAtletaButton.Text = "Nuovo allenatore";
+            this.AddAtletaButton.Click += new System.EventHandler(this.AddAtletaButton_Click);
             // 
             // bunifuImageButton3
             // 
@@ -218,6 +219,7 @@
             this.bunifuImageButton3.TabIndex = 57;
             this.bunifuImageButton3.TabStop = false;
             this.bunifuImageButton3.Zoom = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
             // 
             // bunifuCustomLabel6
             // 
@@ -225,7 +227,7 @@
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(541, 267);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(537, 267);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(92, 23);
             this.bunifuCustomLabel6.TabIndex = 60;
