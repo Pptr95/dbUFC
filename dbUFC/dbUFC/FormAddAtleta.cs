@@ -17,6 +17,22 @@ namespace dbUFC
             InitializeComponent();
         }
 
-      
+        private void AddAtletaButton_Click(object sender, EventArgs e)
+        {
+            SetVisibleAddCategoryButton(true);
+
+        }
+        
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            SetVisibleAddCategoryButton(true);
+        }
+        private void SetVisibleAddCategoryButton(bool value)
+        {
+            FormAddCategoria cat = new FormAddCategoria();
+            cat.Visible = true;
+        }
+        
     }
 }

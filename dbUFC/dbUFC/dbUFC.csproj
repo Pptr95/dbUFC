@@ -63,6 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbUFC.dbml</DependentUpon>
     </Compile>
+    <Compile Include="FormAddCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCategoria.Designer.cs">
+      <DependentUpon>FormAddCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <None Include="dbUFC.dbml.layout">
       <DependentUpon>dbUFC.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="FormAddCategoria.resx">
+      <DependentUpon>FormAddCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
