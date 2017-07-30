@@ -18,6 +18,10 @@ namespace dbUFC
         {
             InitializeComponent();
             this.dc = new dbUFCDataContext();
+            Console.WriteLine("Test");
+            Console.Read();
+
+
            
         }
 
