@@ -64,5 +64,21 @@ namespace dbUFC
             FormAddArbitro arbitro = new FormAddArbitro();
             arbitro.Visible = true;
         }
+
+        private void bunifuCustomLabel2_Click(object sender, EventArgs e)
+        {
+            SetVisibleAggiungiGiudiceButton(true);
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            SetVisibleAggiungiGiudiceButton(true);
+        }
+
+        private void SetVisibleAggiungiGiudiceButton(bool value)
+        {
+            FormAddGiudice giudice = new FormAddGiudice();
+            giudice.Visible = true;
+        }
     }
 }

@@ -135,6 +135,7 @@
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(64, 21);
             this.bunifuCustomLabel2.TabIndex = 57;
             this.bunifuCustomLabel2.Text = "Giudice";
+            this.bunifuCustomLabel2.Click += new System.EventHandler(this.bunifuCustomLabel2_Click);
             // 
             // bunifuImageButton1
             // 
@@ -148,6 +149,7 @@
             this.bunifuImageButton1.TabIndex = 56;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // bunifuCustomLabel4
             // 
