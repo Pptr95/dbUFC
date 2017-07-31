@@ -80,5 +80,21 @@ namespace dbUFC
             FormAddGiudice giudice = new FormAddGiudice();
             giudice.Visible = true;
         }
+
+        private void bunifuCustomLabel4_Click(object sender, EventArgs e)
+        {
+            SetVisibleAggiungiMedicoButton(true);
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            SetVisibleAggiungiMedicoButton(true);
+        }
+
+        private void SetVisibleAggiungiMedicoButton(bool value)
+        {
+            FormAddMedico medico = new FormAddMedico();
+            medico.Visible = true;
+        }
     }
 }
