@@ -23,3 +23,5 @@ C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormAddFisioterapista.re
 C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormAddGiudice.resources
 C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormAddMedico.resources
 C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormAddPsicologo.resources
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormVisualizzaIncontri.resources
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormCaratteristicheIncontro.resources

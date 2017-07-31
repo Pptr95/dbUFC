@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace dbUFC
 {
-    public partial class FormProgrammazioneIncontro : Form
+    public partial class FormCaratteristicheIncontro : Form
     {
-        public FormProgrammazioneIncontro()
+        public FormCaratteristicheIncontro()
         {
             InitializeComponent();
         }

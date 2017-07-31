@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace dbUFC
 {
-    public partial class FormProgrammazioneIncontro : Form
+    public partial class FormVisualizzaIncontri : Form
     {
-        public FormProgrammazioneIncontro()
+        public FormVisualizzaIncontri()
         {
             InitializeComponent();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            FormCaratteristicheIncontro car = new FormCaratteristicheIncontro();
+            car.Visible = true;
         }
     }
 }

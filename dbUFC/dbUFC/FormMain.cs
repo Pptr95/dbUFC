@@ -128,5 +128,11 @@ namespace dbUFC
             FormProgrammazioneIncontro pro = new FormProgrammazioneIncontro();
             pro.Visible = true;
         }
+
+        private void bunifuImageButton8_Click(object sender, EventArgs e)
+        {
+            FormVisualizzaIncontri caratt = new FormVisualizzaIncontri();
+            caratt.Visible = true;
+        }
     }
 }

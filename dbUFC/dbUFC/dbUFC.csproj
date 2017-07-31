@@ -129,6 +129,18 @@
     <Compile Include="FormAddTrainer.Designer.cs">
       <DependentUpon>FormAddTrainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCaratteristicheIncontro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCaratteristicheIncontro.Designer.cs">
+      <DependentUpon>FormCaratteristicheIncontro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVisualizzaIncontri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVisualizzaIncontri.Designer.cs">
+      <DependentUpon>FormVisualizzaIncontri.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEntrataUscita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +202,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddTrainer.resx">
       <DependentUpon>FormAddTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCaratteristicheIncontro.resx">
+      <DependentUpon>FormCaratteristicheIncontro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVisualizzaIncontri.resx">
+      <DependentUpon>FormVisualizzaIncontri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEntrataUscita.resx">
       <DependentUpon>FormEntrataUscita.cs</DependentUpon>
