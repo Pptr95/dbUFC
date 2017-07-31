@@ -200,7 +200,7 @@
             this.AddAtletaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.AddAtletaButton.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddAtletaButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AddAtletaButton.Location = new System.Drawing.Point(495, 175);
+            this.AddAtletaButton.Location = new System.Drawing.Point(498, 172);
             this.AddAtletaButton.Name = "AddAtletaButton";
             this.AddAtletaButton.Size = new System.Drawing.Size(151, 23);
             this.AddAtletaButton.TabIndex = 58;

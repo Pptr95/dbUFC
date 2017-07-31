@@ -117,6 +117,12 @@
     <Compile Include="FormAddAtleta.Designer.cs">
       <DependentUpon>FormAddAtleta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProgrammazioneIncontro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProgrammazioneIncontro.Designer.cs">
+      <DependentUpon>FormProgrammazioneIncontro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="dbUFC.dbml.layout">
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddAtleta.resx">
       <DependentUpon>FormAddAtleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProgrammazioneIncontro.resx">
+      <DependentUpon>FormProgrammazioneIncontro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

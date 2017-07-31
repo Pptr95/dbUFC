@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace dbUFC
 {
-    public partial class FormEntrataUscita : Form
+    public partial class FormProgrammazioneIncontro : Form
     {
-        public FormEntrataUscita()
+        public FormProgrammazioneIncontro()
         {
             InitializeComponent();
         }
 
-        private void bunifuCustomLabel9_Click(object sender, EventArgs e)
-        {
-            bunifuCustomLabel9.Text = bunifuDatepicker1.Value.ToString("yyyy-MM-dd");
-        }
+     
     }
 }
