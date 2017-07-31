@@ -112,5 +112,21 @@ namespace dbUFC
             FormEntrataUscita team = new FormEntrataUscita();
             team.Visible = true;
         }
+
+        private void bunifuCustomLabel6_Click(object sender, EventArgs e)
+        {
+            SetVisibleProgrammaIncontroButton(true);
+        }
+
+        private void bunifuImageButton7_Click(object sender, EventArgs e)
+        {
+            SetVisibleProgrammaIncontroButton(true);
+        }
+
+        private void SetVisibleProgrammaIncontroButton(bool value)
+        {
+            FormProgrammazioneIncontro pro = new FormProgrammazioneIncontro();
+            pro.Visible = true;
+        }
     }
 }

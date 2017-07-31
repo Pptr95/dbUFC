@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace dbUFC
 {
-    public partial class FormAddCategoria : Form
+    public partial class FormAddPsicologo : Form
     {
-        public FormAddCategoria()
+        public FormAddPsicologo()
         {
             InitializeComponent();
         }
 
+       
     }
 }
