@@ -103,11 +103,12 @@
             this.bunifuCustomLabel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel15.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel15.Location = new System.Drawing.Point(239, 88);
+            this.bunifuCustomLabel15.Location = new System.Drawing.Point(250, 88);
             this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
             this.bunifuCustomLabel15.Size = new System.Drawing.Size(64, 21);
             this.bunifuCustomLabel15.TabIndex = 55;
             this.bunifuCustomLabel15.Text = "Arbitro";
+            this.bunifuCustomLabel15.Click += new System.EventHandler(this.bunifuCustomLabel15_Click);
             // 
             // bunifuImageButton4
             // 
@@ -121,6 +122,7 @@
             this.bunifuImageButton4.TabIndex = 54;
             this.bunifuImageButton4.TabStop = false;
             this.bunifuImageButton4.Zoom = 10;
+            this.bunifuImageButton4.Click += new System.EventHandler(this.bunifuImageButton4_Click);
             // 
             // bunifuCustomLabel2
             // 
@@ -128,7 +130,7 @@
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(239, 156);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(249, 156);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(64, 21);
             this.bunifuCustomLabel2.TabIndex = 57;
@@ -153,7 +155,7 @@
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(239, 224);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(248, 224);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(65, 21);
             this.bunifuCustomLabel4.TabIndex = 59;
@@ -183,6 +185,7 @@
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(108, 21);
             this.bunifuCustomLabel5.TabIndex = 61;
             this.bunifuCustomLabel5.Text = "Fisioterapista";
+            this.bunifuCustomLabel5.Click += new System.EventHandler(this.bunifuCustomLabel5_Click);
             // 
             // bunifuImageButton3
             // 
@@ -196,6 +199,7 @@
             this.bunifuImageButton3.TabIndex = 60;
             this.bunifuImageButton3.TabStop = false;
             this.bunifuImageButton3.Zoom = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
             // 
             // bunifuCustomLabel6
             // 
@@ -208,6 +212,7 @@
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(81, 21);
             this.bunifuCustomLabel6.TabIndex = 63;
             this.bunifuCustomLabel6.Text = "Psicologo";
+            this.bunifuCustomLabel6.Click += new System.EventHandler(this.bunifuCustomLabel6_Click);
             // 
             // bunifuImageButton5
             // 
@@ -221,6 +226,7 @@
             this.bunifuImageButton5.TabIndex = 62;
             this.bunifuImageButton5.TabStop = false;
             this.bunifuImageButton5.Zoom = 10;
+            this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton5_Click);
             // 
             // bunifuCustomLabel7
             // 
