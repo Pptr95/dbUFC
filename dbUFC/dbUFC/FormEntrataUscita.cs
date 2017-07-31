@@ -17,11 +17,15 @@ namespace dbUFC
             InitializeComponent();
         }
 
-
-        //this is a test to test date picker format.
         private void bunifuCustomLabel9_Click(object sender, EventArgs e)
         {
-            bunifuCustomLabel9.Text = bunifuDatepicker1.Value.ToString("yyyy-MM-dd");
+            //bunifuCustomLabel9.Text = bunifuDatepicker1.Value.ToString("yyyy-MM-dd"); test for date format
+            Close();
+        }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

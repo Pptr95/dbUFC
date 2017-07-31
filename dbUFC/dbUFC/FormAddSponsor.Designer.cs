@@ -120,6 +120,7 @@
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(64, 21);
             this.bunifuCustomLabel4.TabIndex = 55;
             this.bunifuCustomLabel4.Text = "Annulla";
+            this.bunifuCustomLabel4.Click += new System.EventHandler(this.bunifuCustomLabel4_Click);
             // 
             // bunifuImageButton1
             // 
@@ -146,6 +147,7 @@
             this.bunifuImageButton2.TabIndex = 53;
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
             // bunifuDragControl1
             // 

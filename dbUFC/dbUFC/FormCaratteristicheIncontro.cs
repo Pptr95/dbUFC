@@ -34,5 +34,15 @@ namespace dbUFC
             FormCaratteristicheAtletaInIncontro atl = new FormCaratteristicheAtletaInIncontro();
             atl.Visible = true;
         }
+
+        private void bunifuCustomLabel14_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

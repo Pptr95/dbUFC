@@ -16,5 +16,15 @@ namespace dbUFC
         {
             InitializeComponent();
         }
+
+        private void bunifuCustomLabel17_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void bunifuImageButton6_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

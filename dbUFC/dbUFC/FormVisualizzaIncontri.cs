@@ -22,5 +22,15 @@ namespace dbUFC
             FormCaratteristicheIncontro car = new FormCaratteristicheIncontro();
             car.Visible = true;
         }
+
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

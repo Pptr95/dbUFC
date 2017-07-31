@@ -314,11 +314,12 @@
             this.bunifuCustomLabel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel11.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(348, 527);
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(351, 527);
             this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
-            this.bunifuCustomLabel11.Size = new System.Drawing.Size(64, 21);
+            this.bunifuCustomLabel11.Size = new System.Drawing.Size(54, 21);
             this.bunifuCustomLabel11.TabIndex = 94;
-            this.bunifuCustomLabel11.Text = "Annulla";
+            this.bunifuCustomLabel11.Text = "Chiudi";
+            this.bunifuCustomLabel11.Click += new System.EventHandler(this.bunifuCustomLabel11_Click);
             // 
             // bunifuImageButton1
             // 
@@ -332,6 +333,7 @@
             this.bunifuImageButton1.TabIndex = 93;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // bunifuDragControl1
             // 

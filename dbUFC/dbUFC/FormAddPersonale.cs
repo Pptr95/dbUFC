@@ -96,5 +96,15 @@ namespace dbUFC
             FormAddMedico medico = new FormAddMedico();
             medico.Visible = true;
         }
+
+        private void bunifuCustomLabel8_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void bunifuImageButton7_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -65,5 +65,15 @@ namespace dbUFC
             FormAddRecord rec = new FormAddRecord();
             rec.Visible = true;
         }
+
+        private void bunifuCustomLabel17_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void bunifuImageButton6_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

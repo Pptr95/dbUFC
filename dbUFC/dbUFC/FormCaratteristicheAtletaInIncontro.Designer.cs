@@ -72,11 +72,12 @@
             this.bunifuCustomLabel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel14.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel14.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel14.Location = new System.Drawing.Point(128, 270);
+            this.bunifuCustomLabel14.Location = new System.Drawing.Point(131, 270);
             this.bunifuCustomLabel14.Name = "bunifuCustomLabel14";
             this.bunifuCustomLabel14.Size = new System.Drawing.Size(64, 21);
             this.bunifuCustomLabel14.TabIndex = 160;
             this.bunifuCustomLabel14.Text = "Annulla";
+            this.bunifuCustomLabel14.Click += new System.EventHandler(this.bunifuCustomLabel14_Click);
             // 
             // bunifuImageButton1
             // 
@@ -90,6 +91,7 @@
             this.bunifuImageButton1.TabIndex = 159;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // bunifuCustomLabel10
             // 
@@ -220,7 +222,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(635, 378);
+            this.ClientSize = new System.Drawing.Size(635, 358);
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.bunifuCustomLabel14);
             this.Controls.Add(this.bunifuImageButton1);

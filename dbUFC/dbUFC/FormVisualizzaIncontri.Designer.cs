@@ -61,6 +61,7 @@
             this.bunifuImageButton1.TabIndex = 125;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // bunifuCustomLabel4
             // 
@@ -137,6 +138,7 @@
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(69, 21);
             this.bunifuCustomLabel1.TabIndex = 126;
             this.bunifuCustomLabel1.Text = "Indietro";
+            this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
             // bunifuCustomLabel3
             // 
