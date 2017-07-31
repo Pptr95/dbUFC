@@ -16,5 +16,23 @@ namespace dbUFC
         {
             InitializeComponent();
         }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            FormViewArbitri varbitri = new FormViewArbitri();
+            varbitri.Visible = true;
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            FormCaratteristicheAtletaInIncontro atl = new FormCaratteristicheAtletaInIncontro();
+            atl.Visible = true;
+        }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            FormCaratteristicheAtletaInIncontro atl = new FormCaratteristicheAtletaInIncontro();
+            atl.Visible = true;
+        }
     }
 }

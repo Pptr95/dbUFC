@@ -88,7 +88,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1126, 35);
+            this.panel1.Size = new System.Drawing.Size(1116, 35);
             this.panel1.TabIndex = 101;
             // 
             // label1
@@ -367,7 +367,7 @@
             // 
             this.bunifuDragControl1.Fixed = true;
             this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = null;
+            this.bunifuDragControl1.TargetControl = this;
             this.bunifuDragControl1.Vertical = true;
             // 
             // bunifuElipse1
@@ -442,6 +442,7 @@
             this.bunifuImageButton2.TabIndex = 132;
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
             // bunifuImageButton3
             // 
@@ -455,6 +456,7 @@
             this.bunifuImageButton3.TabIndex = 134;
             this.bunifuImageButton3.TabStop = false;
             this.bunifuImageButton3.Zoom = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
             // 
             // bunifuCustomLabel18
             // 
@@ -479,6 +481,7 @@
             this.bunifuImageButton5.TabIndex = 136;
             this.bunifuImageButton5.TabStop = false;
             this.bunifuImageButton5.Zoom = 10;
+            this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton5_Click);
             // 
             // bunifuCustomLabel17
             // 
@@ -496,7 +499,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(1126, 714);
+            this.ClientSize = new System.Drawing.Size(1116, 714);
             this.Controls.Add(this.bunifuCustomLabel17);
             this.Controls.Add(this.bunifuCustomLabel18);
             this.Controls.Add(this.bunifuImageButton5);

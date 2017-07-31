@@ -63,6 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbUFC.dbml</DependentUpon>
     </Compile>
+    <Compile Include="FormCaratteristicheAtletaInIncontro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCaratteristicheAtletaInIncontro.Designer.cs">
+      <DependentUpon>FormCaratteristicheAtletaInIncontro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddArbitro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,12 @@
     <Compile Include="FormCaratteristicheIncontro.Designer.cs">
       <DependentUpon>FormCaratteristicheIncontro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormViewArbitri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewArbitri.Designer.cs">
+      <DependentUpon>FormViewArbitri.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormVisualizzaIncontri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +182,9 @@
     <None Include="dbUFC.dbml.layout">
       <DependentUpon>dbUFC.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="FormCaratteristicheAtletaInIncontro.resx">
+      <DependentUpon>FormCaratteristicheAtletaInIncontro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddArbitro.resx">
       <DependentUpon>FormAddArbitro.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCaratteristicheIncontro.resx">
       <DependentUpon>FormCaratteristicheIncontro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewArbitri.resx">
+      <DependentUpon>FormViewArbitri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVisualizzaIncontri.resx">
       <DependentUpon>FormVisualizzaIncontri.cs</DependentUpon>
