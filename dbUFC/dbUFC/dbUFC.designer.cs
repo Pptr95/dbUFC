@@ -81,12 +81,12 @@ namespace dbUFC
     partial void InsertSponsor(Sponsor instance);
     partial void UpdateSponsor(Sponsor instance);
     partial void DeleteSponsor(Sponsor instance);
-    partial void InsertSponsorizzazioneTeam(SponsorizzazioneTeam instance);
-    partial void UpdateSponsorizzazioneTeam(SponsorizzazioneTeam instance);
-    partial void DeleteSponsorizzazioneTeam(SponsorizzazioneTeam instance);
     partial void InsertSponsorizzazioneIncontro(SponsorizzazioneIncontro instance);
     partial void UpdateSponsorizzazioneIncontro(SponsorizzazioneIncontro instance);
     partial void DeleteSponsorizzazioneIncontro(SponsorizzazioneIncontro instance);
+    partial void InsertSponsorizzazioneTeam(SponsorizzazioneTeam instance);
+    partial void UpdateSponsorizzazioneTeam(SponsorizzazioneTeam instance);
+    partial void DeleteSponsorizzazioneTeam(SponsorizzazioneTeam instance);
     partial void InsertTeam(Team instance);
     partial void UpdateTeam(Team instance);
     partial void DeleteTeam(Team instance);
@@ -258,19 +258,19 @@ namespace dbUFC
 			}
 		}
 		
-		public System.Data.Linq.Table<SponsorizzazioneTeam> SponsorizzazioneTeams
-		{
-			get
-			{
-				return this.GetTable<SponsorizzazioneTeam>();
-			}
-		}
-		
 		public System.Data.Linq.Table<SponsorizzazioneIncontro> SponsorizzazioneIncontros
 		{
 			get
 			{
 				return this.GetTable<SponsorizzazioneIncontro>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SponsorizzazioneTeam> SponsorizzazioneTeams
+		{
+			get
+			{
+				return this.GetTable<SponsorizzazioneTeam>();
 			}
 		}
 		
@@ -4255,61 +4255,48 @@ namespace dbUFC
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _NomeSposor;
-		
-		private EntitySet<SponsorizzazioneTeam> _SponsorizzazioneTeams;
+		private string _NomeSponsor;
 		
 		private EntitySet<SponsorizzazioneIncontro> _SponsorizzazioneIncontros;
+		
+		private EntitySet<SponsorizzazioneTeam> _SponsorizzazioneTeams;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnNomeSposorChanging(string value);
-    partial void OnNomeSposorChanged();
+    partial void OnNomeSponsorChanging(string value);
+    partial void OnNomeSponsorChanged();
     #endregion
 		
 		public Sponsor()
 		{
-			this._SponsorizzazioneTeams = new EntitySet<SponsorizzazioneTeam>(new Action<SponsorizzazioneTeam>(this.attach_SponsorizzazioneTeams), new Action<SponsorizzazioneTeam>(this.detach_SponsorizzazioneTeams));
 			this._SponsorizzazioneIncontros = new EntitySet<SponsorizzazioneIncontro>(new Action<SponsorizzazioneIncontro>(this.attach_SponsorizzazioneIncontros), new Action<SponsorizzazioneIncontro>(this.detach_SponsorizzazioneIncontros));
+			this._SponsorizzazioneTeams = new EntitySet<SponsorizzazioneTeam>(new Action<SponsorizzazioneTeam>(this.attach_SponsorizzazioneTeams), new Action<SponsorizzazioneTeam>(this.detach_SponsorizzazioneTeams));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NomeSposor", DbType="Char(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string NomeSposor
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NomeSponsor", DbType="Char(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string NomeSponsor
 		{
 			get
 			{
-				return this._NomeSposor;
+				return this._NomeSponsor;
 			}
 			set
 			{
-				if ((this._NomeSposor != value))
+				if ((this._NomeSponsor != value))
 				{
-					this.OnNomeSposorChanging(value);
+					this.OnNomeSponsorChanging(value);
 					this.SendPropertyChanging();
-					this._NomeSposor = value;
-					this.SendPropertyChanged("NomeSposor");
-					this.OnNomeSposorChanged();
+					this._NomeSponsor = value;
+					this.SendPropertyChanged("NomeSponsor");
+					this.OnNomeSponsorChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Sponsor_SponsorizzazioneTeam", Storage="_SponsorizzazioneTeams", ThisKey="NomeSposor", OtherKey="NomeSposor")]
-		public EntitySet<SponsorizzazioneTeam> SponsorizzazioneTeams
-		{
-			get
-			{
-				return this._SponsorizzazioneTeams;
-			}
-			set
-			{
-				this._SponsorizzazioneTeams.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Sponsor_SponsorizzazioneIncontro", Storage="_SponsorizzazioneIncontros", ThisKey="NomeSposor", OtherKey="NomeSposor")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Sponsor_SponsorizzazioneIncontro", Storage="_SponsorizzazioneIncontros", ThisKey="NomeSponsor", OtherKey="NomeSponsor")]
 		public EntitySet<SponsorizzazioneIncontro> SponsorizzazioneIncontros
 		{
 			get
@@ -4319,6 +4306,19 @@ namespace dbUFC
 			set
 			{
 				this._SponsorizzazioneIncontros.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Sponsor_SponsorizzazioneTeam", Storage="_SponsorizzazioneTeams", ThisKey="NomeSponsor", OtherKey="NomeSponsor")]
+		public EntitySet<SponsorizzazioneTeam> SponsorizzazioneTeams
+		{
+			get
+			{
+				return this._SponsorizzazioneTeams;
+			}
+			set
+			{
+				this._SponsorizzazioneTeams.Assign(value);
 			}
 		}
 		
@@ -4340,18 +4340,6 @@ namespace dbUFC
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_SponsorizzazioneTeams(SponsorizzazioneTeam entity)
-		{
-			this.SendPropertyChanging();
-			entity.Sponsor = this;
-		}
-		
-		private void detach_SponsorizzazioneTeams(SponsorizzazioneTeam entity)
-		{
-			this.SendPropertyChanging();
-			entity.Sponsor = null;
 		}
 		
 		private void attach_SponsorizzazioneIncontros(SponsorizzazioneIncontro entity)
@@ -4365,173 +4353,17 @@ namespace dbUFC
 			this.SendPropertyChanging();
 			entity.Sponsor = null;
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SponsorizzazioneTeam")]
-	public partial class SponsorizzazioneTeam : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _NomeSposor;
-		
-		private string _CodiceTeam;
-		
-		private EntityRef<Sponsor> _Sponsor;
-		
-		private EntityRef<Team> _Team;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnNomeSposorChanging(string value);
-    partial void OnNomeSposorChanged();
-    partial void OnCodiceTeamChanging(string value);
-    partial void OnCodiceTeamChanged();
-    #endregion
-		
-		public SponsorizzazioneTeam()
+		private void attach_SponsorizzazioneTeams(SponsorizzazioneTeam entity)
 		{
-			this._Sponsor = default(EntityRef<Sponsor>);
-			this._Team = default(EntityRef<Team>);
-			OnCreated();
+			this.SendPropertyChanging();
+			entity.Sponsor = this;
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NomeSposor", DbType="Char(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string NomeSposor
+		private void detach_SponsorizzazioneTeams(SponsorizzazioneTeam entity)
 		{
-			get
-			{
-				return this._NomeSposor;
-			}
-			set
-			{
-				if ((this._NomeSposor != value))
-				{
-					if (this._Sponsor.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnNomeSposorChanging(value);
-					this.SendPropertyChanging();
-					this._NomeSposor = value;
-					this.SendPropertyChanged("NomeSposor");
-					this.OnNomeSposorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodiceTeam", DbType="Char(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string CodiceTeam
-		{
-			get
-			{
-				return this._CodiceTeam;
-			}
-			set
-			{
-				if ((this._CodiceTeam != value))
-				{
-					if (this._Team.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnCodiceTeamChanging(value);
-					this.SendPropertyChanging();
-					this._CodiceTeam = value;
-					this.SendPropertyChanged("CodiceTeam");
-					this.OnCodiceTeamChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Sponsor_SponsorizzazioneTeam", Storage="_Sponsor", ThisKey="NomeSposor", OtherKey="NomeSposor", IsForeignKey=true)]
-		public Sponsor Sponsor
-		{
-			get
-			{
-				return this._Sponsor.Entity;
-			}
-			set
-			{
-				Sponsor previousValue = this._Sponsor.Entity;
-				if (((previousValue != value) 
-							|| (this._Sponsor.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Sponsor.Entity = null;
-						previousValue.SponsorizzazioneTeams.Remove(this);
-					}
-					this._Sponsor.Entity = value;
-					if ((value != null))
-					{
-						value.SponsorizzazioneTeams.Add(this);
-						this._NomeSposor = value.NomeSposor;
-					}
-					else
-					{
-						this._NomeSposor = default(string);
-					}
-					this.SendPropertyChanged("Sponsor");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Team_SponsorizzazioneTeam", Storage="_Team", ThisKey="CodiceTeam", OtherKey="CodiceTeam", IsForeignKey=true)]
-		public Team Team
-		{
-			get
-			{
-				return this._Team.Entity;
-			}
-			set
-			{
-				Team previousValue = this._Team.Entity;
-				if (((previousValue != value) 
-							|| (this._Team.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Team.Entity = null;
-						previousValue.SponsorizzazioneTeams.Remove(this);
-					}
-					this._Team.Entity = value;
-					if ((value != null))
-					{
-						value.SponsorizzazioneTeams.Add(this);
-						this._CodiceTeam = value.CodiceTeam;
-					}
-					else
-					{
-						this._CodiceTeam = default(string);
-					}
-					this.SendPropertyChanged("Team");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
+			this.SendPropertyChanging();
+			entity.Sponsor = null;
 		}
 	}
 	
@@ -4541,7 +4373,7 @@ namespace dbUFC
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _NomeSposor;
+		private string _NomeSponsor;
 		
 		private int _CodiceCaratteristicheIncontro;
 		
@@ -4553,8 +4385,8 @@ namespace dbUFC
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnNomeSposorChanging(string value);
-    partial void OnNomeSposorChanged();
+    partial void OnNomeSponsorChanging(string value);
+    partial void OnNomeSponsorChanged();
     partial void OnCodiceCaratteristicheIncontroChanging(int value);
     partial void OnCodiceCaratteristicheIncontroChanged();
     #endregion
@@ -4566,26 +4398,26 @@ namespace dbUFC
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NomeSposor", DbType="Char(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string NomeSposor
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NomeSponsor", DbType="Char(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string NomeSponsor
 		{
 			get
 			{
-				return this._NomeSposor;
+				return this._NomeSponsor;
 			}
 			set
 			{
-				if ((this._NomeSposor != value))
+				if ((this._NomeSponsor != value))
 				{
 					if (this._Sponsor.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
-					this.OnNomeSposorChanging(value);
+					this.OnNomeSponsorChanging(value);
 					this.SendPropertyChanging();
-					this._NomeSposor = value;
-					this.SendPropertyChanged("NomeSposor");
-					this.OnNomeSposorChanged();
+					this._NomeSponsor = value;
+					this.SendPropertyChanged("NomeSponsor");
+					this.OnNomeSponsorChanged();
 				}
 			}
 		}
@@ -4648,7 +4480,7 @@ namespace dbUFC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Sponsor_SponsorizzazioneIncontro", Storage="_Sponsor", ThisKey="NomeSposor", OtherKey="NomeSposor", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Sponsor_SponsorizzazioneIncontro", Storage="_Sponsor", ThisKey="NomeSponsor", OtherKey="NomeSponsor", IsForeignKey=true)]
 		public Sponsor Sponsor
 		{
 			get
@@ -4671,13 +4503,181 @@ namespace dbUFC
 					if ((value != null))
 					{
 						value.SponsorizzazioneIncontros.Add(this);
-						this._NomeSposor = value.NomeSposor;
+						this._NomeSponsor = value.NomeSponsor;
 					}
 					else
 					{
-						this._NomeSposor = default(string);
+						this._NomeSponsor = default(string);
 					}
 					this.SendPropertyChanged("Sponsor");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SponsorizzazioneTeam")]
+	public partial class SponsorizzazioneTeam : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _NomeSponsor;
+		
+		private string _CodiceTeam;
+		
+		private EntityRef<Sponsor> _Sponsor;
+		
+		private EntityRef<Team> _Team;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnNomeSponsorChanging(string value);
+    partial void OnNomeSponsorChanged();
+    partial void OnCodiceTeamChanging(string value);
+    partial void OnCodiceTeamChanged();
+    #endregion
+		
+		public SponsorizzazioneTeam()
+		{
+			this._Sponsor = default(EntityRef<Sponsor>);
+			this._Team = default(EntityRef<Team>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NomeSponsor", DbType="Char(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string NomeSponsor
+		{
+			get
+			{
+				return this._NomeSponsor;
+			}
+			set
+			{
+				if ((this._NomeSponsor != value))
+				{
+					if (this._Sponsor.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnNomeSponsorChanging(value);
+					this.SendPropertyChanging();
+					this._NomeSponsor = value;
+					this.SendPropertyChanged("NomeSponsor");
+					this.OnNomeSponsorChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodiceTeam", DbType="Char(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string CodiceTeam
+		{
+			get
+			{
+				return this._CodiceTeam;
+			}
+			set
+			{
+				if ((this._CodiceTeam != value))
+				{
+					if (this._Team.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnCodiceTeamChanging(value);
+					this.SendPropertyChanging();
+					this._CodiceTeam = value;
+					this.SendPropertyChanged("CodiceTeam");
+					this.OnCodiceTeamChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Sponsor_SponsorizzazioneTeam", Storage="_Sponsor", ThisKey="NomeSponsor", OtherKey="NomeSponsor", IsForeignKey=true)]
+		public Sponsor Sponsor
+		{
+			get
+			{
+				return this._Sponsor.Entity;
+			}
+			set
+			{
+				Sponsor previousValue = this._Sponsor.Entity;
+				if (((previousValue != value) 
+							|| (this._Sponsor.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Sponsor.Entity = null;
+						previousValue.SponsorizzazioneTeams.Remove(this);
+					}
+					this._Sponsor.Entity = value;
+					if ((value != null))
+					{
+						value.SponsorizzazioneTeams.Add(this);
+						this._NomeSponsor = value.NomeSponsor;
+					}
+					else
+					{
+						this._NomeSponsor = default(string);
+					}
+					this.SendPropertyChanged("Sponsor");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Team_SponsorizzazioneTeam", Storage="_Team", ThisKey="CodiceTeam", OtherKey="CodiceTeam", IsForeignKey=true)]
+		public Team Team
+		{
+			get
+			{
+				return this._Team.Entity;
+			}
+			set
+			{
+				Team previousValue = this._Team.Entity;
+				if (((previousValue != value) 
+							|| (this._Team.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Team.Entity = null;
+						previousValue.SponsorizzazioneTeams.Remove(this);
+					}
+					this._Team.Entity = value;
+					if ((value != null))
+					{
+						value.SponsorizzazioneTeams.Add(this);
+						this._CodiceTeam = value.CodiceTeam;
+					}
+					else
+					{
+						this._CodiceTeam = default(string);
+					}
+					this.SendPropertyChanged("Team");
 				}
 			}
 		}

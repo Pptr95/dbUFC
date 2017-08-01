@@ -190,25 +190,25 @@
   </Table>
   <Table Name="dbo.Sponsor" Member="Sponsors">
     <Type Name="Sponsor">
-      <Column Name="NomeSposor" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="Sponsor_SponsorizzazioneTeam" Member="SponsorizzazioneTeams" ThisKey="NomeSposor" OtherKey="NomeSposor" Type="SponsorizzazioneTeam" />
-      <Association Name="Sponsor_SponsorizzazioneIncontro" Member="SponsorizzazioneIncontros" ThisKey="NomeSposor" OtherKey="NomeSposor" Type="SponsorizzazioneIncontro" />
-    </Type>
-  </Table>
-  <Table Name="dbo.SponsorizzazioneTeam" Member="SponsorizzazioneTeams">
-    <Type Name="SponsorizzazioneTeam">
-      <Column Name="NomeSposor" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="CodiceTeam" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="Sponsor_SponsorizzazioneTeam" Member="Sponsor" ThisKey="NomeSposor" OtherKey="NomeSposor" Type="Sponsor" IsForeignKey="true" />
-      <Association Name="Team_SponsorizzazioneTeam" Member="Team" ThisKey="CodiceTeam" OtherKey="CodiceTeam" Type="Team" IsForeignKey="true" />
+      <Column Name="NomeSponsor" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Sponsor_SponsorizzazioneIncontro" Member="SponsorizzazioneIncontros" ThisKey="NomeSponsor" OtherKey="NomeSponsor" Type="SponsorizzazioneIncontro" />
+      <Association Name="Sponsor_SponsorizzazioneTeam" Member="SponsorizzazioneTeams" ThisKey="NomeSponsor" OtherKey="NomeSponsor" Type="SponsorizzazioneTeam" />
     </Type>
   </Table>
   <Table Name="dbo.SponsorizzazioneIncontro" Member="SponsorizzazioneIncontros">
     <Type Name="SponsorizzazioneIncontro">
-      <Column Name="NomeSposor" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NomeSponsor" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="CodiceCaratteristicheIncontro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="CaratteristicheIncontro_SponsorizzazioneIncontro" Member="CaratteristicheIncontro" ThisKey="CodiceCaratteristicheIncontro" OtherKey="CodiceCaratteristicheIncontro" Type="CaratteristicheIncontro" IsForeignKey="true" />
-      <Association Name="Sponsor_SponsorizzazioneIncontro" Member="Sponsor" ThisKey="NomeSposor" OtherKey="NomeSposor" Type="Sponsor" IsForeignKey="true" />
+      <Association Name="Sponsor_SponsorizzazioneIncontro" Member="Sponsor" ThisKey="NomeSponsor" OtherKey="NomeSponsor" Type="Sponsor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SponsorizzazioneTeam" Member="SponsorizzazioneTeams">
+    <Type Name="SponsorizzazioneTeam">
+      <Column Name="NomeSponsor" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodiceTeam" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Sponsor_SponsorizzazioneTeam" Member="Sponsor" ThisKey="NomeSponsor" OtherKey="NomeSponsor" Type="Sponsor" IsForeignKey="true" />
+      <Association Name="Team_SponsorizzazioneTeam" Member="Team" ThisKey="CodiceTeam" OtherKey="CodiceTeam" Type="Team" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Team" Member="Teams">

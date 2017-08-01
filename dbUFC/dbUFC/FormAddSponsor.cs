@@ -43,15 +43,15 @@ namespace dbUFC
         {
             Sponsor spo = new Sponsor();
             List<Sponsor> ls = dc.Sponsors.ToList();
-            spo.NomeSposor = bunifuTextbox1.text.Trim();
-            if(spo.NomeSposor.Length == 0)
+            spo.NomeSponsor = bunifuTextbox1.text.Trim();
+            if(spo.NomeSponsor.Length == 0)
             {
                 MessageBox.Show("Inserisci il nome di uno sponsor.");
                 return;
             }
             foreach (Sponsor s in ls)
             {
-                if (s.NomeSposor.Trim() == spo.NomeSposor)
+                if (s.NomeSponsor.Trim() == spo.NomeSponsor)
                 {
                     MessageBox.Show("Questo sponsor è già presente. Inserimento non riuscito");
                     return;
@@ -69,7 +69,7 @@ namespace dbUFC
             List<Sponsor> ls = dc.Sponsors.ToList();
             foreach( Sponsor s in ls)
             {
-                if (s.NomeSposor.Trim() == bunifuTextbox1.text.Trim())
+                if (s.NomeSponsor.Trim() == bunifuTextbox1.text.Trim())
                 {
                     dc.Sponsors.DeleteOnSubmit(s);
                     dc.SubmitChanges();
