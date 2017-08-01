@@ -12,7 +12,7 @@ namespace dbUFC
 {
     public partial class FormAddSponsor : Form
     {
-        dbUFCDataContext dc;
+        readonly dbUFCDataContext dc = new dbUFCDataContext();
 
         public FormAddSponsor()
         {
@@ -31,41 +31,36 @@ namespace dbUFC
 
         private void bunifuCustomLabel5_Click(object sender, EventArgs e)
         {
-            this.dc = new dbUFCDataContext();
+            AddSponsor();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            AddSponsor();
+        }
+
+        private void AddSponsor()
+        {
             Sponsor spo = new Sponsor();
             List<Sponsor> ls = dc.Sponsors.ToList();
-            /*   List<string> str = new List<string>();
-               foreach(var v in ls)
-               {
-                   str.Add(v.NomeSposor.ToString());
-                   MessageBox.Show(v.NomeSposor.ToString());
-               }
-               MessageBox.Show(""+str[0].Length);
-               string str1 = bunifuTextbox1.text;
-               MessageBox.Show(str1);
-               foreach ( string s in str)
-               {
-                   if(s == str1)
-                   {
-                       MessageBox.Show("ok");
-                   }
-               }
-               this.dc.Sponsors.InsertOnSubmit(spo);
-               this.dc.SubmitChanges();
-               MessageBox.Show("The new sponsor has been added correctly.");
-               */
-            spo.NomeSposor = bunifuTextbox1.text;
-            //string trimmed = "careteam order4-26-11.csv".Replace(" ", string.Empty);
-            string trim = ls[0].NomeSposor.Replace(" ", string.Empty);
-            MessageBox.Show("" + trim.Length);
-
-            if(spo.NomeSposor == trim)
+            spo.NomeSposor = bunifuTextbox1.text.Trim();
+            if(spo.NomeSposor.Length == 0)
             {
-                MessageBox.Show("Ok!!!");
+                MessageBox.Show("Inserisci il nome di uno sponsor.");
+                return;
+            }
+            foreach (Sponsor s in ls)
+            {
+                if (s.NomeSposor.Trim() == spo.NomeSposor)
+                {
+                    MessageBox.Show("Questo sponsor è già presente. Inserimento non riuscito");
+                    return;
+                }
             }
 
-
-
+            this.dc.Sponsors.InsertOnSubmit(spo);
+            this.dc.SubmitChanges();
+            MessageBox.Show("Il nuovo sponsor è stato aggiunto correttamente.");
         }
     }
 }
