@@ -36,13 +36,10 @@
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuTextbox11 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuTextbox2 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuTextbox3 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuTextbox4 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuTextbox5 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -50,37 +47,42 @@
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuTextbox7 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuTextbox8 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuTextbox9 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuTextbox10 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuTextbox12 = new Bunifu.Framework.UI.BunifuTextbox();
-            this.AddAtletaButton = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel16 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel17 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton6 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuCustomLabel18 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuImageButton7 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton9 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel19 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuTextbox13 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.bunifuTextbox14 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.bunifuTextbox15 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bunifuTextbox2 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.bunifuTextbox4 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.bunifuTextbox8 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.bunifuTextbox10 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.bunifuTextbox11 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -95,7 +97,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(873, 36);
+            this.panel1.Size = new System.Drawing.Size(1225, 36);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -145,20 +147,6 @@
             this.bunifuCustomLabel11.TabIndex = 25;
             this.bunifuCustomLabel11.Text = "Cognome";
             // 
-            // bunifuTextbox11
-            // 
-            this.bunifuTextbox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuTextbox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox11.BackgroundImage")));
-            this.bunifuTextbox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox11.ForeColor = System.Drawing.Color.White;
-            this.bunifuTextbox11.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox11.Icon")));
-            this.bunifuTextbox11.Location = new System.Drawing.Point(564, 63);
-            this.bunifuTextbox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuTextbox11.Name = "bunifuTextbox11";
-            this.bunifuTextbox11.Size = new System.Drawing.Size(228, 33);
-            this.bunifuTextbox11.TabIndex = 24;
-            this.bunifuTextbox11.text = "";
-            // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
@@ -169,20 +157,6 @@
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(151, 29);
             this.bunifuCustomLabel2.TabIndex = 29;
             this.bunifuCustomLabel2.Text = "Codice fiscale";
-            // 
-            // bunifuTextbox2
-            // 
-            this.bunifuTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuTextbox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox2.BackgroundImage")));
-            this.bunifuTextbox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuTextbox2.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox2.Icon")));
-            this.bunifuTextbox2.Location = new System.Drawing.Point(564, 116);
-            this.bunifuTextbox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuTextbox2.Name = "bunifuTextbox2";
-            this.bunifuTextbox2.Size = new System.Drawing.Size(228, 33);
-            this.bunifuTextbox2.TabIndex = 28;
-            this.bunifuTextbox2.text = "";
             // 
             // bunifuCustomLabel3
             // 
@@ -219,20 +193,6 @@
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(128, 29);
             this.bunifuCustomLabel4.TabIndex = 33;
             this.bunifuCustomLabel4.Text = "Nazionalità";
-            // 
-            // bunifuTextbox4
-            // 
-            this.bunifuTextbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuTextbox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox4.BackgroundImage")));
-            this.bunifuTextbox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox4.ForeColor = System.Drawing.Color.White;
-            this.bunifuTextbox4.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox4.Icon")));
-            this.bunifuTextbox4.Location = new System.Drawing.Point(565, 169);
-            this.bunifuTextbox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuTextbox4.Name = "bunifuTextbox4";
-            this.bunifuTextbox4.Size = new System.Drawing.Size(228, 33);
-            this.bunifuTextbox4.TabIndex = 32;
-            this.bunifuTextbox4.text = "";
             // 
             // bunifuCustomLabel5
             // 
@@ -320,20 +280,6 @@
             this.bunifuCustomLabel8.TabIndex = 41;
             this.bunifuCustomLabel8.Text = "Raggio gamba";
             // 
-            // bunifuTextbox8
-            // 
-            this.bunifuTextbox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuTextbox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox8.BackgroundImage")));
-            this.bunifuTextbox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox8.ForeColor = System.Drawing.Color.White;
-            this.bunifuTextbox8.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox8.Icon")));
-            this.bunifuTextbox8.Location = new System.Drawing.Point(564, 276);
-            this.bunifuTextbox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuTextbox8.Name = "bunifuTextbox8";
-            this.bunifuTextbox8.Size = new System.Drawing.Size(228, 33);
-            this.bunifuTextbox8.TabIndex = 40;
-            this.bunifuTextbox8.text = "";
-            // 
             // bunifuCustomLabel9
             // 
             this.bunifuCustomLabel9.AutoSize = true;
@@ -370,20 +316,6 @@
             this.bunifuCustomLabel10.TabIndex = 37;
             this.bunifuCustomLabel10.Text = "Nome d\'arte";
             // 
-            // bunifuTextbox10
-            // 
-            this.bunifuTextbox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuTextbox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox10.BackgroundImage")));
-            this.bunifuTextbox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox10.ForeColor = System.Drawing.Color.White;
-            this.bunifuTextbox10.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox10.Icon")));
-            this.bunifuTextbox10.Location = new System.Drawing.Point(564, 223);
-            this.bunifuTextbox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuTextbox10.Name = "bunifuTextbox10";
-            this.bunifuTextbox10.Size = new System.Drawing.Size(228, 33);
-            this.bunifuTextbox10.TabIndex = 36;
-            this.bunifuTextbox10.text = "";
-            // 
             // bunifuCustomLabel12
             // 
             this.bunifuCustomLabel12.AutoSize = true;
@@ -409,33 +341,6 @@
             this.bunifuTextbox12.TabIndex = 34;
             this.bunifuTextbox12.text = "";
             // 
-            // AddAtletaButton
-            // 
-            this.AddAtletaButton.AutoSize = true;
-            this.AddAtletaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.AddAtletaButton.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddAtletaButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AddAtletaButton.Location = new System.Drawing.Point(115, 437);
-            this.AddAtletaButton.Name = "AddAtletaButton";
-            this.AddAtletaButton.Size = new System.Drawing.Size(129, 21);
-            this.AddAtletaButton.TabIndex = 47;
-            this.AddAtletaButton.Text = "Nuova categoria";
-            this.AddAtletaButton.Click += new System.EventHandler(this.AddAtletaButton_Click);
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(101, 426);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(169, 43);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 46;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
-            // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
@@ -450,40 +355,13 @@
             this.bunifuDragControl2.TargetControl = this.panel1;
             this.bunifuDragControl2.Vertical = true;
             // 
-            // bunifuCustomLabel13
-            // 
-            this.bunifuCustomLabel13.AutoSize = true;
-            this.bunifuCustomLabel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.bunifuCustomLabel13.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel13.Location = new System.Drawing.Point(554, 448);
-            this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
-            this.bunifuCustomLabel13.Size = new System.Drawing.Size(99, 21);
-            this.bunifuCustomLabel13.TabIndex = 49;
-            this.bunifuCustomLabel13.Text = "Nuovo team";
-            this.bunifuCustomLabel13.Click += new System.EventHandler(this.bunifuCustomLabel13_Click);
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(526, 437);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(169, 43);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 48;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
-            // 
             // bunifuCustomLabel16
             // 
             this.bunifuCustomLabel16.AutoSize = true;
             this.bunifuCustomLabel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel16.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel16.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel16.Location = new System.Drawing.Point(493, 580);
+            this.bunifuCustomLabel16.Location = new System.Drawing.Point(710, 564);
             this.bunifuCustomLabel16.Name = "bunifuCustomLabel16";
             this.bunifuCustomLabel16.Size = new System.Drawing.Size(82, 21);
             this.bunifuCustomLabel16.TabIndex = 59;
@@ -495,7 +373,7 @@
             this.bunifuCustomLabel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel17.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel17.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel17.Location = new System.Drawing.Point(312, 580);
+            this.bunifuCustomLabel17.Location = new System.Drawing.Point(529, 564);
             this.bunifuCustomLabel17.Name = "bunifuCustomLabel17";
             this.bunifuCustomLabel17.Size = new System.Drawing.Size(64, 21);
             this.bunifuCustomLabel17.TabIndex = 58;
@@ -507,7 +385,7 @@
             this.bunifuImageButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(426, 569);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(643, 553);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
             this.bunifuImageButton5.Size = new System.Drawing.Size(217, 41);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -520,7 +398,7 @@
             this.bunifuImageButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuImageButton6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton6.Image")));
             this.bunifuImageButton6.ImageActive = null;
-            this.bunifuImageButton6.Location = new System.Drawing.Point(233, 569);
+            this.bunifuImageButton6.Location = new System.Drawing.Point(450, 553);
             this.bunifuImageButton6.Name = "bunifuImageButton6";
             this.bunifuImageButton6.Size = new System.Drawing.Size(220, 41);
             this.bunifuImageButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -529,39 +407,12 @@
             this.bunifuImageButton6.Zoom = 10;
             this.bunifuImageButton6.Click += new System.EventHandler(this.bunifuImageButton6_Click);
             // 
-            // bunifuCustomLabel18
-            // 
-            this.bunifuCustomLabel18.AutoSize = true;
-            this.bunifuCustomLabel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.bunifuCustomLabel18.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel18.Location = new System.Drawing.Point(388, 341);
-            this.bunifuCustomLabel18.Name = "bunifuCustomLabel18";
-            this.bunifuCustomLabel18.Size = new System.Drawing.Size(124, 21);
-            this.bunifuCustomLabel18.TabIndex = 61;
-            this.bunifuCustomLabel18.Text = "Inserisci record";
-            this.bunifuCustomLabel18.Click += new System.EventHandler(this.bunifuCustomLabel18_Click);
-            // 
-            // bunifuImageButton7
-            // 
-            this.bunifuImageButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuImageButton7.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton7.Image")));
-            this.bunifuImageButton7.ImageActive = null;
-            this.bunifuImageButton7.Location = new System.Drawing.Point(370, 330);
-            this.bunifuImageButton7.Name = "bunifuImageButton7";
-            this.bunifuImageButton7.Size = new System.Drawing.Size(169, 43);
-            this.bunifuImageButton7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton7.TabIndex = 60;
-            this.bunifuImageButton7.TabStop = false;
-            this.bunifuImageButton7.Zoom = 10;
-            this.bunifuImageButton7.Click += new System.EventHandler(this.bunifuImageButton7_Click);
-            // 
             // bunifuImageButton9
             // 
             this.bunifuImageButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuImageButton9.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton9.Image")));
             this.bunifuImageButton9.ImageActive = null;
-            this.bunifuImageButton9.Location = new System.Drawing.Point(79, 490);
+            this.bunifuImageButton9.Location = new System.Drawing.Point(92, 429);
             this.bunifuImageButton9.Name = "bunifuImageButton9";
             this.bunifuImageButton9.Size = new System.Drawing.Size(70, 26);
             this.bunifuImageButton9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -574,7 +425,7 @@
             this.bunifuCustomLabel15.AutoSize = true;
             this.bunifuCustomLabel15.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuCustomLabel15.Location = new System.Drawing.Point(156, 489);
+            this.bunifuCustomLabel15.Location = new System.Drawing.Point(165, 428);
             this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
             this.bunifuCustomLabel15.Size = new System.Drawing.Size(178, 24);
             this.bunifuCustomLabel15.TabIndex = 63;
@@ -585,7 +436,7 @@
             this.bunifuCustomLabel19.AutoSize = true;
             this.bunifuCustomLabel19.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel19.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuCustomLabel19.Location = new System.Drawing.Point(584, 492);
+            this.bunifuCustomLabel19.Location = new System.Drawing.Point(605, 429);
             this.bunifuCustomLabel19.Name = "bunifuCustomLabel19";
             this.bunifuCustomLabel19.Size = new System.Drawing.Size(141, 24);
             this.bunifuCustomLabel19.TabIndex = 65;
@@ -596,7 +447,7 @@
             this.bunifuImageButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
             this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.Location = new System.Drawing.Point(507, 493);
+            this.bunifuImageButton4.Location = new System.Drawing.Point(533, 430);
             this.bunifuImageButton4.Name = "bunifuImageButton4";
             this.bunifuImageButton4.Size = new System.Drawing.Size(70, 26);
             this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -604,48 +455,225 @@
             this.bunifuImageButton4.TabStop = false;
             this.bunifuImageButton4.Zoom = 10;
             // 
+            // bunifuCustomLabel13
+            // 
+            this.bunifuCustomLabel13.AutoSize = true;
+            this.bunifuCustomLabel13.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel13.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuCustomLabel13.Location = new System.Drawing.Point(924, 63);
+            this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
+            this.bunifuCustomLabel13.Size = new System.Drawing.Size(150, 29);
+            this.bunifuCustomLabel13.TabIndex = 66;
+            this.bunifuCustomLabel13.Text = "Record atleta";
+            // 
+            // bunifuTextbox13
+            // 
+            this.bunifuTextbox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.bunifuTextbox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox13.BackgroundImage")));
+            this.bunifuTextbox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox13.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextbox13.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox13.Icon")));
+            this.bunifuTextbox13.Location = new System.Drawing.Point(1005, 244);
+            this.bunifuTextbox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuTextbox13.Name = "bunifuTextbox13";
+            this.bunifuTextbox13.Size = new System.Drawing.Size(126, 33);
+            this.bunifuTextbox13.TabIndex = 72;
+            this.bunifuTextbox13.text = "0";
+            // 
+            // bunifuTextbox14
+            // 
+            this.bunifuTextbox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.bunifuTextbox14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox14.BackgroundImage")));
+            this.bunifuTextbox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox14.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextbox14.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox14.Icon")));
+            this.bunifuTextbox14.Location = new System.Drawing.Point(1005, 189);
+            this.bunifuTextbox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuTextbox14.Name = "bunifuTextbox14";
+            this.bunifuTextbox14.Size = new System.Drawing.Size(126, 33);
+            this.bunifuTextbox14.TabIndex = 71;
+            this.bunifuTextbox14.text = "0";
+            // 
+            // bunifuTextbox15
+            // 
+            this.bunifuTextbox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.bunifuTextbox15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox15.BackgroundImage")));
+            this.bunifuTextbox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox15.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextbox15.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox15.Icon")));
+            this.bunifuTextbox15.Location = new System.Drawing.Point(1005, 134);
+            this.bunifuTextbox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuTextbox15.Name = "bunifuTextbox15";
+            this.bunifuTextbox15.Size = new System.Drawing.Size(126, 33);
+            this.bunifuTextbox15.TabIndex = 70;
+            this.bunifuTextbox15.text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(873, 198);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 24);
+            this.label5.TabIndex = 69;
+            this.label5.Text = "Sconfitte:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(873, 253);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 24);
+            this.label4.TabIndex = 68;
+            this.label4.Text = "Pareggi:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(873, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 24);
+            this.label3.TabIndex = 67;
+            this.label3.Text = "Vittorie:";
+            // 
+            // bunifuTextbox2
+            // 
+            this.bunifuTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.bunifuTextbox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox2.BackgroundImage")));
+            this.bunifuTextbox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox2.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextbox2.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox2.Icon")));
+            this.bunifuTextbox2.Location = new System.Drawing.Point(564, 274);
+            this.bunifuTextbox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuTextbox2.Name = "bunifuTextbox2";
+            this.bunifuTextbox2.Size = new System.Drawing.Size(228, 33);
+            this.bunifuTextbox2.TabIndex = 77;
+            this.bunifuTextbox2.text = "";
+            // 
+            // bunifuTextbox4
+            // 
+            this.bunifuTextbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.bunifuTextbox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox4.BackgroundImage")));
+            this.bunifuTextbox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox4.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextbox4.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox4.Icon")));
+            this.bunifuTextbox4.Location = new System.Drawing.Point(564, 223);
+            this.bunifuTextbox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuTextbox4.Name = "bunifuTextbox4";
+            this.bunifuTextbox4.Size = new System.Drawing.Size(228, 33);
+            this.bunifuTextbox4.TabIndex = 76;
+            this.bunifuTextbox4.text = "";
+            // 
+            // bunifuTextbox8
+            // 
+            this.bunifuTextbox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.bunifuTextbox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox8.BackgroundImage")));
+            this.bunifuTextbox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox8.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextbox8.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox8.Icon")));
+            this.bunifuTextbox8.Location = new System.Drawing.Point(564, 167);
+            this.bunifuTextbox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuTextbox8.Name = "bunifuTextbox8";
+            this.bunifuTextbox8.Size = new System.Drawing.Size(228, 33);
+            this.bunifuTextbox8.TabIndex = 75;
+            this.bunifuTextbox8.text = "";
+            // 
+            // bunifuTextbox10
+            // 
+            this.bunifuTextbox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.bunifuTextbox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox10.BackgroundImage")));
+            this.bunifuTextbox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox10.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextbox10.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox10.Icon")));
+            this.bunifuTextbox10.Location = new System.Drawing.Point(564, 114);
+            this.bunifuTextbox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuTextbox10.Name = "bunifuTextbox10";
+            this.bunifuTextbox10.Size = new System.Drawing.Size(228, 33);
+            this.bunifuTextbox10.TabIndex = 74;
+            this.bunifuTextbox10.text = "";
+            // 
+            // bunifuTextbox11
+            // 
+            this.bunifuTextbox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.bunifuTextbox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox11.BackgroundImage")));
+            this.bunifuTextbox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox11.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextbox11.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox11.Icon")));
+            this.bunifuTextbox11.Location = new System.Drawing.Point(564, 63);
+            this.bunifuTextbox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuTextbox11.Name = "bunifuTextbox11";
+            this.bunifuTextbox11.Size = new System.Drawing.Size(228, 33);
+            this.bunifuTextbox11.TabIndex = 73;
+            this.bunifuTextbox11.text = "";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(846, 50);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 48);
+            this.pictureBox1.TabIndex = 78;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1080, 50);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 48);
+            this.pictureBox2.TabIndex = 79;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormAddAtleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(873, 622);
+            this.ClientSize = new System.Drawing.Size(1225, 622);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.bunifuTextbox2);
+            this.Controls.Add(this.bunifuTextbox4);
+            this.Controls.Add(this.bunifuTextbox8);
+            this.Controls.Add(this.bunifuTextbox10);
+            this.Controls.Add(this.bunifuTextbox11);
+            this.Controls.Add(this.bunifuTextbox13);
+            this.Controls.Add(this.bunifuTextbox14);
+            this.Controls.Add(this.bunifuTextbox15);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.bunifuCustomLabel13);
             this.Controls.Add(this.bunifuCustomLabel19);
             this.Controls.Add(this.bunifuImageButton4);
             this.Controls.Add(this.bunifuCustomLabel15);
             this.Controls.Add(this.bunifuImageButton9);
-            this.Controls.Add(this.bunifuCustomLabel18);
-            this.Controls.Add(this.bunifuImageButton7);
             this.Controls.Add(this.bunifuCustomLabel16);
             this.Controls.Add(this.bunifuCustomLabel17);
             this.Controls.Add(this.bunifuImageButton5);
             this.Controls.Add(this.bunifuImageButton6);
-            this.Controls.Add(this.bunifuCustomLabel13);
-            this.Controls.Add(this.bunifuImageButton1);
-            this.Controls.Add(this.AddAtletaButton);
-            this.Controls.Add(this.bunifuImageButton2);
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.bunifuTextbox6);
             this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.bunifuTextbox7);
             this.Controls.Add(this.bunifuCustomLabel8);
-            this.Controls.Add(this.bunifuTextbox8);
             this.Controls.Add(this.bunifuCustomLabel9);
             this.Controls.Add(this.bunifuTextbox9);
             this.Controls.Add(this.bunifuCustomLabel10);
-            this.Controls.Add(this.bunifuTextbox10);
             this.Controls.Add(this.bunifuCustomLabel12);
             this.Controls.Add(this.bunifuTextbox12);
             this.Controls.Add(this.bunifuCustomLabel4);
-            this.Controls.Add(this.bunifuTextbox4);
             this.Controls.Add(this.bunifuCustomLabel5);
             this.Controls.Add(this.bunifuTextbox5);
             this.Controls.Add(this.bunifuCustomLabel2);
-            this.Controls.Add(this.bunifuTextbox2);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.bunifuTextbox3);
             this.Controls.Add(this.bunifuCustomLabel11);
-            this.Controls.Add(this.bunifuTextbox11);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuTextbox1);
             this.Controls.Add(this.panel1);
@@ -654,13 +682,12 @@
             this.Text = "FormAddAtleta";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -673,14 +700,11 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox11;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
@@ -688,28 +712,34 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox8;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox9;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox10;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox12;
-        private Bunifu.Framework.UI.BunifuCustomLabel AddAtletaButton;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel13;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel16;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel17;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton6;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel18;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton7;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton9;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel19;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel15;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel13;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox2;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox4;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox8;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox10;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox11;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox13;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox14;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox15;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
