@@ -174,6 +174,7 @@
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(82, 21);
             this.bunifuCustomLabel5.TabIndex = 52;
             this.bunifuCustomLabel5.Text = "Conferma";
+            this.bunifuCustomLabel5.Click += new System.EventHandler(this.bunifuCustomLabel5_Click);
             // 
             // bunifuDragControl1
             // 
