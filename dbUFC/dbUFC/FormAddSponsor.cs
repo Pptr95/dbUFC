@@ -57,7 +57,6 @@ namespace dbUFC
                     return;
                 }
             }
-
             this.dc.Sponsors.InsertOnSubmit(spo);
             this.dc.SubmitChanges();
             MessageBox.Show("Il nuovo sponsor è stato aggiunto correttamente.");

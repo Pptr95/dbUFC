@@ -17,13 +17,7 @@ namespace dbUFC
         public int CodiceCategoria
         {
             get { return _CodiceCategoria; }
-            set
-            {
-              //  if(value == _CodiceCategoria+1)
-              //  {
-                    _CodiceCategoria = value;
-               // }
-            }
+            set { _CodiceCategoria = value; }
         }
 
         public FormAddCategoria()
