@@ -203,9 +203,9 @@
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomLabel3.Location = new System.Drawing.Point(422, 157);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(82, 21);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(102, 21);
             this.bunifuCustomLabel3.TabIndex = 119;
-            this.bunifuCustomLabel3.Text = "Conferma";
+            this.bunifuCustomLabel3.Text = "Delete (test)";
             this.bunifuCustomLabel3.Click += new System.EventHandler(this.bunifuCustomLabel3_Click);
             // 
             // bunifuImageButton4

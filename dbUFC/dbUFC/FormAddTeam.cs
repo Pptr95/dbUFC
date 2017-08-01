@@ -69,8 +69,22 @@ namespace dbUFC
             tea.CodiceTeam = SetCodiceTeam();
             tea.NomeTeam = bunifuTextbox1.text.Trim();
             tea.CodiceFiscaleAllenatore = bunifuTextbox3.text.Trim();
-            //tea.CodiceFiscale = bunifuTextbox5.text.Trim(); this in for the sponsor of team TODO.
+            if (bunifuTextbox2.text.Trim().Length != 0)
+            {
 
+                Sponsor s = new Sponsor();
+                List<Sponsor> ls = dc.Sponsors.ToList();
+               if(!ContanisSponsor(ls, bunifuTextbox2.text.Trim()))
+                {
+                    MessageBox.Show("Lo sponsor non esiste. Inserimento non riuscito.");
+                    return;
+                }
+                SponsorizzazioneTeam sp = new SponsorizzazioneTeam();
+                sp.CodiceTeam = tea.CodiceTeam.Trim();
+                sp.NomeSponsor = bunifuTextbox2.text.Trim();
+
+                this.dc.SponsorizzazioneTeams.InsertOnSubmit(sp);
+            }
             if (CheckIfNotNullAttributes(tea))
             {
                 return;
@@ -120,7 +134,7 @@ namespace dbUFC
                     codToSet = int.Parse(t.CodiceTeam);
                 }
             }
-            return (codToSet + 1).ToString();
+            return (codToSet + 1).ToString().Trim();
 
         }
 
@@ -140,6 +154,25 @@ namespace dbUFC
         {
             FormAddAllenatore al = new FormAddAllenatore();
             al.Visible = true;
+        }
+
+        private void bunifuImageButton6_Click(object sender, EventArgs e)
+        {
+            FormAddSponsor sp = new FormAddSponsor();
+            sp.Visible = true;
+        }
+
+        private bool ContanisSponsor(List<Sponsor> spo, string sponsorName)
+        {
+            int counter = 0;
+            foreach(Sponsor s in spo)
+            {
+                if(s.NomeSponsor.Trim() == sponsorName )
+                {
+                    counter++;
+                }
+            }
+            return counter > 0;
         }
     }
 }
