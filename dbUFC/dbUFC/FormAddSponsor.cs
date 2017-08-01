@@ -62,5 +62,22 @@ namespace dbUFC
             this.dc.SubmitChanges();
             MessageBox.Show("Il nuovo sponsor è stato aggiunto correttamente.");
         }
+        //this is a test to remove instance in database
+        private void bunifuCustomLabel3_Click(object sender, EventArgs e)
+        {
+
+            List<Sponsor> ls = dc.Sponsors.ToList();
+            foreach( Sponsor s in ls)
+            {
+                if (s.NomeSposor.Trim() == bunifuTextbox1.text.Trim())
+                {
+                    dc.Sponsors.DeleteOnSubmit(s);
+                    dc.SubmitChanges();
+                    MessageBox.Show("Il nuovo sponsor è stato rimosso correttamente.");
+                    return;
+                }
+            }
+            MessageBox.Show("Lo sponsor non è presente.");
+        }
     }
 }

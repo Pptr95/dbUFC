@@ -19,10 +19,10 @@ namespace dbUFC
             get { return _CodiceCategoria; }
             set
             {
-                if(value == _CodiceCategoria+1)
-                {
+              //  if(value == _CodiceCategoria+1)
+              //  {
                     _CodiceCategoria = value;
-                }
+               // }
             }
         }
 
@@ -43,30 +43,26 @@ namespace dbUFC
 
         private void bunifuCustomLabel5_Click(object sender, EventArgs e)
         {
+            Categoria cat = new Categoria();
+            List<Categoria> lcat = dc.Categorias.ToList();
+            CodiceCategoria++;
+            MessageBox.Show("" + CodiceCategoria);
+            cat.CodiceCategoria = CodiceCategoria.ToString().Trim();
+            cat.NomeCategoria = bunifuTextbox3.text.Trim();
+            cat.Descrizione = bunifuTextbox2.text.Trim();
+            dc.Categorias.InsertOnSubmit(cat);
+            dc.SubmitChanges();
+            MessageBox.Show("la nuova categoria è stata aggiunta correttamente.");
+
+
+        }
+
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
             //TODO
         }
-        private void Todelete() // this is the insert of sponsor. Just take a look to implement insert Categoria. TODELETE
-        {
-            Sponsor spo = new Sponsor();
-            List<Sponsor> ls = dc.Sponsors.ToList();
-            spo.NomeSposor = bunifuTextbox1.text.Trim();
-            if (spo.NomeSposor.Length == 0)
-            {
-                MessageBox.Show("Inserisci il nome di uno sponsor.");
-                return;
-            }
-            foreach (Sponsor s in ls)
-            {
-                if (s.NomeSposor.Trim() == spo.NomeSposor)
-                {
-                    MessageBox.Show("Questo sponsor è già presente. Inserimento non riuscito");
-                    return;
-                }
-            }
 
-            this.dc.Sponsors.InsertOnSubmit(spo);
-            this.dc.SubmitChanges();
-            MessageBox.Show("Il nuovo sponsor è stato aggiunto correttamente.");
-        }
-}
+       
+    }
 }
