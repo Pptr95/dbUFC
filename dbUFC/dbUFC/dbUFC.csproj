@@ -123,11 +123,11 @@
     <Compile Include="FormAddTeam.Designer.cs">
       <DependentUpon>FormAddTeam.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddTrainer.cs">
+    <Compile Include="FormAddAllenatore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddTrainer.Designer.cs">
-      <DependentUpon>FormAddTrainer.cs</DependentUpon>
+    <Compile Include="FormAddAllenatore.Designer.cs">
+      <DependentUpon>FormAddAllenatore.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCaratteristicheIncontro.cs">
       <SubType>Form</SubType>
@@ -209,8 +209,8 @@
     <EmbeddedResource Include="FormAddTeam.resx">
       <DependentUpon>FormAddTeam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddTrainer.resx">
-      <DependentUpon>FormAddTrainer.cs</DependentUpon>
+    <EmbeddedResource Include="FormAddAllenatore.resx">
+      <DependentUpon>FormAddAllenatore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCaratteristicheIncontro.resx">
       <DependentUpon>FormCaratteristicheIncontro.cs</DependentUpon>
