@@ -13,7 +13,7 @@ namespace dbUFC
     public partial class FormAddCategoria : Form
     {
         readonly dbUFCDataContext dc = new dbUFCDataContext();
-        int _CodiceCategoria = 0;
+        int _CodiceCategoria;
         public int CodiceCategoria
         {
             get { return _CodiceCategoria; }
@@ -43,26 +43,48 @@ namespace dbUFC
 
         private void bunifuCustomLabel5_Click(object sender, EventArgs e)
         {
-            Categoria cat = new Categoria();
-            List<Categoria> lcat = dc.Categorias.ToList();
-            CodiceCategoria++;
-            MessageBox.Show("" + CodiceCategoria);
-            cat.CodiceCategoria = CodiceCategoria.ToString().Trim();
-            cat.NomeCategoria = bunifuTextbox3.text.Trim();
-            cat.Descrizione = bunifuTextbox2.text.Trim();
-            dc.Categorias.InsertOnSubmit(cat);
-            dc.SubmitChanges();
-            MessageBox.Show("la nuova categoria è stata aggiunta correttamente.");
-
-
+            AddCategoria();
         }
 
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            //TODO
+            AddCategoria();
         }
 
-       
+        private void AddCategoria()
+        {
+            Categoria cat = new Categoria();
+            List<Categoria> lcat = dc.Categorias.ToList();
+            cat.CodiceCategoria = SetCodiceCategoria();
+            cat.NomeCategoria = bunifuTextbox3.text.Trim();
+            cat.Descrizione = bunifuTextbox2.text.Trim();
+            if ((cat.NomeCategoria.Length == 0) || (cat.Descrizione.Length == 0))
+            {
+                MessageBox.Show("Riempi tutti i campi per inserire una nuova categoria.");
+                return;
+
+            }
+            dc.Categorias.InsertOnSubmit(cat);
+            dc.SubmitChanges();
+            MessageBox.Show("la nuova categoria è stata aggiunta correttamente.");
+            CodiceCategoria++;
+        }
+
+        private string SetCodiceCategoria()
+        {
+            int codToSet = 0;
+            List<Categoria> lcat = dc.Categorias.ToList();
+            foreach (Categoria c in lcat)
+            {
+                if (int.Parse(c.CodiceCategoria) > codToSet)
+                {
+                    codToSet = int.Parse(c.CodiceCategoria);
+                }
+            }
+            return (codToSet + 1).ToString();
+
+        }
+
     }
 }
