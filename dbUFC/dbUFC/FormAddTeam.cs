@@ -85,6 +85,7 @@ namespace dbUFC
 
                 this.dc.SponsorizzazioneTeams.InsertOnSubmit(sp);
             }
+
             if (CheckIfNotNullAttributes(tea))
             {
                 return;
