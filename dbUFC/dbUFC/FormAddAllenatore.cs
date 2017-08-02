@@ -62,7 +62,13 @@ namespace dbUFC
                 }
             }
             this.dc.Allenatores.InsertOnSubmit(all);
-            this.dc.SubmitChanges();
+            try
+            {
+                this.dc.SubmitChanges();
+            } catch (Exception e)
+            {
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati inseriti. Inserimento non riuscito.");
+            }
             MessageBox.Show("Il nuovo allenatore è stato aggiunto correttamente.");
         }
 

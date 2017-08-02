@@ -14,7 +14,7 @@ namespace dbUFC
     {
         readonly dbUFCDataContext dc = new dbUFCDataContext();
         int _CodiceCaratteristicheIncontro = 0;
-
+ 
         public int CodiceCaratteristicheIncontro
         {
             get { return _CodiceCaratteristicheIncontro; }
@@ -63,12 +63,12 @@ namespace dbUFC
 
         private void bunifuCustomLabel10_Click(object sender, EventArgs e)
         {
-
+            AddCaratteristicheIncontro();
         }
 
         private void bunifuImageButton4_Click(object sender, EventArgs e)
         {
-
+            AddCaratteristicheIncontro();
         }
 
         private void AddCaratteristicheIncontro()
@@ -85,22 +85,45 @@ namespace dbUFC
             car.Vincitore = bunifuTextbox2.text.Trim();
             car.CodiceFiscaleArbitro = bunifuTextbox4.text.Trim();
 
-
-            if (CheckIfNotNullAttributes(car))
+            if(bunifuTextbox12.text.Trim().Length == 0 && bunifuTextbox9.text.Trim().Length == 0 && bunifuTextbox2.text.Trim().Length == 0)
             {
-                return;
+                MessageBox.Show("Almeno uno dei campi Pareggio, codice fiscalde dello Sconfitto e del Vincitore deve essere non vuoto." + "\n"
+                    +"Inserimento non riuscito.");
             }
 
+            if (bunifuTextbox6.text.Trim().Length != 0)
+            {
+                FormAddTeam f = new FormAddTeam();
+                List<Sponsor> ls = dc.Sponsors.ToList();
+                if (!f.ContainsSponsor(ls, bunifuTextbox6.text.Trim()))
+                {
+                    MessageBox.Show("Lo sponsor inserito non esiste. Inserimento non riuscito.");
+                    return;
+                }
+                SponsorizzazioneIncontro sp = new SponsorizzazioneIncontro();
+                sp.CodiceCaratteristicheIncontro = car.CodiceCaratteristicheIncontro;
+                sp.NomeSponsor = bunifuTextbox6.text.Trim();
+                this.dc.SponsorizzazioneIncontros.InsertOnSubmit(sp);
+            }
+            //Update record of atleti based on what is write in textboxs
+            UpdateRecord(car.Pareggio, car.Sconfitto, car.Vincitore);
+           
             this.dc.CaratteristicheIncontros.InsertOnSubmit(car);
-            this.dc.SubmitChanges();
-            MessageBox.Show("Il nuovo giudice è stato aggiunto correttamente.");
+            try
+            {
+                this.dc.SubmitChanges();
+            } catch(Exception e)
+            {
+                MessageBox.Show("Qualcosa è andato storto. Ricontrollare i dati inseriti. Inserimento non effettutato."
+                    +"\n");
+                Close();
+                return;
+            }
+            MessageBox.Show("La caratteristica all'incontro è stata inserita correttamente.");
+            CodiceCaratteristicheIncontro++;
         }
 
-        private bool CheckIfNotNullAttributes(CaratteristicheIncontro cc)
-        {
-        }
-
-        private int SetCodiceCaratteristicheIncontro()
+        public int SetCodiceCaratteristicheIncontro()
         {
             int codToSet = 0;
             List<CaratteristicheIncontro> lcar = dc.CaratteristicheIncontros.ToList();
@@ -112,6 +135,49 @@ namespace dbUFC
                 }
             }
             return (codToSet + 1);
+        }
+
+        private void UpdateRecord(string pareggio, string cfsconfitto, string cfvincitore)
+        {
+            List<Record> rec = dc.Records.ToList();
+            if(pareggio.Length > 0)
+            {
+                foreach(Record r in rec)
+                {
+                    if(r.CodiceFiscaleAtleta.Trim() == cfsconfitto)
+                    {
+                        int pr = int.Parse(r.Pareggi.Trim());
+                        pr++;
+                        r.Pareggi = pr.ToString();
+                    }
+                    if (r.CodiceFiscaleAtleta.Trim() == cfvincitore)
+                    {
+                        int pr2 = int.Parse(r.Pareggi.Trim());
+                        pr2++;
+                        r.Pareggi= pr2.ToString();
+                    }
+
+                }
+            } else
+            {
+                foreach(Record r in rec)
+                {
+                    if (r.CodiceFiscaleAtleta.Trim() == cfsconfitto)
+                    {
+                        int sc = int.Parse(r.Sconfitte.Trim());
+                        sc++;
+                        r.Sconfitte = sc.ToString();
+                    }
+                    if (r.CodiceFiscaleAtleta.Trim() == cfvincitore)
+                    {
+                        int vt = int.Parse(r.Vittorie.Trim());
+                        vt++;
+                        r.Vittorie = vt.ToString();
+                    }
+                }
+            }
+
+
         }
     }
 }

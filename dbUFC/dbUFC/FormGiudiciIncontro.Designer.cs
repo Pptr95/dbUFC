@@ -172,6 +172,7 @@
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(70, 21);
             this.bunifuCustomLabel1.TabIndex = 109;
             this.bunifuCustomLabel1.Text = "Inserisci";
+            this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
             // bunifuCustomLabel15
             // 
@@ -196,6 +197,7 @@
             this.bunifuImageButton1.TabIndex = 108;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // FormGiudiciIncontro
             // 

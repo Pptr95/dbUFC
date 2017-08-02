@@ -81,7 +81,15 @@ namespace dbUFC
                 return;
             }
             this.dc.ProgrammazioneIncontros.InsertOnSubmit(pro);
-            this.dc.SubmitChanges();
+            try
+            {
+                this.dc.SubmitChanges();
+            } catch(Exception e)
+            {
+                MessageBox.Show("Qualcosa è andato storto. Ricontrollare i dati inseriti. Inserimento non riuscito.");
+                Close();
+                return;
+            }
             MessageBox.Show("Il nuovo incontro è stato programmato correttamente il: "+ pro.Data.ToShortDateString());
         }
 

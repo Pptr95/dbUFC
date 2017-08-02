@@ -63,9 +63,15 @@ namespace dbUFC
                 }
             }
             this.dc.Arbitros.InsertOnSubmit(arb);
-            this.dc.SubmitChanges();
+            try
+            {
+                this.dc.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati inseriti. Inserimento non riuscito.");
+            }
             MessageBox.Show("Il nuovo arbitro è stato aggiunto correttamente.");
-
         }
 
         private bool CheckIfNotNullAttributes(Arbitro arb)

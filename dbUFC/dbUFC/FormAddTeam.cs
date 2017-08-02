@@ -71,12 +71,10 @@ namespace dbUFC
             tea.CodiceFiscaleAllenatore = bunifuTextbox3.text.Trim();
             if (bunifuTextbox2.text.Trim().Length != 0)
             {
-
-                Sponsor s = new Sponsor();
                 List<Sponsor> ls = dc.Sponsors.ToList();
-               if(!ContanisSponsor(ls, bunifuTextbox2.text.Trim()))
+               if(!ContainsSponsor(ls, bunifuTextbox2.text.Trim()))
                 {
-                    MessageBox.Show("Lo sponsor non esiste. Inserimento non riuscito.");
+                    MessageBox.Show("Lo sponsor inserito non esiste. Inserimento non riuscito.");
                     return;
                 }
                 SponsorizzazioneTeam sp = new SponsorizzazioneTeam();
@@ -163,7 +161,7 @@ namespace dbUFC
             sp.Visible = true;
         }
 
-        private bool ContanisSponsor(List<Sponsor> spo, string sponsorName)
+        public bool ContainsSponsor(List<Sponsor> spo, string sponsorName)
         {
             int counter = 0;
             foreach(Sponsor s in spo)
