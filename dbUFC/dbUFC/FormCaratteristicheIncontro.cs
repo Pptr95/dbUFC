@@ -106,7 +106,7 @@ namespace dbUFC
                 this.dc.SponsorizzazioneIncontros.InsertOnSubmit(sp);
             }
             //Update record of atleti based on what is write in textboxs
-            UpdateRecord(car.Pareggio, car.Sconfitto, car.Vincitore);
+            UpdateRecord(car.Pareggio, car.Sconfitto, car.Vincitore, car.CodiceFiscaleAtleta1, car.CodiceFiscaleAtleta2);
            
             this.dc.CaratteristicheIncontros.InsertOnSubmit(car);
             try
@@ -137,20 +137,20 @@ namespace dbUFC
             return (codToSet + 1);
         }
 
-        private void UpdateRecord(string pareggio, string cfsconfitto, string cfvincitore)
+        private void UpdateRecord(string pareggio, string cfsconfitto, string cfvincitore, string cfsconfitto2, string cfvincitore2)
         {
             List<Record> rec = dc.Records.ToList();
-            if(pareggio.Length > 0)
+            if(pareggio != null)
             {
                 foreach(Record r in rec)
                 {
-                    if(r.CodiceFiscaleAtleta.Trim() == cfsconfitto)
+                    if(r.CodiceFiscaleAtleta.Trim() == cfsconfitto2)
                     {
                         int pr = int.Parse(r.Pareggi.Trim());
                         pr++;
                         r.Pareggi = pr.ToString();
                     }
-                    if (r.CodiceFiscaleAtleta.Trim() == cfvincitore)
+                    if (r.CodiceFiscaleAtleta.Trim() == cfvincitore2)
                     {
                         int pr2 = int.Parse(r.Pareggi.Trim());
                         pr2++;
