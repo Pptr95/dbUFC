@@ -245,6 +245,7 @@
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(82, 21);
             this.bunifuCustomLabel10.TabIndex = 113;
             this.bunifuCustomLabel10.Text = "Conferma";
+            this.bunifuCustomLabel10.Click += new System.EventHandler(this.bunifuCustomLabel10_Click);
             // 
             // bunifuImageButton4
             // 
@@ -258,6 +259,7 @@
             this.bunifuImageButton4.TabIndex = 112;
             this.bunifuImageButton4.TabStop = false;
             this.bunifuImageButton4.Zoom = 10;
+            this.bunifuImageButton4.Click += new System.EventHandler(this.bunifuImageButton4_Click);
             // 
             // bunifuTextbox9
             // 
@@ -551,13 +553,14 @@
             this.bunifuImageButton7.TabIndex = 139;
             this.bunifuImageButton7.TabStop = false;
             this.bunifuImageButton7.Zoom = 10;
+            this.bunifuImageButton7.Click += new System.EventHandler(this.bunifuImageButton7_Click);
             // 
             // bunifuCustomLabel21
             // 
             this.bunifuCustomLabel21.AutoSize = true;
             this.bunifuCustomLabel21.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel21.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuCustomLabel21.Location = new System.Drawing.Point(47, 600);
+            this.bunifuCustomLabel21.Location = new System.Drawing.Point(45, 600);
             this.bunifuCustomLabel21.Name = "bunifuCustomLabel21";
             this.bunifuCustomLabel21.Size = new System.Drawing.Size(193, 29);
             this.bunifuCustomLabel21.TabIndex = 144;

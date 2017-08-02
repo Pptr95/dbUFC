@@ -26,3 +26,5 @@ C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormCaratteristicheIncon
 C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormViewArbitri.resources
 C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormCaratteristicheAtletaInIncontro.resources
 C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormAddAllenatore.resources
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormGiudiciIncontro.resources
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormMediciInIncontro.resources

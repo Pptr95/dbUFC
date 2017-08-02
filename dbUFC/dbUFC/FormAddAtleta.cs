@@ -13,7 +13,7 @@ namespace dbUFC
     public partial class FormAddAtleta : Form
     {
         readonly dbUFCDataContext dc = new dbUFCDataContext();
-        int _CodiceRecord;
+        int _CodiceRecord = 0;
 
         public int CodiceRecord
         {
@@ -216,7 +216,6 @@ namespace dbUFC
                 }
             }
             return (codToSet + 1).ToString();
-
         }
     }
 }
