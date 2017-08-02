@@ -14,6 +14,7 @@ namespace dbUFC
     {
         readonly dbUFCDataContext dc = new dbUFCDataContext();
         int _CodiceCategoria;
+
         public int CodiceCategoria
         {
             get { return _CodiceCategoria; }
@@ -61,7 +62,7 @@ namespace dbUFC
             }
             dc.Categorias.InsertOnSubmit(cat);
             dc.SubmitChanges();
-            MessageBox.Show("la nuova categoria è stata aggiunta correttamente.");
+            MessageBox.Show("La nuova categoria è stata aggiunta correttamente.");
             CodiceCategoria++;
         }
 

@@ -55,7 +55,6 @@ namespace dbUFC
                 return;
             }
 
-            Team t = new Team();
             List<Team> lt = dc.Teams.ToList();
             if (!ContainsTeam(lt, psi.CodiceTeam))
             {

@@ -43,7 +43,6 @@
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuTextbox5 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuTextbox6 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuTextbox7 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -76,6 +75,7 @@
             this.bunifuTextbox11 = new Bunifu.Framework.UI.BunifuTextbox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bunifuTextbox16 = new Bunifu.Framework.UI.BunifuTextbox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
@@ -230,20 +230,6 @@
             this.bunifuCustomLabel6.TabIndex = 45;
             this.bunifuCustomLabel6.Text = "Codice Team";
             // 
-            // bunifuTextbox6
-            // 
-            this.bunifuTextbox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuTextbox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox6.BackgroundImage")));
-            this.bunifuTextbox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox6.ForeColor = System.Drawing.Color.White;
-            this.bunifuTextbox6.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox6.Icon")));
-            this.bunifuTextbox6.Location = new System.Drawing.Point(564, 377);
-            this.bunifuTextbox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuTextbox6.Name = "bunifuTextbox6";
-            this.bunifuTextbox6.Size = new System.Drawing.Size(228, 33);
-            this.bunifuTextbox6.TabIndex = 44;
-            this.bunifuTextbox6.text = "";
-            // 
             // bunifuCustomLabel7
             // 
             this.bunifuCustomLabel7.AutoSize = true;
@@ -366,6 +352,7 @@
             this.bunifuCustomLabel16.Size = new System.Drawing.Size(82, 21);
             this.bunifuCustomLabel16.TabIndex = 59;
             this.bunifuCustomLabel16.Text = "Conferma";
+            this.bunifuCustomLabel16.Click += new System.EventHandler(this.bunifuCustomLabel16_Click);
             // 
             // bunifuCustomLabel17
             // 
@@ -392,6 +379,7 @@
             this.bunifuImageButton5.TabIndex = 57;
             this.bunifuImageButton5.TabStop = false;
             this.bunifuImageButton5.Zoom = 10;
+            this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton5_Click);
             // 
             // bunifuImageButton6
             // 
@@ -614,7 +602,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(846, 50);
+            this.pictureBox1.Location = new System.Drawing.Point(851, 50);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(72, 48);
             this.pictureBox1.TabIndex = 78;
@@ -629,12 +617,27 @@
             this.pictureBox2.TabIndex = 79;
             this.pictureBox2.TabStop = false;
             // 
+            // bunifuTextbox16
+            // 
+            this.bunifuTextbox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.bunifuTextbox16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox16.BackgroundImage")));
+            this.bunifuTextbox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox16.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextbox16.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox16.Icon")));
+            this.bunifuTextbox16.Location = new System.Drawing.Point(564, 377);
+            this.bunifuTextbox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuTextbox16.Name = "bunifuTextbox16";
+            this.bunifuTextbox16.Size = new System.Drawing.Size(228, 33);
+            this.bunifuTextbox16.TabIndex = 80;
+            this.bunifuTextbox16.text = "";
+            // 
             // FormAddAtleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1225, 622);
+            this.Controls.Add(this.bunifuTextbox16);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bunifuTextbox2);
@@ -658,7 +661,6 @@
             this.Controls.Add(this.bunifuImageButton5);
             this.Controls.Add(this.bunifuImageButton6);
             this.Controls.Add(this.bunifuCustomLabel6);
-            this.Controls.Add(this.bunifuTextbox6);
             this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.bunifuTextbox7);
             this.Controls.Add(this.bunifuCustomLabel8);
@@ -708,7 +710,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox6;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
@@ -741,5 +742,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox16;
     }
 }
