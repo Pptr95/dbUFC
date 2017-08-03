@@ -58,7 +58,6 @@ namespace dbUFC
         {
             FormGiudiciIncontro fg = new FormGiudiciIncontro();
             fg.Visible = true;
-
         }
 
         private void bunifuCustomLabel10_Click(object sender, EventArgs e)
@@ -179,6 +178,12 @@ namespace dbUFC
             }
 
 
+        }
+
+        private void bunifuImageButton6_Click(object sender, EventArgs e)
+        {
+            FormMediciInIncontro md = new FormMediciInIncontro();
+            md.Visible = true;
         }
     }
 }

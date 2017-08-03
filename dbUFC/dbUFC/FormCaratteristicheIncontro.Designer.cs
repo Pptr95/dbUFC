@@ -532,6 +532,7 @@
             this.bunifuImageButton6.TabIndex = 141;
             this.bunifuImageButton6.TabStop = false;
             this.bunifuImageButton6.Zoom = 10;
+            this.bunifuImageButton6.Click += new System.EventHandler(this.bunifuImageButton6_Click);
             // 
             // bunifuCustomLabel20
             // 
