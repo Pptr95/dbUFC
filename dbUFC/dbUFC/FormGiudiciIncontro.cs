@@ -49,5 +49,15 @@ namespace dbUFC
             }
             MessageBox.Show("Il giudice che ha giudicato è stato inserito correttamente.");
         }
+
+        private void bunifuCustomLabel3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace dbUFC
     {
         readonly dbUFCDataContext dc = new dbUFCDataContext();
         int _CodiceCaratteristicheIncontro = 0;
- 
+
         public int CodiceCaratteristicheIncontro
         {
             get { return _CodiceCaratteristicheIncontro; }
@@ -33,12 +33,6 @@ namespace dbUFC
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
-        {
-            FormCaratteristicheAtletaInIncontro atl = new FormCaratteristicheAtletaInIncontro();
-            atl.Visible = true;
-        }
-
-        private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
             FormCaratteristicheAtletaInIncontro atl = new FormCaratteristicheAtletaInIncontro();
             atl.Visible = true;
