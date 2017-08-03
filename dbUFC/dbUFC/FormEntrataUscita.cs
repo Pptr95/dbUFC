@@ -73,7 +73,6 @@ namespace dbUFC
                         { 
                             if (a.CodiceTeam.Trim() == null)
                             {
-
                             }
                         } catch(Exception)
                         {
@@ -101,9 +100,6 @@ namespace dbUFC
                         }
                         catch (Exception)
                         {
-                            MessageBox.Show("Questo atleta appartiene già ad un team. Per eseguire la transizione, eseguire un Uscita."+"\n"+
-                                "Inserimento non riuscito.");
-                            return;
                         }
                     }
                 }
