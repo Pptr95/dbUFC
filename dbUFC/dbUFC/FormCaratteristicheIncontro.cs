@@ -81,6 +81,7 @@ namespace dbUFC
             car.Data = bunifuDatepicker1.Value;
             car.Descrizione = bunifuTextbox5.text.Trim();
             car.Pareggio = bunifuTextbox12.text.Trim();
+            MessageBox.Show("Pareggio:" + car.Pareggio+".");
             car.Sconfitto = bunifuTextbox9.text.Trim();
             car.Vincitore = bunifuTextbox2.text.Trim();
             car.CodiceFiscaleArbitro = bunifuTextbox4.text.Trim();
@@ -140,7 +141,7 @@ namespace dbUFC
         private void UpdateRecord(string pareggio, string cfsconfitto, string cfvincitore, string cfsconfitto2, string cfvincitore2)
         {
             List<Record> rec = dc.Records.ToList();
-            if(pareggio != null)
+            if(pareggio.Length != 0)
             {
                 foreach(Record r in rec)
                 {
