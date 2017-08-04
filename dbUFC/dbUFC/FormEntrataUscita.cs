@@ -58,57 +58,27 @@ namespace dbUFC
                 return;
             }
 
+            if(!ContainsAtleta(eu.CodiceFiscaleAtleta))
+            {
+                MessageBox.Show("Il codice fiscale inserito non appartine e nessun'atleta. Inserimento non  riuscito.");
+                return;
+            }
+
             if(CheckIfNotNullAttributes(eu))
             {
                 return;
             }
-
-            if(eu.EntrataUscita1 == USCITA)
-            {
-                foreach(Atleta a in dc.Atletas.ToList())
-                {
-                    if(a.CodiceFiscale.Trim() == eu.CodiceFiscaleAtleta)
-                    {
-                        try
-                        { 
-                            if (a.CodiceTeam.Trim() == null)
-                            {
-                            }
-                        } catch(Exception)
-                        {
-                            MessageBox.Show("Questo atleta non appartiene a nessun team. Inserimento non riuscito.");
-                            return;
-                        }
-                    }
-                }
-            }
-
-            if (eu.EntrataUscita1 == ENTRATA)
-            {
-                foreach (Atleta a in dc.Atletas.ToList())
-                {
-                    if (a.CodiceFiscale.Trim() == eu.CodiceFiscaleAtleta)
-                    {
-                        try
-                        {
-                            if (a.CodiceTeam.Trim() != null)
-                            {
-                                MessageBox.Show("Questo atleta appartiene già ad un team. Per eseguire la transizione, eseguire un Uscita." + "\n" +
-                                "Inserimento non riuscito.");
-                                return;
-                            }
-                        }
-                        catch (Exception)
-                        {
-                        }
-                    }
-                }
-            }
-
-            UpdateAtleta(eu.CodiceFiscaleAtleta, eu.EntrataUscita1, eu.CodiceTeam);
-            this.dc.EntrataUscitas.InsertOnSubmit(eu);
             try
             {
+
+                if (!UpdateAtleta(eu.CodiceFiscaleAtleta, eu.EntrataUscita1, eu.CodiceTeam))
+            {
+                MessageBox.Show("Qualcosa è andato storto. Ricontrollare i campi ed assicurarsi che un atleta non deve appartenere" + 
+                    "a nessun Team se vuole fare un'Entrata e che se vuole fare un'Uscita allora deve appartenere ad un Team."
+                    + "Inserimento non riuscito.");
+                return;
+            }
+            this.dc.EntrataUscitas.InsertOnSubmit(eu);
                 this.dc.SubmitChanges();
             } catch (Exception)
             {
@@ -146,24 +116,36 @@ namespace dbUFC
             bunifuCustomDataGrid2.DataSource = query;
         }
 
-        private void UpdateAtleta(string cfAtleta, string entrataOrUscita, string codTeam)
+        private bool UpdateAtleta(string cfAtleta, string entrataOrUscita, string codTeam)
         {
            
             List<Atleta> la = dc.Atletas.ToList();
             foreach(Atleta a in la)
             {
-                if ((a.CodiceFiscale.Trim() == cfAtleta) && (string.Equals(entrataOrUscita, USCITA)))
+                if ((a.CodiceFiscale.Trim() == cfAtleta) && (string.Equals(entrataOrUscita, USCITA) && a.CodiceTeam.Trim() == codTeam))
                 {
                     a.CodiceTeam = null;
-
-                
+                    return true;
                 }
-                if ((a.CodiceFiscale.Trim() == cfAtleta) && (string.Equals(entrataOrUscita, ENTRATA)))
+                if ((a.CodiceFiscale.Trim() == cfAtleta) && (string.Equals(entrataOrUscita, ENTRATA) && (a.CodiceTeam == null)))
                 {
-                        a.CodiceTeam = codTeam;
+                    a.CodiceTeam = codTeam;
+                    return true;
                 } 
+            }
+            return false;
+         }
+
+        private bool ContainsAtleta(string cfAtleta)
+        {
+            foreach (Atleta a in dc.Atletas.ToList())
+            {
+                if (a.CodiceFiscale.Trim() == cfAtleta)
+                {
+                    return true;
                 }
             }
+            return false;
         }
-    
+    }
 }
