@@ -61,7 +61,7 @@ namespace dbUFC
 
             if ((bunifuCustomDataGrid2.SelectedCells.Count > 1) || (bunifuCustomDataGrid2.SelectedCells.Count == 0))
             {
-                MessageBox.Show("Selezionare solo una riga per Sponsor e solo una per Team. Modifica non effettuata");
+                MessageBox.Show("Selezionare solo una riga per Sponsor e solo una per CaratteristicaIncontro. Modifica non effettuata");
                 Close();
                 return;
             }
@@ -86,7 +86,7 @@ namespace dbUFC
                 Close();
                 return;
             }
-            MessageBox.Show("Lo sponsor è stato aggiunto al team con successo.");
+            MessageBox.Show("Lo sponsor è stato aggiunto alla caratteristica dell'incontro con successo.");
         }
 
         private void bunifuCustomLabel16_Click(object sender, EventArgs e)

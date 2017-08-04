@@ -146,5 +146,17 @@ namespace dbUFC
             FormAddSponsorToCaratteristicaIncontro sci = new FormAddSponsorToCaratteristicaIncontro();
             sci.Visible = true;
         }
+
+        private void bunifuImageButton10_Click(object sender, EventArgs e)
+        {
+            FormAddGiudiceAtCaratteristicheIncontro addg = new FormAddGiudiceAtCaratteristicheIncontro();
+            addg.Visible = true;
+        }
+
+        private void bunifuImageButton12_Click(object sender, EventArgs e)
+        {
+            FormAddMedicoAtCaratteristicheIncontro addm = new FormAddMedicoAtCaratteristicheIncontro();
+            addm.Visible = true;
+        }
     }
 }

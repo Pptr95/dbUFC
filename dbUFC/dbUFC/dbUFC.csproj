@@ -57,6 +57,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbUFC.dbml</DependentUpon>
     </Compile>
+    <Compile Include="FormAddMedicoAtCaratteristicheIncontro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddMedicoAtCaratteristicheIncontro.Designer.cs">
+      <DependentUpon>FormAddMedicoAtCaratteristicheIncontro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddGiudiceAtCaratteristicheIncontro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddGiudiceAtCaratteristicheIncontro.Designer.cs">
+      <DependentUpon>FormAddGiudiceAtCaratteristicheIncontro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddSponsorToCaratteristicaIncontro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +206,12 @@
     <None Include="dbUFC.dbml.layout">
       <DependentUpon>dbUFC.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="FormAddMedicoAtCaratteristicheIncontro.resx">
+      <DependentUpon>FormAddMedicoAtCaratteristicheIncontro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddGiudiceAtCaratteristicheIncontro.resx">
+      <DependentUpon>FormAddGiudiceAtCaratteristicheIncontro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddSponsorToCaratteristicaIncontro.resx">
       <DependentUpon>FormAddSponsorToCaratteristicaIncontro.cs</DependentUpon>
     </EmbeddedResource>
