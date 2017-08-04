@@ -29,3 +29,4 @@ C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormGiudiciIncontro.reso
 C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormMediciInIncontro.resources
 C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.Application.resources
 C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormAddSponsorToTeam.resources
+C:\Users\pptr\Desktop\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormAddSponsorToCaratteristicaIncontro.resources
