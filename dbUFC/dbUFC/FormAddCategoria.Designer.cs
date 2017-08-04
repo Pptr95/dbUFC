@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddCategoria));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -43,9 +46,14 @@
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuTextbox2 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuTextbox3 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -60,7 +68,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(654, 37);
+            this.panel1.Size = new System.Drawing.Size(946, 37);
             this.panel1.TabIndex = 0;
             // 
             // bunifuCustomLabel1
@@ -101,9 +109,9 @@
             this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(231, 388);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(278, 376);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(220, 41);
+            this.bunifuImageButton2.Size = new System.Drawing.Size(217, 41);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton2.TabIndex = 48;
             this.bunifuImageButton2.TabStop = false;
@@ -115,9 +123,9 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(442, 388);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(57, 376);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(217, 41);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(214, 41);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 50;
             this.bunifuImageButton1.TabStop = false;
@@ -130,7 +138,7 @@
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(310, 399);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(352, 387);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(64, 21);
             this.bunifuCustomLabel4.TabIndex = 51;
@@ -143,7 +151,7 @@
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(509, 399);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(120, 387);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(82, 21);
             this.bunifuCustomLabel5.TabIndex = 52;
@@ -192,12 +200,72 @@
             this.bunifuTextbox3.TabIndex = 54;
             this.bunifuTextbox3.text = "";
             // 
+            // bunifuCustomDataGrid1
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bunifuCustomDataGrid1.DoubleBuffered = true;
+            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
+            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
+            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.SeaShell;
+            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(516, 117);
+            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
+            this.bunifuCustomDataGrid1.ReadOnly = true;
+            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.bunifuCustomDataGrid1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.bunifuCustomDataGrid1.RowTemplate.Height = 24;
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(418, 300);
+            this.bunifuCustomDataGrid1.TabIndex = 170;
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(614, 69);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(237, 29);
+            this.bunifuCustomLabel2.TabIndex = 168;
+            this.bunifuCustomLabel2.Text = "Visualizza le categorie";
+            // 
+            // bunifuImageButton3
+            // 
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.Location = new System.Drawing.Point(516, 72);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Size = new System.Drawing.Size(70, 26);
+            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton3.TabIndex = 171;
+            this.bunifuImageButton3.TabStop = false;
+            this.bunifuImageButton3.Zoom = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
+            // 
             // FormAddCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(654, 444);
+            this.ClientSize = new System.Drawing.Size(946, 444);
+            this.Controls.Add(this.bunifuImageButton3);
+            this.Controls.Add(this.bunifuCustomDataGrid1);
+            this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuTextbox3);
             this.Controls.Add(this.bunifuTextbox2);
             this.Controls.Add(this.bunifuCustomLabel5);
@@ -215,6 +283,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +305,8 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox3;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox2;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
     }
 }

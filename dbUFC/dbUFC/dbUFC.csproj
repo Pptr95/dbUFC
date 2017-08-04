@@ -159,11 +159,11 @@
     <Compile Include="FormEntrataUscita.Designer.cs">
       <DependentUpon>FormEntrataUscita.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs">
+    <Compile Include="Application.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="Application.Designer.cs">
+      <DependentUpon>Application.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAddAtleta.cs">
       <SubType>Form</SubType>
@@ -233,8 +233,8 @@
     <EmbeddedResource Include="FormEntrataUscita.resx">
       <DependentUpon>FormEntrataUscita.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <EmbeddedResource Include="Application.resx">
+      <DependentUpon>Application.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddAtleta.resx">
       <DependentUpon>FormAddAtleta.cs</DependentUpon>

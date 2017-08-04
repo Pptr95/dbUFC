@@ -81,5 +81,11 @@ namespace dbUFC
 
         }
 
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            var query = from C in dc.Categorias
+                        select C;
+            bunifuCustomDataGrid1.DataSource = query;
+        }
     }
 }

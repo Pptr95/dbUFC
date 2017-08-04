@@ -101,7 +101,6 @@ namespace dbUFC
                 return;
             }
 
-
             List<Categoria> lc = dc.Categorias.ToList();
             if (!ContainsCategoria(lc, atl.CodiceCategoria))
             {
@@ -147,7 +146,16 @@ namespace dbUFC
                 return;
             }
             this.dc.Records.InsertOnSubmit(rec);
-            this.dc.SubmitChanges();
+            try
+            {
+                this.dc.SubmitChanges();
+            } catch(Exception)
+            {
+                MessageBox.Show("Qualcosa è andato storto. Ricontrollare i dati inseriti. Inserimento non effettutato."
+                   + "\n");
+                Close();
+                return;
+            }
             MessageBox.Show("Il nuovo atleta è stato inserito correttamente.");
         }
 
@@ -216,6 +224,20 @@ namespace dbUFC
                 }
             }
             return (codToSet + 1).ToString();
+        }
+
+        private void bunifuImageButton9_Click(object sender, EventArgs e)
+        {
+            var query = from C in dc.Categorias
+                        select C;
+            bunifuCustomDataGrid2.DataSource = query;
+        }
+
+        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        {
+            var query = from T in dc.Teams
+                        select T;
+            bunifuCustomDataGrid1.DataSource = query;
         }
     }
 }

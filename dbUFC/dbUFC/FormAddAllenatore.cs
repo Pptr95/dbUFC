@@ -120,5 +120,12 @@ namespace dbUFC
             this.dc.SubmitChanges();
             MessageBox.Show("La nuova arte marziale è stata aggiunta correttamente.");
         }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            var query = from A in dc.Allenatores
+                        select A;
+            bunifuCustomDataGrid2.DataSource = query;
+        }
     }
 }

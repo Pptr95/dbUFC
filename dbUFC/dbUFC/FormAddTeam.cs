@@ -173,5 +173,12 @@ namespace dbUFC
             }
             return counter > 0;
         }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            var query = from S in dc.Sponsors
+                        select S;
+            bunifuCustomDataGrid1.DataSource = query;
+        }
     }
 }

@@ -33,7 +33,15 @@ namespace dbUFC
         {
             Giudica si = new Giudica();
             List<Giudica> lsi = dc.Giudicas.ToList();
-            si.CodiceCaratteristicheIncontro = new FormCaratteristicheIncontro().SetCodiceCaratteristicheIncontro()-1;
+            if (bunifuCustomDataGrid2.SelectedCells.Count == 0 || bunifuCustomDataGrid2.SelectedCells.Count > 1)
+            {
+                MessageBox.Show("Seleziona il codice (solo uno) della caratteristica incontro per inserire in giudice."
+                    + " Inserimento non riuscito.");
+            }
+
+            int selectedrowindex = bunifuCustomDataGrid2.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = bunifuCustomDataGrid2.Rows[selectedrowindex];
+            si.CodiceCaratteristicheIncontro = int.Parse(Convert.ToString(selectedRow.Cells["CodiceCaratteristicheIncontro"].Value));
             si.CodiceFiscaleGiudice = bunifuTextbox1.text.Trim();
 
             this.dc.Giudicas.InsertOnSubmit(si);
@@ -41,7 +49,7 @@ namespace dbUFC
             {
                 this.dc.SubmitChanges();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 MessageBox.Show("Qualcosa è andato storto. Ricontrollare i dati inseriti. Inserimento non riuscito.");
                 Close();
@@ -58,6 +66,20 @@ namespace dbUFC
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void bunifuImageButton9_Click(object sender, EventArgs e)
+        {
+            var query = from G in dc.Giudices
+                        select G;
+            bunifuCustomDataGrid1.DataSource = query;
+        }
+
+        private void bunifuImageButton8_Click(object sender, EventArgs e)
+        {
+            var query = from C in dc.CaratteristicheIncontros
+                        select C;
+            bunifuCustomDataGrid2.DataSource = query;
         }
     }
 }

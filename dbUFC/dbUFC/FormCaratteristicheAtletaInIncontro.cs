@@ -43,22 +43,37 @@ namespace dbUFC
         {
             CaratteristicheAtletaInIncontro car = new CaratteristicheAtletaInIncontro();
             List<CaratteristicheAtletaInIncontro> la = dc.CaratteristicheAtletaInIncontros.ToList();
-            car.CodiceCaratteristicheIncontro = new FormCaratteristicheIncontro().SetCodiceCaratteristicheIncontro() - 1;
+            if (bunifuCustomDataGrid1.SelectedCells.Count == 0  || bunifuCustomDataGrid1.SelectedCells.Count > 1)
+            {
+                MessageBox.Show("Seleziona il codice (solo uno) della caratteristica incontro per inserire la caratteristica dell'atleta."
+                    +" Inserimento non riuscito.");
+            }
+
+            int selectedrowindex = bunifuCustomDataGrid1.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = bunifuCustomDataGrid1.Rows[selectedrowindex];
+            car.CodiceCaratteristicheIncontro = int.Parse(Convert.ToString(selectedRow.Cells["CodiceCaratteristicheIncontro"].Value));
+
             car.CodiceFiscaleAtleta = bunifuTextbox1.text.Trim();
             car.StatoAtleta = bunifuTextbox5.text.Trim();
             car.Guantini_Misura = bunifuTextbox12.text.Trim();
             car.Guantini_Marca = bunifuTextbox9.text.Trim();
+            try
+            {
+                if (!CheckAtleta(car.CodiceFiscaleAtleta, car.CodiceCaratteristicheIncontro))
+            {
+                MessageBox.Show("Questo atleta non ha combattuto nell'incontro selezionato. Ricontrollare i dati inseriti.");
+                Close();
+                return;
+            }
 
-            if (CheckIfNotNullAttributes(car))
+                if (CheckIfNotNullAttributes(car))
             {
                 return;
             }
             this.dc.CaratteristicheAtletaInIncontros.InsertOnSubmit(car);
-            try
-            {
-                this.dc.SubmitChanges();
+            this.dc.SubmitChanges();
 
-            } catch (Exception e)
+            } catch (Exception)
             {
                 MessageBox.Show("Qualcosa è andato storto. Ricontrollare i dati inseriti. Inserimento non riuscito.");
                 Close();
@@ -82,11 +97,27 @@ namespace dbUFC
             }
         }
 
-        private void bunifuImageButton8_Click(object sender, EventArgs e)
+        private void bunifuImageButton8_Click_1(object sender, EventArgs e)
         {
             var query = from C in dc.CaratteristicheIncontros
-                        select C; // query test
+                        select C;
             bunifuCustomDataGrid1.DataSource = query;
         }
+
+        private bool CheckAtleta(string cfAtleta, int codCaratteristicheIncontro)
+        {
+            foreach(CaratteristicheIncontro p in dc.CaratteristicheIncontros.ToList())
+            {
+                if(p.CodiceCaratteristicheIncontro == codCaratteristicheIncontro)
+                {
+                    if((p.CodiceFiscaleAtleta1.Trim() == cfAtleta) || (p.CodiceFiscaleAtleta2.Trim() == cfAtleta))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
     }
 }

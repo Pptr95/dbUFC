@@ -1,6 +1,6 @@
 ﻿namespace dbUFC
 {
-    partial class FormMain
+    partial class Application
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Application));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -80,7 +80,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(757, 41);
+            this.panel1.Size = new System.Drawing.Size(832, 41);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -221,7 +221,7 @@
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(69, 551);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(66, 551);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(150, 24);
             this.bunifuCustomLabel4.TabIndex = 10;
@@ -348,12 +348,12 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(208, 6);
             // 
-            // FormMain
+            // Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(757, 612);
+            this.ClientSize = new System.Drawing.Size(832, 612);
             this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.bunifuImageButton8);
             this.Controls.Add(this.bunifuCustomLabel6);
@@ -372,7 +372,7 @@
             this.Controls.Add(this.bunifuImageButton2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormMain";
+            this.Name = "Application";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

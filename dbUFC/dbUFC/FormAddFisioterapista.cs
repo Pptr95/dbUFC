@@ -103,5 +103,12 @@ namespace dbUFC
             }
             return counter > 0;
         }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            var query = from T in dc.Teams
+                        select T;
+            bunifuCustomDataGrid1.DataSource = query;
+        }
     }
 }

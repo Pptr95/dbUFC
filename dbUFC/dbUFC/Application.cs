@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace dbUFC
 {
-    public partial class FormMain : Form
+    public partial class Application : Form
     {
-        public FormMain()
+        public Application()
         {
             InitializeComponent();
         }

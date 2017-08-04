@@ -12,6 +12,8 @@ namespace dbUFC
 {
     public partial class FormViewArbitri : Form
     {
+        readonly dbUFCDataContext dc = new dbUFCDataContext();
+
         public FormViewArbitri()
         {
             InitializeComponent();
@@ -25,6 +27,13 @@ namespace dbUFC
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void FormViewArbitri_Load(object sender, EventArgs e)
+        {
+            var query = from A in dc.Arbitros
+                        select A;
+            bunifuCustomDataGrid1.DataSource = query;
         }
     }
 }

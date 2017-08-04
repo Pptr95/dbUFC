@@ -106,7 +106,7 @@ namespace dbUFC
             try
             {
                 this.dc.SubmitChanges();
-            } catch(Exception e)
+            } catch(Exception)
             {
                 MessageBox.Show("Qualcosa è andato storto. Ricontrollare i dati inseriti. Inserimento non effettutato."
                     +"\n");
@@ -178,6 +178,13 @@ namespace dbUFC
         {
             FormMediciInIncontro md = new FormMediciInIncontro();
             md.Visible = true;
+        }
+
+        private void bunifuImageButton8_Click(object sender, EventArgs e)
+        {
+            var query = from S in dc.Sponsors
+                        select S;
+            bunifuCustomDataGrid1.DataSource = query;
         }
     }
 }
