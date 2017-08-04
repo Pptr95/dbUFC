@@ -38,7 +38,7 @@
       <Column Name="CodiceFiscale" Type="System.String" DbType="Char(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Nazionalità" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
       <Column Name="RaggioGamba" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Età" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AnnoNascita" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
       <Column Name="Altezza" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
       <Column Name="Peso" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
       <Column Name="NomeDarte" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
@@ -95,7 +95,7 @@
     <Type Name="EntrataUscita">
       <Column Name="CodiceTeam" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="CodiceFiscaleAtleta" Type="System.String" DbType="Char(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="EntrataUscita" Member="EntrataUscita1" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EntrataOUscita" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
       <Column Name="Data" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="Atleta_EntrataUscita" Member="Atleta" ThisKey="CodiceFiscaleAtleta" OtherKey="CodiceFiscale" Type="Atleta" IsForeignKey="true" />
       <Association Name="Team_EntrataUscita" Member="Team" ThisKey="CodiceTeam" OtherKey="CodiceTeam" Type="Team" IsForeignKey="true" />
@@ -151,17 +151,6 @@
       <Association Name="Medico_Medicazione" Member="Medicaziones" ThisKey="CodiceFiscale" OtherKey="CodiceFiscaleMedico" Type="Medicazione" />
     </Type>
   </Table>
-  <Table Name="dbo.Pisicologo" Member="Pisicologos">
-    <Type Name="Pisicologo">
-      <Column Name="Telefono" Type="System.String" DbType="Char(50)" CanBeNull="true" />
-      <Column Name="Specializzazione" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Nome" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Cognome" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
-      <Column Name="CodiceFiscale" Type="System.String" DbType="Char(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="CodiceTeam" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
-      <Association Name="Team_Pisicologo" Member="Team" ThisKey="CodiceTeam" OtherKey="CodiceTeam" Type="Team" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.ProgrammazioneIncontro" Member="ProgrammazioneIncontros">
     <Type Name="ProgrammazioneIncontro">
       <Column Name="CodiceFiscaleAtleta2" Type="System.String" DbType="Char(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -176,6 +165,17 @@
       <Association Name="ProgrammazioneIncontro_CaratteristicheIncontro" Member="CaratteristicheIncontros" ThisKey="CodiceFiscaleAtleta2,CodiceFiscaleAtleta1,Data" OtherKey="CodiceFiscaleAtleta2,CodiceFiscaleAtleta1,Data" Type="CaratteristicheIncontro" />
       <Association Name="Atleta_ProgrammazioneIncontro" Member="Atleta" ThisKey="CodiceFiscaleAtleta1" OtherKey="CodiceFiscale" Type="Atleta" IsForeignKey="true" />
       <Association Name="Atleta_ProgrammazioneIncontro1" Member="Atleta1" ThisKey="CodiceFiscaleAtleta2" OtherKey="CodiceFiscale" Type="Atleta" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Psicologo" Member="Psicologos">
+    <Type Name="Psicologo">
+      <Column Name="Telefono" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Specializzazione" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nome" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Cognome" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CodiceFiscale" Type="System.String" DbType="Char(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodiceTeam" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Team_Psicologo" Member="Team" ThisKey="CodiceTeam" OtherKey="CodiceTeam" Type="Team" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Record" Member="Records">
@@ -219,7 +219,7 @@
       <Association Name="Team_Atleta" Member="Atletas" ThisKey="CodiceTeam" OtherKey="CodiceTeam" Type="Atleta" />
       <Association Name="Team_EntrataUscita" Member="EntrataUscitas" ThisKey="CodiceTeam" OtherKey="CodiceTeam" Type="EntrataUscita" />
       <Association Name="Team_Fisioterapista" Member="Fisioterapistas" ThisKey="CodiceTeam" OtherKey="CodiceTeam" Type="Fisioterapista" />
-      <Association Name="Team_Pisicologo" Member="Pisicologos" ThisKey="CodiceTeam" OtherKey="CodiceTeam" Type="Pisicologo" />
+      <Association Name="Team_Psicologo" Member="Psicologos" ThisKey="CodiceTeam" OtherKey="CodiceTeam" Type="Psicologo" />
       <Association Name="Team_SponsorizzazioneTeam" Member="SponsorizzazioneTeams" ThisKey="CodiceTeam" OtherKey="CodiceTeam" Type="SponsorizzazioneTeam" />
       <Association Name="Allenatore_Team" Member="Allenatore" ThisKey="CodiceFiscaleAllenatore" OtherKey="CodiceFiscale" Type="Allenatore" IsForeignKey="true" />
     </Type>

@@ -67,7 +67,7 @@ namespace dbUFC
             {
                 this.dc.SubmitChanges();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati inseriti. Inserimento non riuscito.");
             }

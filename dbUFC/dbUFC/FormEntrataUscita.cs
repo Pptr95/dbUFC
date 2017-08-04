@@ -47,11 +47,11 @@ namespace dbUFC
             EntrataUscita eu = new EntrataUscita();
             List<EntrataUscita> leu = dc.EntrataUscitas.ToList();
             eu.CodiceFiscaleAtleta = bunifuTextbox1.text.Trim();
-            eu.EntrataUscita1 = bunifuTextbox2.text.Trim();
+            eu.EntrataOUscita = bunifuTextbox2.text.Trim();
             eu.CodiceTeam = bunifuTextbox3.text.Trim();
             eu.Data = bunifuDatepicker1.Value;
 
-            if((eu.EntrataUscita1 != ENTRATA) && (eu.EntrataUscita1 != USCITA))
+            if((eu.EntrataOUscita != ENTRATA) && (eu.EntrataOUscita != USCITA))
             {
                 MessageBox.Show("Inserire nel campo dell'entrata/uscita la parola 'Entrata' per eseguire un'entrata" + "\n" +
                     "o 'Uscita' per eseguire un'uscita. Inserimento non riuscito.");
@@ -71,7 +71,7 @@ namespace dbUFC
             try
             {
 
-                if (!UpdateAtleta(eu.CodiceFiscaleAtleta, eu.EntrataUscita1, eu.CodiceTeam))
+                if (!UpdateAtleta(eu.CodiceFiscaleAtleta, eu.EntrataOUscita, eu.CodiceTeam))
             {
                 MessageBox.Show("Qualcosa è andato storto. Ricontrollare i campi ed assicurarsi che un atleta non deve appartenere" + 
                     "a nessun Team se vuole fare un'Entrata e che se vuole fare un'Uscita allora deve appartenere ad un Team."
@@ -91,7 +91,7 @@ namespace dbUFC
 
         private bool CheckIfNotNullAttributes(EntrataUscita eu)
         {
-            if ((eu.CodiceFiscaleAtleta.Length == 0) || (eu.EntrataUscita1.Length == 0) || (eu.CodiceTeam.Length == 0))
+            if ((eu.CodiceFiscaleAtleta.Length == 0) || (eu.EntrataOUscita.Length == 0) || (eu.CodiceTeam.Length == 0))
             {
                 MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito");
                 return true;

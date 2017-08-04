@@ -171,6 +171,12 @@
     <Compile Include="FormViewArbitri.Designer.cs">
       <DependentUpon>FormViewArbitri.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormViewArtiMarzialiAllenatore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewArtiMarzialiAllenatore.Designer.cs">
+      <DependentUpon>FormViewArtiMarzialiAllenatore.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormVisualizzaIncontri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewArbitri.resx">
       <DependentUpon>FormViewArbitri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewArtiMarzialiAllenatore.resx">
+      <DependentUpon>FormViewArtiMarzialiAllenatore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVisualizzaIncontri.resx">
       <DependentUpon>FormVisualizzaIncontri.cs</DependentUpon>

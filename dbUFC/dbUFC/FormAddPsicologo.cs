@@ -41,8 +41,8 @@ namespace dbUFC
 
         private void AddPsicologo()
         {
-            Pisicologo psi = new Pisicologo();
-            List<Pisicologo> lp = dc.Pisicologos.ToList();
+            Psicologo psi = new Psicologo();
+            List<Psicologo> lp = dc.Psicologos.ToList();
             psi.Nome = bunifuTextbox1.text.Trim();
             psi.Cognome = bunifuTextbox3.text.Trim();
             psi.CodiceFiscale = bunifuTextbox5.text.Trim();
@@ -62,7 +62,7 @@ namespace dbUFC
                 return;
             }
 
-            foreach (Pisicologo p in lp)
+            foreach (Psicologo p in lp)
             {
                 if (psi.CodiceFiscale.Trim() == p.CodiceFiscale.Trim())
                 {
@@ -70,12 +70,12 @@ namespace dbUFC
                     return;
                 }
             }
-            this.dc.Pisicologos.InsertOnSubmit(psi);
+            this.dc.Psicologos.InsertOnSubmit(psi);
             this.dc.SubmitChanges();
             MessageBox.Show("Il nuovo psicologo è stato aggiunto correttamente.");
         }
 
-        private bool CheckIfNotNullAttributes(Pisicologo pi)
+        private bool CheckIfNotNullAttributes(Psicologo pi)
         {
             if ((pi.Nome.Length == 0) || (pi.Cognome.Length == 0) || (pi.CodiceFiscale.Length == 0) || (pi.Telefono.Length == 0)
                 || (pi.Specializzazione.Length == 0) || (pi.CodiceTeam.Length == 0) )

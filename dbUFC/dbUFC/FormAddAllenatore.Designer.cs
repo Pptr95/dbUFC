@@ -255,9 +255,9 @@
             this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomLabel7.Location = new System.Drawing.Point(347, 373);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(64, 21);
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(69, 21);
             this.bunifuCustomLabel7.TabIndex = 65;
-            this.bunifuCustomLabel7.Text = "Annulla";
+            this.bunifuCustomLabel7.Text = "Indietro";
             this.bunifuCustomLabel7.Click += new System.EventHandler(this.bunifuCustomLabel7_Click);
             // 
             // bunifuImageButton2

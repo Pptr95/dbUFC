@@ -158,5 +158,16 @@ namespace dbUFC
             FormAddMedicoAtCaratteristicheIncontro addm = new FormAddMedicoAtCaratteristicheIncontro();
             addm.Visible = true;
         }
+
+        private void bunifuImageButton13_Click(object sender, EventArgs e)
+        {
+            FormViewArtiMarzialiAllenatore vm = new FormViewArtiMarzialiAllenatore();
+            vm.Visible = true;
+        }
+
+        private void bunifuImageButton14_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

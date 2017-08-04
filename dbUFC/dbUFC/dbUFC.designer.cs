@@ -69,12 +69,12 @@ namespace dbUFC
     partial void InsertMedico(Medico instance);
     partial void UpdateMedico(Medico instance);
     partial void DeleteMedico(Medico instance);
-    partial void InsertPisicologo(Pisicologo instance);
-    partial void UpdatePisicologo(Pisicologo instance);
-    partial void DeletePisicologo(Pisicologo instance);
     partial void InsertProgrammazioneIncontro(ProgrammazioneIncontro instance);
     partial void UpdateProgrammazioneIncontro(ProgrammazioneIncontro instance);
     partial void DeleteProgrammazioneIncontro(ProgrammazioneIncontro instance);
+    partial void InsertPsicologo(Psicologo instance);
+    partial void UpdatePsicologo(Psicologo instance);
+    partial void DeletePsicologo(Psicologo instance);
     partial void InsertRecord(Record instance);
     partial void UpdateRecord(Record instance);
     partial void DeleteRecord(Record instance);
@@ -226,19 +226,19 @@ namespace dbUFC
 			}
 		}
 		
-		public System.Data.Linq.Table<Pisicologo> Pisicologos
-		{
-			get
-			{
-				return this.GetTable<Pisicologo>();
-			}
-		}
-		
 		public System.Data.Linq.Table<ProgrammazioneIncontro> ProgrammazioneIncontros
 		{
 			get
 			{
 				return this.GetTable<ProgrammazioneIncontro>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Psicologo> Psicologos
+		{
+			get
+			{
+				return this.GetTable<Psicologo>();
 			}
 		}
 		
@@ -876,7 +876,7 @@ namespace dbUFC
 		
 		private string _RaggioGamba;
 		
-		private string _Età;
+		private string _AnnoNascita;
 		
 		private string _Altezza;
 		
@@ -918,8 +918,8 @@ namespace dbUFC
     partial void OnNazionalitàChanged();
     partial void OnRaggioGambaChanging(string value);
     partial void OnRaggioGambaChanged();
-    partial void OnEtàChanging(string value);
-    partial void OnEtàChanged();
+    partial void OnAnnoNascitaChanging(string value);
+    partial void OnAnnoNascitaChanged();
     partial void OnAltezzaChanging(string value);
     partial void OnAltezzaChanged();
     partial void OnPesoChanging(string value);
@@ -1064,22 +1064,22 @@ namespace dbUFC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Età", DbType="Char(50) NOT NULL", CanBeNull=false)]
-		public string Età
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AnnoNascita", DbType="Char(50) NOT NULL", CanBeNull=false)]
+		public string AnnoNascita
 		{
 			get
 			{
-				return this._Età;
+				return this._AnnoNascita;
 			}
 			set
 			{
-				if ((this._Età != value))
+				if ((this._AnnoNascita != value))
 				{
-					this.OnEtàChanging(value);
+					this.OnAnnoNascitaChanging(value);
 					this.SendPropertyChanging();
-					this._Età = value;
-					this.SendPropertyChanged("Età");
-					this.OnEtàChanged();
+					this._AnnoNascita = value;
+					this.SendPropertyChanged("AnnoNascita");
+					this.OnAnnoNascitaChanged();
 				}
 			}
 		}
@@ -2254,7 +2254,7 @@ namespace dbUFC
 		
 		private string _CodiceFiscaleAtleta;
 		
-		private string _EntrataUscita1;
+		private string _EntrataOUscita;
 		
 		private System.DateTime _Data;
 		
@@ -2270,8 +2270,8 @@ namespace dbUFC
     partial void OnCodiceTeamChanged();
     partial void OnCodiceFiscaleAtletaChanging(string value);
     partial void OnCodiceFiscaleAtletaChanged();
-    partial void OnEntrataUscita1Changing(string value);
-    partial void OnEntrataUscita1Changed();
+    partial void OnEntrataOUscitaChanging(string value);
+    partial void OnEntrataOUscitaChanged();
     partial void OnDataChanging(System.DateTime value);
     partial void OnDataChanged();
     #endregion
@@ -2331,22 +2331,22 @@ namespace dbUFC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="EntrataUscita", Storage="_EntrataUscita1", DbType="Char(50) NOT NULL", CanBeNull=false)]
-		public string EntrataUscita1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EntrataOUscita", DbType="Char(50) NOT NULL", CanBeNull=false)]
+		public string EntrataOUscita
 		{
 			get
 			{
-				return this._EntrataUscita1;
+				return this._EntrataOUscita;
 			}
 			set
 			{
-				if ((this._EntrataUscita1 != value))
+				if ((this._EntrataOUscita != value))
 				{
-					this.OnEntrataUscita1Changing(value);
+					this.OnEntrataOUscitaChanging(value);
 					this.SendPropertyChanging();
-					this._EntrataUscita1 = value;
-					this.SendPropertyChanged("EntrataUscita1");
-					this.OnEntrataUscita1Changed();
+					this._EntrataOUscita = value;
+					this.SendPropertyChanged("EntrataOUscita");
+					this.OnEntrataOUscitaChanged();
 				}
 			}
 		}
@@ -3463,229 +3463,6 @@ namespace dbUFC
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Pisicologo")]
-	public partial class Pisicologo : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _Telefono;
-		
-		private string _Specializzazione;
-		
-		private string _Nome;
-		
-		private string _Cognome;
-		
-		private string _CodiceFiscale;
-		
-		private string _CodiceTeam;
-		
-		private EntityRef<Team> _Team;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnTelefonoChanging(string value);
-    partial void OnTelefonoChanged();
-    partial void OnSpecializzazioneChanging(string value);
-    partial void OnSpecializzazioneChanged();
-    partial void OnNomeChanging(string value);
-    partial void OnNomeChanged();
-    partial void OnCognomeChanging(string value);
-    partial void OnCognomeChanged();
-    partial void OnCodiceFiscaleChanging(string value);
-    partial void OnCodiceFiscaleChanged();
-    partial void OnCodiceTeamChanging(string value);
-    partial void OnCodiceTeamChanged();
-    #endregion
-		
-		public Pisicologo()
-		{
-			this._Team = default(EntityRef<Team>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Telefono", DbType="Char(50)")]
-		public string Telefono
-		{
-			get
-			{
-				return this._Telefono;
-			}
-			set
-			{
-				if ((this._Telefono != value))
-				{
-					this.OnTelefonoChanging(value);
-					this.SendPropertyChanging();
-					this._Telefono = value;
-					this.SendPropertyChanged("Telefono");
-					this.OnTelefonoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Specializzazione", DbType="Char(50) NOT NULL", CanBeNull=false)]
-		public string Specializzazione
-		{
-			get
-			{
-				return this._Specializzazione;
-			}
-			set
-			{
-				if ((this._Specializzazione != value))
-				{
-					this.OnSpecializzazioneChanging(value);
-					this.SendPropertyChanging();
-					this._Specializzazione = value;
-					this.SendPropertyChanged("Specializzazione");
-					this.OnSpecializzazioneChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nome", DbType="Char(50) NOT NULL", CanBeNull=false)]
-		public string Nome
-		{
-			get
-			{
-				return this._Nome;
-			}
-			set
-			{
-				if ((this._Nome != value))
-				{
-					this.OnNomeChanging(value);
-					this.SendPropertyChanging();
-					this._Nome = value;
-					this.SendPropertyChanged("Nome");
-					this.OnNomeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cognome", DbType="Char(50) NOT NULL", CanBeNull=false)]
-		public string Cognome
-		{
-			get
-			{
-				return this._Cognome;
-			}
-			set
-			{
-				if ((this._Cognome != value))
-				{
-					this.OnCognomeChanging(value);
-					this.SendPropertyChanging();
-					this._Cognome = value;
-					this.SendPropertyChanged("Cognome");
-					this.OnCognomeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodiceFiscale", DbType="Char(16) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string CodiceFiscale
-		{
-			get
-			{
-				return this._CodiceFiscale;
-			}
-			set
-			{
-				if ((this._CodiceFiscale != value))
-				{
-					this.OnCodiceFiscaleChanging(value);
-					this.SendPropertyChanging();
-					this._CodiceFiscale = value;
-					this.SendPropertyChanged("CodiceFiscale");
-					this.OnCodiceFiscaleChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodiceTeam", DbType="Char(50) NOT NULL", CanBeNull=false)]
-		public string CodiceTeam
-		{
-			get
-			{
-				return this._CodiceTeam;
-			}
-			set
-			{
-				if ((this._CodiceTeam != value))
-				{
-					if (this._Team.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnCodiceTeamChanging(value);
-					this.SendPropertyChanging();
-					this._CodiceTeam = value;
-					this.SendPropertyChanged("CodiceTeam");
-					this.OnCodiceTeamChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Team_Pisicologo", Storage="_Team", ThisKey="CodiceTeam", OtherKey="CodiceTeam", IsForeignKey=true)]
-		public Team Team
-		{
-			get
-			{
-				return this._Team.Entity;
-			}
-			set
-			{
-				Team previousValue = this._Team.Entity;
-				if (((previousValue != value) 
-							|| (this._Team.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Team.Entity = null;
-						previousValue.Pisicologos.Remove(this);
-					}
-					this._Team.Entity = value;
-					if ((value != null))
-					{
-						value.Pisicologos.Add(this);
-						this._CodiceTeam = value.CodiceTeam;
-					}
-					else
-					{
-						this._CodiceTeam = default(string);
-					}
-					this.SendPropertyChanged("Team");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ProgrammazioneIncontro")]
 	public partial class ProgrammazioneIncontro : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -4047,6 +3824,229 @@ namespace dbUFC
 		{
 			this.SendPropertyChanging();
 			entity.ProgrammazioneIncontro = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Psicologo")]
+	public partial class Psicologo : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Telefono;
+		
+		private string _Specializzazione;
+		
+		private string _Nome;
+		
+		private string _Cognome;
+		
+		private string _CodiceFiscale;
+		
+		private string _CodiceTeam;
+		
+		private EntityRef<Team> _Team;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTelefonoChanging(string value);
+    partial void OnTelefonoChanged();
+    partial void OnSpecializzazioneChanging(string value);
+    partial void OnSpecializzazioneChanged();
+    partial void OnNomeChanging(string value);
+    partial void OnNomeChanged();
+    partial void OnCognomeChanging(string value);
+    partial void OnCognomeChanged();
+    partial void OnCodiceFiscaleChanging(string value);
+    partial void OnCodiceFiscaleChanged();
+    partial void OnCodiceTeamChanging(string value);
+    partial void OnCodiceTeamChanged();
+    #endregion
+		
+		public Psicologo()
+		{
+			this._Team = default(EntityRef<Team>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Telefono", DbType="Char(50)")]
+		public string Telefono
+		{
+			get
+			{
+				return this._Telefono;
+			}
+			set
+			{
+				if ((this._Telefono != value))
+				{
+					this.OnTelefonoChanging(value);
+					this.SendPropertyChanging();
+					this._Telefono = value;
+					this.SendPropertyChanged("Telefono");
+					this.OnTelefonoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Specializzazione", DbType="Char(50) NOT NULL", CanBeNull=false)]
+		public string Specializzazione
+		{
+			get
+			{
+				return this._Specializzazione;
+			}
+			set
+			{
+				if ((this._Specializzazione != value))
+				{
+					this.OnSpecializzazioneChanging(value);
+					this.SendPropertyChanging();
+					this._Specializzazione = value;
+					this.SendPropertyChanged("Specializzazione");
+					this.OnSpecializzazioneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nome", DbType="Char(50) NOT NULL", CanBeNull=false)]
+		public string Nome
+		{
+			get
+			{
+				return this._Nome;
+			}
+			set
+			{
+				if ((this._Nome != value))
+				{
+					this.OnNomeChanging(value);
+					this.SendPropertyChanging();
+					this._Nome = value;
+					this.SendPropertyChanged("Nome");
+					this.OnNomeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cognome", DbType="Char(50) NOT NULL", CanBeNull=false)]
+		public string Cognome
+		{
+			get
+			{
+				return this._Cognome;
+			}
+			set
+			{
+				if ((this._Cognome != value))
+				{
+					this.OnCognomeChanging(value);
+					this.SendPropertyChanging();
+					this._Cognome = value;
+					this.SendPropertyChanged("Cognome");
+					this.OnCognomeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodiceFiscale", DbType="Char(16) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string CodiceFiscale
+		{
+			get
+			{
+				return this._CodiceFiscale;
+			}
+			set
+			{
+				if ((this._CodiceFiscale != value))
+				{
+					this.OnCodiceFiscaleChanging(value);
+					this.SendPropertyChanging();
+					this._CodiceFiscale = value;
+					this.SendPropertyChanged("CodiceFiscale");
+					this.OnCodiceFiscaleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodiceTeam", DbType="Char(50) NOT NULL", CanBeNull=false)]
+		public string CodiceTeam
+		{
+			get
+			{
+				return this._CodiceTeam;
+			}
+			set
+			{
+				if ((this._CodiceTeam != value))
+				{
+					if (this._Team.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnCodiceTeamChanging(value);
+					this.SendPropertyChanging();
+					this._CodiceTeam = value;
+					this.SendPropertyChanged("CodiceTeam");
+					this.OnCodiceTeamChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Team_Psicologo", Storage="_Team", ThisKey="CodiceTeam", OtherKey="CodiceTeam", IsForeignKey=true)]
+		public Team Team
+		{
+			get
+			{
+				return this._Team.Entity;
+			}
+			set
+			{
+				Team previousValue = this._Team.Entity;
+				if (((previousValue != value) 
+							|| (this._Team.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Team.Entity = null;
+						previousValue.Psicologos.Remove(this);
+					}
+					this._Team.Entity = value;
+					if ((value != null))
+					{
+						value.Psicologos.Add(this);
+						this._CodiceTeam = value.CodiceTeam;
+					}
+					else
+					{
+						this._CodiceTeam = default(string);
+					}
+					this.SendPropertyChanged("Team");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	
@@ -4721,7 +4721,7 @@ namespace dbUFC
 		
 		private EntitySet<Fisioterapista> _Fisioterapistas;
 		
-		private EntitySet<Pisicologo> _Pisicologos;
+		private EntitySet<Psicologo> _Psicologos;
 		
 		private EntitySet<SponsorizzazioneTeam> _SponsorizzazioneTeams;
 		
@@ -4744,7 +4744,7 @@ namespace dbUFC
 			this._Atletas = new EntitySet<Atleta>(new Action<Atleta>(this.attach_Atletas), new Action<Atleta>(this.detach_Atletas));
 			this._EntrataUscitas = new EntitySet<EntrataUscita>(new Action<EntrataUscita>(this.attach_EntrataUscitas), new Action<EntrataUscita>(this.detach_EntrataUscitas));
 			this._Fisioterapistas = new EntitySet<Fisioterapista>(new Action<Fisioterapista>(this.attach_Fisioterapistas), new Action<Fisioterapista>(this.detach_Fisioterapistas));
-			this._Pisicologos = new EntitySet<Pisicologo>(new Action<Pisicologo>(this.attach_Pisicologos), new Action<Pisicologo>(this.detach_Pisicologos));
+			this._Psicologos = new EntitySet<Psicologo>(new Action<Psicologo>(this.attach_Psicologos), new Action<Psicologo>(this.detach_Psicologos));
 			this._SponsorizzazioneTeams = new EntitySet<SponsorizzazioneTeam>(new Action<SponsorizzazioneTeam>(this.attach_SponsorizzazioneTeams), new Action<SponsorizzazioneTeam>(this.detach_SponsorizzazioneTeams));
 			this._Allenatore = default(EntityRef<Allenatore>);
 			OnCreated();
@@ -4853,16 +4853,16 @@ namespace dbUFC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Team_Pisicologo", Storage="_Pisicologos", ThisKey="CodiceTeam", OtherKey="CodiceTeam")]
-		public EntitySet<Pisicologo> Pisicologos
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Team_Psicologo", Storage="_Psicologos", ThisKey="CodiceTeam", OtherKey="CodiceTeam")]
+		public EntitySet<Psicologo> Psicologos
 		{
 			get
 			{
-				return this._Pisicologos;
+				return this._Psicologos;
 			}
 			set
 			{
-				this._Pisicologos.Assign(value);
+				this._Psicologos.Assign(value);
 			}
 		}
 		
@@ -4969,13 +4969,13 @@ namespace dbUFC
 			entity.Team = null;
 		}
 		
-		private void attach_Pisicologos(Pisicologo entity)
+		private void attach_Psicologos(Psicologo entity)
 		{
 			this.SendPropertyChanging();
 			entity.Team = this;
 		}
 		
-		private void detach_Pisicologos(Pisicologo entity)
+		private void detach_Psicologos(Psicologo entity)
 		{
 			this.SendPropertyChanging();
 			entity.Team = null;

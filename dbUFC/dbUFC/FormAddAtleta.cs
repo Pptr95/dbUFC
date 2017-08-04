@@ -87,7 +87,7 @@ namespace dbUFC
             atl.Cognome = bunifuTextbox11.text.Trim();
             atl.Classe = bunifuTextbox3.text.Trim();
             atl.CodiceFiscale = bunifuTextbox10.text.Trim();
-            atl.Età= bunifuTextbox5.text.Trim();
+            atl.AnnoNascita = bunifuTextbox5.text.Trim();
             atl.Nazionalità = bunifuTextbox8.text.Trim();
             atl.Altezza = bunifuTextbox12.text.Trim();
             atl.NomeDarte = bunifuTextbox4.text.Trim();
@@ -162,7 +162,7 @@ namespace dbUFC
         private bool CheckIfNotNullAttributes(Atleta atl)
         {
             if ((atl.Nome.Length == 0) || (atl.Cognome.Length == 0) || (atl.CodiceFiscale.Length == 0) || (atl.Classe.Length == 0)
-                || (atl.Età.Length == 0) || (atl.Altezza.Length == 0) || (atl.Peso.Length == 0) || (atl.NomeDarte.Length == 0)
+                || (atl.AnnoNascita.Length == 0) || (atl.Altezza.Length == 0) || (atl.Peso.Length == 0) || (atl.NomeDarte.Length == 0)
                 || (atl.RaggioGamba.Length == 0) || (atl.Nazionalità.Length == 0))
             {
                 MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito");
