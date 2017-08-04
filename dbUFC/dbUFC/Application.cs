@@ -134,5 +134,11 @@ namespace dbUFC
             FormVisualizzaIncontri caratt = new FormVisualizzaIncontri();
             caratt.Visible = true;
         }
+
+        private void bunifuImageButton9_Click(object sender, EventArgs e)
+        {
+            FormAddSponsorToTeam tta = new FormAddSponsorToTeam();
+            tta.Visible = true;
+        }
     }
 }

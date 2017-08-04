@@ -333,10 +333,10 @@
             this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
             this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(246, 217);
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(246, 200);
             this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(183, 44);
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(271, 82);
             this.bunifuDatepicker1.TabIndex = 91;
             this.bunifuDatepicker1.Value = new System.DateTime(2017, 7, 31, 14, 33, 20, 41);
             // 

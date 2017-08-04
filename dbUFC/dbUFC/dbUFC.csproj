@@ -57,6 +57,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbUFC.dbml</DependentUpon>
     </Compile>
+    <Compile Include="FormAddSponsorToTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddSponsorToTeam.Designer.cs">
+      <DependentUpon>FormAddSponsorToTeam.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCaratteristicheAtletaInIncontro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     <None Include="dbUFC.dbml.layout">
       <DependentUpon>dbUFC.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="FormAddSponsorToTeam.resx">
+      <DependentUpon>FormAddSponsorToTeam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCaratteristicheAtletaInIncontro.resx">
       <DependentUpon>FormCaratteristicheAtletaInIncontro.cs</DependentUpon>
     </EmbeddedResource>

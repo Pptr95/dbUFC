@@ -52,7 +52,6 @@
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -60,6 +59,7 @@
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuCustomDataGrid2 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
@@ -249,20 +249,6 @@
             this.bunifuDragControl2.TargetControl = this.panel1;
             this.bunifuDragControl2.Vertical = true;
             // 
-            // bunifuDatepicker1
-            // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(770, 101);
-            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(183, 44);
-            this.bunifuDatepicker1.TabIndex = 63;
-            this.bunifuDatepicker1.Value = new System.DateTime(2017, 7, 31, 14, 33, 20, 41);
-            // 
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.AutoSize = true;
@@ -388,6 +374,20 @@
             this.bunifuCustomDataGrid2.Size = new System.Drawing.Size(478, 257);
             this.bunifuCustomDataGrid2.TabIndex = 164;
             // 
+            // bunifuDatepicker1
+            // 
+            this.bunifuDatepicker1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.bunifuDatepicker1.BorderRadius = 0;
+            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
+            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bunifuDatepicker1.FormatCustom = null;
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(770, 81);
+            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(251, 93);
+            this.bunifuDatepicker1.TabIndex = 63;
+            this.bunifuDatepicker1.Value = new System.DateTime(2017, 7, 31, 14, 33, 20, 41);
+            // 
             // FormEntrataUscita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -448,7 +448,6 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
@@ -456,5 +455,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid2;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
+        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
     }
 }

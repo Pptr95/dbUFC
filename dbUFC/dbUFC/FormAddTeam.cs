@@ -14,7 +14,7 @@ namespace dbUFC
     {
         readonly dbUFCDataContext dc = new dbUFCDataContext();
         int _CodiceTeam;
-
+       
         public int CodiceTeam
         {
             get { return _CodiceTeam; }
@@ -52,21 +52,12 @@ namespace dbUFC
             Close();
         }
 
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            AddTeam();
-        }
-
-        private void bunifuCustomLabel5_Click(object sender, EventArgs e)
-        {
-            AddTeam();
-        }
-
         private void AddTeam()
         {
             Team tea = new Team();
             List<Team> lt = dc.Teams.ToList();
             tea.CodiceTeam = SetCodiceTeam();
+            CodiceTeam = int.Parse(tea.CodiceTeam);
             tea.NomeTeam = bunifuTextbox1.text.Trim();
             tea.CodiceFiscaleAllenatore = bunifuTextbox3.text.Trim();
             if (bunifuTextbox2.text.Trim().Length != 0)
@@ -106,7 +97,7 @@ namespace dbUFC
             this.dc.Teams.InsertOnSubmit(tea);
             this.dc.SubmitChanges();
             MessageBox.Show("Il nuovo team è stato aggiunto correttamente.");
-            CodiceTeam++;
+            bunifuImageButton1.Visible = true;
         }
 
         private bool CheckIfNotNullAttributes(Team tea)
@@ -179,6 +170,44 @@ namespace dbUFC
             var query = from S in dc.Sponsors
                         select S;
             bunifuCustomDataGrid1.DataSource = query;
+        }
+
+        private void bunifuImageButton8_Click(object sender, EventArgs e)
+        {
+            AddTeam();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+                
+                List<Sponsor> ls = dc.Sponsors.ToList();
+                if (!ContainsSponsor(ls, bunifuTextbox2.text.Trim()))
+                {
+                    MessageBox.Show("Lo sponsor inserito non esiste. Inserimento non riuscito.");
+                    return;
+                }
+                SponsorizzazioneTeam sp = new SponsorizzazioneTeam(); 
+                sp.CodiceTeam = CodiceTeam.ToString();
+                sp.NomeSponsor = bunifuTextbox2.text.Trim();
+                this.dc.SponsorizzazioneTeams.InsertOnSubmit(sp);
+            try
+            {
+                this.dc.SubmitChanges();
+            } catch(Exception)
+            {
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati inseriti. Inserimento non effettuato.");
+                Close();
+                return;
+            }
+            MessageBox.Show("Lo Sponsor al Team è stato aggiunto con successo.");
+          
+        }
+
+        private void bunifuImageButton3_Click_1(object sender, EventArgs e)
+        {
+            var query = from A in dc.Allenatores
+                        select A;
+            bunifuCustomDataGrid2.DataSource = query;
         }
     }
 }

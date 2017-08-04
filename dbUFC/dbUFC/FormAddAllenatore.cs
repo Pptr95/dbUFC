@@ -55,7 +55,7 @@ namespace dbUFC
             }
             foreach (Allenatore a in la)
             {
-                if (all.CodiceFiscale.Trim() == a.CodiceFiscale.Trim())
+                if (all.CodiceFiscale == a.CodiceFiscale.Trim())
                 {
                     MessageBox.Show("Questo allenatore è già presente. Inserimento non riuscito.");
                     return;
@@ -63,11 +63,13 @@ namespace dbUFC
             }
             this.dc.Allenatores.InsertOnSubmit(all);
             try
-            {
+                {
                 this.dc.SubmitChanges();
-            } catch (Exception e)
+            } catch (Exception)
             {
                 MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati inseriti. Inserimento non riuscito.");
+                Close();
+                return;
             }
             MessageBox.Show("Il nuovo allenatore è stato aggiunto correttamente.");
         }
@@ -117,7 +119,15 @@ namespace dbUFC
                 }
             }
             this.dc.ArteMarzialePraticatas.InsertOnSubmit(art);
-            this.dc.SubmitChanges();
+            try
+            {
+                this.dc.SubmitChanges();
+            } catch(Exception)
+            {
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati inseriti. Inserimento non riuscito.");
+                Close();
+                return;
+            }
             MessageBox.Show("La nuova arte marziale è stata aggiunta correttamente.");
         }
 

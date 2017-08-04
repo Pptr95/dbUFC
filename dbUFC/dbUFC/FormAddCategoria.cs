@@ -13,13 +13,6 @@ namespace dbUFC
     public partial class FormAddCategoria : Form
     {
         readonly dbUFCDataContext dc = new dbUFCDataContext();
-        int _CodiceCategoria;
-
-        public int CodiceCategoria
-        {
-            get { return _CodiceCategoria; }
-            set { _CodiceCategoria = value; }
-        }
 
         public FormAddCategoria()
         {
@@ -63,7 +56,6 @@ namespace dbUFC
             dc.Categorias.InsertOnSubmit(cat);
             dc.SubmitChanges();
             MessageBox.Show("La nuova categoria è stata aggiunta correttamente.");
-            CodiceCategoria++;
         }
 
         private string SetCodiceCategoria()
