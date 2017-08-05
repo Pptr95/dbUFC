@@ -165,6 +165,12 @@
     <Compile Include="FormMediciInIncontro.Designer.cs">
       <DependentUpon>FormMediciInIncontro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOpzioni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOpzioni.Designer.cs">
+      <DependentUpon>FormOpzioni.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormViewArbitri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,12 +182,6 @@
     </Compile>
     <Compile Include="FormViewArtiMarzialiAllenatore.Designer.cs">
       <DependentUpon>FormViewArtiMarzialiAllenatore.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormVisualizzaIncontri.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormVisualizzaIncontri.Designer.cs">
-      <DependentUpon>FormVisualizzaIncontri.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEntrataUscita.cs">
       <SubType>Form</SubType>
@@ -266,14 +266,14 @@
     <EmbeddedResource Include="FormMediciInIncontro.resx">
       <DependentUpon>FormMediciInIncontro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOpzioni.resx">
+      <DependentUpon>FormOpzioni.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormViewArbitri.resx">
       <DependentUpon>FormViewArbitri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewArtiMarzialiAllenatore.resx">
       <DependentUpon>FormViewArtiMarzialiAllenatore.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormVisualizzaIncontri.resx">
-      <DependentUpon>FormVisualizzaIncontri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEntrataUscita.resx">
       <DependentUpon>FormEntrataUscita.cs</DependentUpon>

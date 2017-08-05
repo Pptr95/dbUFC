@@ -12,45 +12,11 @@ namespace dbUFC
 {
     public partial class Application : Form
     {
+        readonly dbUFCDataContext dc = new dbUFCDataContext();
+
         public Application()
         {
             InitializeComponent();
-        }
-
-        private void bunifuImageButton8_Click(object sender, EventArgs e)
-        {
-            FormVisualizzaIncontri caratt = new FormVisualizzaIncontri();
-            caratt.Visible = true;
-        }
-
-        private void bunifuImageButton9_Click(object sender, EventArgs e)
-        {
-            FormAddSponsorToTeam tta = new FormAddSponsorToTeam();
-            tta.Visible = true;
-        }
-
-        private void bunifuImageButton11_Click(object sender, EventArgs e)
-        {
-            FormAddSponsorToCaratteristicaIncontro sci = new FormAddSponsorToCaratteristicaIncontro();
-            sci.Visible = true;
-        }
-
-        private void bunifuImageButton10_Click(object sender, EventArgs e)
-        {
-            FormAddGiudiceAtCaratteristicheIncontro addg = new FormAddGiudiceAtCaratteristicheIncontro();
-            addg.Visible = true;
-        }
-
-        private void bunifuImageButton12_Click(object sender, EventArgs e)
-        {
-            FormAddMedicoAtCaratteristicheIncontro addm = new FormAddMedicoAtCaratteristicheIncontro();
-            addm.Visible = true;
-        }
-
-        private void bunifuImageButton13_Click(object sender, EventArgs e)
-        {
-            FormViewArtiMarzialiAllenatore vm = new FormViewArtiMarzialiAllenatore();
-            vm.Visible = true;
         }
 
         private void bunifuImageButton14_Click(object sender, EventArgs e)
@@ -100,14 +66,23 @@ namespace dbUFC
             pro.Visible = true;
         }
 
-        private void bunifuImageButton7_Click(object sender, EventArgs e)
+        private void bunifuFlatButton8_Click(object sender, EventArgs e)
         {
-
+            FormOpzioni fo = new dbUFC.FormOpzioni();
+            fo.Visible = true;
         }
 
-        private void bunifuCustomLabel6_Click(object sender, EventArgs e)
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
+            FormCaratteristicheIncontro car = new FormCaratteristicheIncontro();
+            car.Visible = true;
+        }
 
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            var query = from I in dc.ProgrammazioneIncontros
+                        select I;
+            bunifuCustomDataGrid1.DataSource = query;
         }
     }
 }
