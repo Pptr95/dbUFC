@@ -62,7 +62,7 @@ namespace dbUFC
 
         private void bunifuFlatButton7_Click(object sender, EventArgs e)
         {
-            FormProgrammazioneIncontro pro = new FormProgrammazioneIncontro();
+            FormProgrammazioneIncontro pro = new FormProgrammazioneIncontro(this);
             pro.Visible = true;
         }
 
@@ -80,8 +80,24 @@ namespace dbUFC
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            var query = from I in dc.ProgrammazioneIncontros
-                        select I;
+            UpdateIncontriProgrammati();
+        }
+
+        public void UpdateIncontriProgrammati()
+        {
+            var query = from P in dc.ProgrammazioneIncontros
+                        select new
+                        {
+                            P.CodiceFiscaleAtleta1,
+                            P.CodiceFiscaleAtleta2,
+                            P.Data,
+                            NumeroRound = P.CaratteristicheRound_NumeroRound,
+                            MinutiPerRound = P.CaratteristicheRound_MinutiPerRound,
+                            P.OraInizio,
+                            P.Città,
+                            P.Stato,
+                            P.CostoIngresso
+                        };
             bunifuCustomDataGrid1.DataSource = query;
         }
     }

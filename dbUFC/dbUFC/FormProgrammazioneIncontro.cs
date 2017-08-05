@@ -13,9 +13,11 @@ namespace dbUFC
     public partial class FormProgrammazioneIncontro : Form
     {
         readonly dbUFCDataContext dc = new dbUFCDataContext();
+        readonly Application appStrategy;
 
-        public FormProgrammazioneIncontro()
+        public FormProgrammazioneIncontro(Application app)
         {
+            appStrategy = app;
             InitializeComponent();
         }
 
@@ -91,6 +93,7 @@ namespace dbUFC
                 return;
             }
             MessageBox.Show("Il nuovo incontro è stato programmato correttamente il: "+ pro.Data.ToShortDateString());
+            this.appStrategy.UpdateIncontriProgrammati();
         }
 
         private bool CheckIfNotNullAttributes(ProgrammazioneIncontro arb)
