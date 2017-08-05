@@ -100,5 +100,11 @@ namespace dbUFC
                         };
             bunifuCustomDataGrid1.DataSource = query;
         }
+
+        private void bunifuFlatButton9_Click(object sender, EventArgs e)
+        {
+            FormQueries fq = new FormQueries();
+            fq.Visible = true;
+        }
     }
 }
