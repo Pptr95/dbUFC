@@ -50,8 +50,9 @@ namespace dbUFC
 
         private void bunifuImageButton7_Click(object sender, EventArgs e)
         {
-            FormGiudiciIncontro fg = new FormGiudiciIncontro();
-            fg.Visible = true;
+
+            FormAddGiudiceAtCaratteristicheIncontro addg = new FormAddGiudiceAtCaratteristicheIncontro();
+            addg.Visible = true;
         }
 
         private void bunifuCustomLabel10_Click(object sender, EventArgs e)
@@ -101,7 +102,7 @@ namespace dbUFC
             }
             //Update record of atleti based on what is write in textboxs
             UpdateRecord(car.Pareggio, car.Sconfitto, car.Vincitore, car.CodiceFiscaleAtleta1, car.CodiceFiscaleAtleta2);
-           
+            UpdatePresenzeIncontriUfficiali(car.CodiceFiscaleArbitro);
             this.dc.CaratteristicheIncontros.InsertOnSubmit(car);
             try
             {
@@ -176,8 +177,8 @@ namespace dbUFC
 
         private void bunifuImageButton6_Click(object sender, EventArgs e)
         {
-            FormMediciInIncontro md = new FormMediciInIncontro();
-            md.Visible = true;
+            FormAddMedicoAtCaratteristicheIncontro addm = new FormAddMedicoAtCaratteristicheIncontro();
+            addm.Visible = true;
         }
 
         private void bunifuImageButton8_Click(object sender, EventArgs e)
@@ -185,6 +186,20 @@ namespace dbUFC
             var query = from S in dc.Sponsors
                         select S;
             bunifuCustomDataGrid1.DataSource = query;
+        }
+
+        private void UpdatePresenzeIncontriUfficiali(string cfArbitro)
+        {
+            foreach (Arbitro a in dc.Arbitros.ToList())
+            {
+                if (a.CodiceFiscale.Trim() == cfArbitro)
+                {
+                    int num = int.Parse(a.NumeroPresenzeIncontriUfficiali.Trim());
+                    ++num;
+                    string numString = num.ToString();
+                    a.NumeroPresenzeIncontriUfficiali = numString;
+                }
+            }
         }
     }
 }

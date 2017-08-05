@@ -95,7 +95,15 @@ namespace dbUFC
                 return;
             }
             this.dc.Teams.InsertOnSubmit(tea);
-            this.dc.SubmitChanges();
+            try
+            {
+                this.dc.SubmitChanges();
+            } catch(Exception)
+            {
+                MessageBox.Show("Qualcosa è andato storto. Inserimento non effettuato.");
+                Close();
+                return;
+            }
             MessageBox.Show("Il nuovo team è stato aggiunto correttamente.");
             bunifuImageButton1.Visible = true;
         }

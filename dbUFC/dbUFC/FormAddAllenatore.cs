@@ -72,6 +72,7 @@ namespace dbUFC
                 return;
             }
             MessageBox.Show("Il nuovo allenatore è stato aggiunto correttamente.");
+            UpdateAllenatori();
         }
 
         private bool CheckIfNotNullAttributes(Allenatore all)
@@ -132,6 +133,11 @@ namespace dbUFC
         }
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            UpdateAllenatori();
+        }
+
+        private void UpdateAllenatori()
         {
             var query = from A in dc.Allenatores
                         select A;

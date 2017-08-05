@@ -96,7 +96,22 @@ namespace dbUFC
                 Close();
                 return;
             }
+            UpdateNumeroIncontriGiudicati(gi.CodiceFiscaleGiudice);
             MessageBox.Show("Il giudice è stato aggiunto alla caratteristica dell'incontro con successo.");
+        }
+
+        private void UpdateNumeroIncontriGiudicati(string cfGiudice)
+        {
+            foreach (Giudice g in dc.Giudices.ToList())
+            {
+                if (g.CodiceFiscale.Trim() == cfGiudice)
+                {
+                    int num = int.Parse(g.NumeroIncotriGiudicati.Trim());
+                    ++num;
+                    string numString = num.ToString();
+                    g.NumeroIncotriGiudicati = numString;
+                }
+            }
         }
     }
 }

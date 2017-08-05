@@ -153,18 +153,6 @@
     <Compile Include="FormCaratteristicheIncontro.Designer.cs">
       <DependentUpon>FormCaratteristicheIncontro.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormGiudiciIncontro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGiudiciIncontro.Designer.cs">
-      <DependentUpon>FormGiudiciIncontro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormMediciInIncontro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMediciInIncontro.Designer.cs">
-      <DependentUpon>FormMediciInIncontro.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormOpzioni.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,12 +247,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCaratteristicheIncontro.resx">
       <DependentUpon>FormCaratteristicheIncontro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGiudiciIncontro.resx">
-      <DependentUpon>FormGiudiciIncontro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMediciInIncontro.resx">
-      <DependentUpon>FormMediciInIncontro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOpzioni.resx">
       <DependentUpon>FormOpzioni.cs</DependentUpon>
