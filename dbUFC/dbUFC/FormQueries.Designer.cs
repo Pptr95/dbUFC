@@ -60,6 +60,8 @@
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuImageButton10 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuImageButton11 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
@@ -72,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel10
@@ -411,12 +414,39 @@
             this.bunifuCustomLabel9.TabIndex = 187;
             this.bunifuCustomLabel9.Text = "Visualizza il team migliore";
             // 
+            // bunifuImageButton11
+            // 
+            this.bunifuImageButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.bunifuImageButton11.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton11.Image")));
+            this.bunifuImageButton11.ImageActive = null;
+            this.bunifuImageButton11.Location = new System.Drawing.Point(437, 414);
+            this.bunifuImageButton11.Name = "bunifuImageButton11";
+            this.bunifuImageButton11.Size = new System.Drawing.Size(49, 29);
+            this.bunifuImageButton11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton11.TabIndex = 190;
+            this.bunifuImageButton11.TabStop = false;
+            this.bunifuImageButton11.Zoom = 10;
+            this.bunifuImageButton11.Click += new System.EventHandler(this.bunifuImageButton11_Click);
+            // 
+            // bunifuCustomLabel12
+            // 
+            this.bunifuCustomLabel12.AutoSize = true;
+            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel12.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuCustomLabel12.Location = new System.Drawing.Point(492, 414);
+            this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
+            this.bunifuCustomLabel12.Size = new System.Drawing.Size(241, 21);
+            this.bunifuCustomLabel12.TabIndex = 189;
+            this.bunifuCustomLabel12.Text = "Visualizza l\'età media degli atleti";
+            // 
             // FormQueries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(1608, 660);
+            this.Controls.Add(this.bunifuImageButton11);
+            this.Controls.Add(this.bunifuCustomLabel12);
             this.Controls.Add(this.bunifuImageButton10);
             this.Controls.Add(this.bunifuCustomLabel9);
             this.Controls.Add(this.bunifuImageButton9);
@@ -456,6 +486,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,5 +520,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton10;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton11;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
     }
 }

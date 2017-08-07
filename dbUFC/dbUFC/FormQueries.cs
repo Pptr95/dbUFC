@@ -130,6 +130,16 @@ namespace dbUFC
                          }).Take(1);
             bunifuCustomDataGrid1.DataSource = query;
         }
+
+        private void bunifuImageButton11_Click(object sender, EventArgs e)
+        {
+            var query = (from A in dc.Atletas
+                        select new {
+                            EtàMedia = dc.Atletas.Average(p => (Convert.ToInt32(DateTime.Now.ToString("yyyy")) - Convert.ToInt32(p.AnnoNascita)))
+                        }).Distinct();
+
+            bunifuCustomDataGrid1.DataSource = query;
+        }
     }
 }
 /*
