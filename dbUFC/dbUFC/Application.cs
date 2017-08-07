@@ -86,6 +86,7 @@ namespace dbUFC
         public void UpdateIncontriProgrammati()
         {
             var query = from P in dc.ProgrammazioneIncontros
+                        orderby P.Data descending
                         select new
                         {
                             P.CodiceFiscaleAtleta1,
