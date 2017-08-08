@@ -142,6 +142,7 @@ namespace dbUFC
         }
     }
 }
+//TODO  add query for viewing for each team fisioterapisti e psicologi
 /*
 
 
