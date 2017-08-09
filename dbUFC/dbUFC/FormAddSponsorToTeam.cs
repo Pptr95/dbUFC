@@ -38,6 +38,11 @@ namespace dbUFC
             Close();
         }
 
+        private void bunifuImageButton6_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void bunifuCustomLabel16_Click(object sender, EventArgs e)
         {
             AddSponsorToTeam();

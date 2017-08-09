@@ -140,15 +140,32 @@ namespace dbUFC
 
             bunifuCustomDataGrid1.DataSource = query;
         }
+
+        private void bunifuImageButton12_Click(object sender, EventArgs e)
+        {
+            var query = from S in dc.Sponsors
+                        select S;
+            bunifuCustomDataGrid2.DataSource = query;
+        }
+
+        private void bunifuImageButton10_Click_1(object sender, EventArgs e)
+        {
+            if ((bunifuCustomDataGrid2.SelectedCells.Count > 1) || (bunifuCustomDataGrid2.SelectedCells.Count == 0))
+            {
+                MessageBox.Show("Selezionare solo una riga.");
+                Close();
+                return;
+            }
+            int selectedrowindex = bunifuCustomDataGrid2.SelectedCells[0].RowIndex;
+
+            DataGridViewRow selectedRow = bunifuCustomDataGrid2.Rows[selectedrowindex];
+
+            string nomeSponsor = Convert.ToString(selectedRow.Cells["NomeSponsor"].Value);
+
+            var query = from T in dc.Teams
+                        join S in dc.SponsorizzazioneTeams on T.CodiceTeam equals S.CodiceTeam into grp
+                        select new { NumeroTeamSponsorizzati = grp.Where(p => p.NomeSponsor == nomeSponsor).Count()};
+            bunifuCustomDataGrid1.DataSource = query;
+        }
     }
 }
-//TODO  add query for viewing for each team fisioterapisti e psicologi
-/*
-
-
-    select top(1) t.CodiceTeam, t.NomeTeam, sum(cast(r.Vittorie as int)-cast(r.Sconfitte as int)) as Positività
-from Atleta a, Record r, Team t
-where a.CodiceFiscale = r.CodiceFiscaleAtleta
-and t.CodiceTeam = a.CodiceTeam
-group by t.CodiceTeam, t.NomeTeam
-order by Positività desc*/
