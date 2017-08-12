@@ -89,5 +89,50 @@ namespace dbUFC
                 return false;
             }
         }
+
+        private void FormAddGiudice_Load(object sender, EventArgs e)
+        {
+            bunifuCustomDataGrid2.DataSource = from G in dc.Giudices select G;
+        }
+
+        private void bunifuCustomLabel7_Click(object sender, EventArgs e)
+        {
+            DeleteGiudice();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            DeleteGiudice();
+        }
+
+        private void DeleteGiudice()
+        {
+            if ((bunifuCustomDataGrid2.SelectedCells.Count > 1) || (bunifuCustomDataGrid2.SelectedCells.Count == 0))
+            {
+                MessageBox.Show("Selezionare solo la riga del giudice da eliminare. Modifica non effettuata.");
+                Close();
+                return;
+            }
+            int selectedrowindex = bunifuCustomDataGrid2.SelectedCells[0].RowIndex;
+
+            DataGridViewRow selectedRow = bunifuCustomDataGrid2.Rows[selectedrowindex];
+            string cfGiudice = Convert.ToString(selectedRow.Cells["CodiceFiscale"].Value);
+            MessageBox.Show("ok" + cfGiudice.Length);
+            foreach (Giudice g in dc.Giudices.ToList())
+            {
+                if(g.CodiceFiscale.Trim() == Convert.ToString(selectedRow.Cells["CodiceFiscale"].Value).Trim()) {
+                    dc.Giudices.DeleteOnSubmit(g);
+                }
+            }
+            try
+            {
+                dc.SubmitChanges();
+            } catch (Exception)
+            {
+                MessageBox.Show("Qualcos è andato storto, ricontrollare i dati. Eliminazione non effettuata.");
+                return;
+            }
+            MessageBox.Show("Giudice eliminato con successo.");
+        }
     }
 }

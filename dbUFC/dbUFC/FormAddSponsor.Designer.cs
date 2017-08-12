@@ -127,7 +127,7 @@
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(315, 264);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(307, 264);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(69, 21);
             this.bunifuCustomLabel4.TabIndex = 55;
@@ -201,6 +201,7 @@
             this.bunifuImageButton4.TabIndex = 118;
             this.bunifuImageButton4.TabStop = false;
             this.bunifuImageButton4.Zoom = 10;
+            this.bunifuImageButton4.Click += new System.EventHandler(this.bunifuImageButton4_Click);
             // 
             // bunifuCustomLabel15
             // 

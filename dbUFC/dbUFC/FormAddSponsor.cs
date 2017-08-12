@@ -103,5 +103,10 @@ namespace dbUFC
                         select S;
             bunifuCustomDataGrid1.DataSource = query;
         }
+
+        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
