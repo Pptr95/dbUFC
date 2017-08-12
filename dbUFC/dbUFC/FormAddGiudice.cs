@@ -117,7 +117,6 @@ namespace dbUFC
 
             DataGridViewRow selectedRow = bunifuCustomDataGrid2.Rows[selectedrowindex];
             string cfGiudice = Convert.ToString(selectedRow.Cells["CodiceFiscale"].Value);
-            MessageBox.Show("ok" + cfGiudice.Length);
             foreach (Giudice g in dc.Giudices.ToList())
             {
                 if(g.CodiceFiscale.Trim() == Convert.ToString(selectedRow.Cells["CodiceFiscale"].Value).Trim()) {
@@ -129,10 +128,11 @@ namespace dbUFC
                 dc.SubmitChanges();
             } catch (Exception)
             {
-                MessageBox.Show("Qualcos è andato storto, ricontrollare i dati. Eliminazione non effettuata.");
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati. Eliminazione non effettuata.");
                 return;
             }
             MessageBox.Show("Giudice eliminato con successo.");
+            Close();
         }
     }
 }

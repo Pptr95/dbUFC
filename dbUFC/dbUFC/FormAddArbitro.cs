@@ -87,5 +87,52 @@ namespace dbUFC
                 return false;
             }
         }
+
+        private void FormAddArbitro_Load(object sender, EventArgs e)
+        {
+            bunifuCustomDataGrid2.DataSource = from A in dc.Arbitros select A;
+        }
+
+        private void bunifuCustomLabel13_Click(object sender, EventArgs e)
+        {
+            DeleteArbitro();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            DeleteArbitro();
+        }
+
+        private void DeleteArbitro()
+        {
+            if ((bunifuCustomDataGrid2.SelectedCells.Count > 1) || (bunifuCustomDataGrid2.SelectedCells.Count == 0))
+            {
+                MessageBox.Show("Selezionare solo la riga dell'arbitro da eliminare. Modifica non effettuata.");
+                Close();
+                return;
+            }
+            int selectedrowindex = bunifuCustomDataGrid2.SelectedCells[0].RowIndex;
+
+            DataGridViewRow selectedRow = bunifuCustomDataGrid2.Rows[selectedrowindex];
+            string cfArbitro = Convert.ToString(selectedRow.Cells["CodiceFiscale"].Value);
+            foreach (Arbitro a in dc.Arbitros.ToList())
+            {
+                if (a.CodiceFiscale.Trim() == Convert.ToString(selectedRow.Cells["CodiceFiscale"].Value).Trim())
+                {
+                    dc.Arbitros.DeleteOnSubmit(a);
+                }
+            }
+            try
+            {
+                dc.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati. Eliminazione non effettuata.");
+                return;
+            }
+            MessageBox.Show("Arbitro eliminato con successo.");
+            Close();
+        }
     }
 }
