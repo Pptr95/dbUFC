@@ -59,7 +59,7 @@ namespace dbUFC
 
             if ((bunifuCustomDataGrid1.SelectedCells.Count > 1) || (bunifuCustomDataGrid1.SelectedCells.Count == 0))
             {
-                MessageBox.Show("Selezionare solo una riga per Medico e solo una per CaratteristicaIncontro. Modifica non effettuata");
+                MessageBox.Show("Selezionare solo una riga per Medico e solo una per CaratteristicaIncontro. Modifica non effettuata.");
                 Close();
                 return;
             }

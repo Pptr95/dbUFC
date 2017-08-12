@@ -93,7 +93,7 @@ namespace dbUFC
         {
             if ((eu.CodiceFiscaleAtleta.Length == 0) || (eu.EntrataOUscita.Length == 0) || (eu.CodiceTeam.Length == 0))
             {
-                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito");
+                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito.");
                 return true;
             }
             else

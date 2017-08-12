@@ -131,7 +131,16 @@ namespace dbUFC
                 }
             }
             this.dc.Atletas.InsertOnSubmit(atl);
-            this.dc.SubmitChanges();
+            try
+            {
+                this.dc.SubmitChanges();
+            } catch(Exception)
+            {
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati. Inserimento non riuscito.");
+                Close();
+                return;
+            }
+
             //insert record of given atleta
             Record rec = new Record();
             List<Record> lrec = dc.Records.ToList();
@@ -151,7 +160,7 @@ namespace dbUFC
                 this.dc.SubmitChanges();
             } catch(Exception)
             {
-                MessageBox.Show("Qualcosa è andato storto. Ricontrollare i dati inseriti. Inserimento non effettutato."
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati inseriti. Inserimento non effettutato."
                    + "\n");
                 Close();
                 return;
@@ -165,7 +174,7 @@ namespace dbUFC
                 || (atl.AnnoNascita.Length == 0) || (atl.Altezza.Length == 0) || (atl.Peso.Length == 0) || (atl.NomeDarte.Length == 0)
                 || (atl.RaggioGamba.Length == 0) || (atl.Nazionalità.Length == 0))
             {
-                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito");
+                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito.");
                 return true;
             }
             else

@@ -73,8 +73,18 @@ namespace dbUFC
                 }
             }
             this.dc.Fisioterapistas.InsertOnSubmit(fisio);
-            this.dc.SubmitChanges();
+            try
+            {
+                this.dc.SubmitChanges();
+            } catch(Exception)
+            {
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati. Inserimento non riuscito.");
+                Close();
+                return;
+            }
+
             MessageBox.Show("Il nuovo fisioterapista è stato aggiunto correttamente.");
+            Close();
         }
 
         private bool CheckIfNotNullAttributes(Fisioterapista fi)
@@ -82,7 +92,7 @@ namespace dbUFC
             if ((fi.Nome.Length == 0) || (fi.Cognome.Length == 0) || (fi.CodiceFiscale.Length == 0) || (fi.Telefono.Length == 0)
                 || (fi.Specializzazione.Length == 0) || (fi.CodiceTeam.Length == 0) || (fi.OspedaleProvenienza.Length == 0))
             {
-                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito");
+                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito.");
                 return true;
             }
             else

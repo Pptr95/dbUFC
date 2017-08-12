@@ -63,7 +63,15 @@ namespace dbUFC
                 }
             }
             this.dc.Medicos.InsertOnSubmit(med);
-            this.dc.SubmitChanges();
+            try
+            {
+                this.dc.SubmitChanges();
+            } catch(Exception)
+            {
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati. Inserimento non riuscito.");
+                Close();
+                return;
+            }
             MessageBox.Show("Il nuovo medico è stato aggiunto correttamente.");
         }
 
@@ -72,7 +80,7 @@ namespace dbUFC
             if ((arb.Nome.Length == 0) || (arb.Cognome.Length == 0) || (arb.CodiceFiscale.Length == 0) || (arb.Telefono.Length == 0)
                 || (arb.OspedaleProvenienza.Length == 0) || (arb.Specilizzazione.Length == 0))
             {
-                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito");
+                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito.");
                 return true;
             }
             else

@@ -121,11 +121,11 @@
             this.bunifuCustomLabel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.bunifuCustomLabel14.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel14.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel14.Location = new System.Drawing.Point(946, 662);
+            this.bunifuCustomLabel14.Location = new System.Drawing.Point(950, 662);
             this.bunifuCustomLabel14.Name = "bunifuCustomLabel14";
-            this.bunifuCustomLabel14.Size = new System.Drawing.Size(64, 21);
+            this.bunifuCustomLabel14.Size = new System.Drawing.Size(68, 21);
             this.bunifuCustomLabel14.TabIndex = 127;
-            this.bunifuCustomLabel14.Text = "Annulla";
+            this.bunifuCustomLabel14.Text = "indietro";
             this.bunifuCustomLabel14.Click += new System.EventHandler(this.bunifuCustomLabel14_Click);
             // 
             // bunifuImageButton1

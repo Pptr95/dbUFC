@@ -54,7 +54,15 @@ namespace dbUFC
 
             }
             dc.Categorias.InsertOnSubmit(cat);
-            dc.SubmitChanges();
+            try
+            {
+                dc.SubmitChanges();
+            } catch(Exception)
+            {
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati. Inserimento non riuscito.");
+                Close();
+                return;
+            }
             MessageBox.Show("La nuova categoria è stata aggiunta correttamente.");
         }
 

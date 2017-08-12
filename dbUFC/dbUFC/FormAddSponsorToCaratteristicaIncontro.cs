@@ -48,7 +48,7 @@ namespace dbUFC
 
             if ((bunifuCustomDataGrid1.SelectedCells.Count > 1) || (bunifuCustomDataGrid1.SelectedCells.Count == 0))
             {
-                MessageBox.Show("Selezionare solo una riga per Sponsor e solo una per CaratteristicaIncontro. Modifica non effettuata");
+                MessageBox.Show("Selezionare solo una riga per Sponsor e solo una per CaratteristicaIncontro. Modifica non effettuata.");
                 Close();
                 return;
             }
@@ -61,7 +61,7 @@ namespace dbUFC
 
             if ((bunifuCustomDataGrid2.SelectedCells.Count > 1) || (bunifuCustomDataGrid2.SelectedCells.Count == 0))
             {
-                MessageBox.Show("Selezionare solo una riga per Sponsor e solo una per CaratteristicaIncontro. Modifica non effettuata");
+                MessageBox.Show("Selezionare solo una riga per Sponsor e solo una per CaratteristicaIncontro. Modifica non effettuata.");
                 Close();
                 return;
             }
@@ -82,7 +82,7 @@ namespace dbUFC
             }
             catch (Exception)
             {
-                MessageBox.Show("Qualcosa è andato storto. Ricontrollare i dati inseriti. Modifica non effettuata.");
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati inseriti. Modifica non effettuata.");
                 Close();
                 return;
             }

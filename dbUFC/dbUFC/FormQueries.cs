@@ -167,5 +167,10 @@ namespace dbUFC
                         select new { NumeroTeamSponsorizzati = grp.Where(p => p.NomeSponsor == nomeSponsor).Count()};
             bunifuCustomDataGrid1.DataSource = query;
         }
+
+        private void FormQueries_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

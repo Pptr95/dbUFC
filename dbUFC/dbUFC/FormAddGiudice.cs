@@ -63,8 +63,17 @@ namespace dbUFC
                 }
             }
             this.dc.Giudices.InsertOnSubmit(giu);
-            this.dc.SubmitChanges();
+            try
+            {
+                this.dc.SubmitChanges();
+            } catch(Exception)
+            {
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati. Inserimento non riuscito.");
+                Close();
+                return;
+            }
             MessageBox.Show("Il nuovo giudice è stato aggiunto correttamente.");
+            Close();
         }
 
         private bool CheckIfNotNullAttributes(Giudice arb)
@@ -72,7 +81,7 @@ namespace dbUFC
             if ((arb.Nome.Length == 0) || (arb.Cognome.Length == 0) || (arb.CodiceFiscale.Length == 0) || (arb.Telefono.Length == 0)
                 || (arb.CodiceCartellinoGiudice.Length == 0) || (arb.NumeroIncotriGiudicati.Length == 0))
             {
-                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito");
+                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito.");
                 return true;
             }
             else

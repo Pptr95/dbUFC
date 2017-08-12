@@ -53,12 +53,20 @@ namespace dbUFC
             {
                 if (s.NomeSponsor.Trim() == spo.NomeSponsor)
                 {
-                    MessageBox.Show("Questo sponsor è già presente. Inserimento non riuscito");
+                    MessageBox.Show("Questo sponsor è già presente. Inserimento non riuscito.");
                     return;
                 }
             }
             this.dc.Sponsors.InsertOnSubmit(spo);
-            this.dc.SubmitChanges();
+            try
+            {
+                this.dc.SubmitChanges();
+            } catch(Exception)
+            {
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati. Inserimento non riuscito.");
+                Close();
+                return;
+            }
             MessageBox.Show("Il nuovo sponsor è stato aggiunto correttamente.");
         }
         //this is a test to remove instance in database

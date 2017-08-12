@@ -71,7 +71,15 @@ namespace dbUFC
                 }
             }
             this.dc.Psicologos.InsertOnSubmit(psi);
-            this.dc.SubmitChanges();
+            try
+            {
+                this.dc.SubmitChanges();
+            } catch(Exception)
+            {
+                MessageBox.Show("Qualcosa è andato storto, ricontrollare i dati. Inserimento non riuscito.");
+                Close();
+                return;
+            }
             MessageBox.Show("Il nuovo psicologo è stato aggiunto correttamente.");
         }
 
@@ -80,7 +88,7 @@ namespace dbUFC
             if ((pi.Nome.Length == 0) || (pi.Cognome.Length == 0) || (pi.CodiceFiscale.Length == 0) || (pi.Telefono.Length == 0)
                 || (pi.Specializzazione.Length == 0) || (pi.CodiceTeam.Length == 0) )
             {
-                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito");
+                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito.");
                 return true;
             }
             else

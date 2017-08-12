@@ -102,7 +102,7 @@ namespace dbUFC
                 || (arb.CaratteristicheRound_NumeroRound.Length == 0) || (arb.CaratteristicheRound_MinutiPerRound.Length == 0) 
                 || (arb.OraInizio.Length == 0) || (arb.Città.Length == 0) || (arb.Stato.Length == 0) || (arb.CostoIngresso.Length == 0))
             {
-                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito");
+                MessageBox.Show("Riempi tutti i campi. Inserimento non riuscito.");
                 return true;
             }
             else
