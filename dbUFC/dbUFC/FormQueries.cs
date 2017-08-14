@@ -37,7 +37,7 @@ namespace dbUFC
                         select C;
             bunifuCustomDataGrid1.DataSource = query;
         }
-
+       
         private void bunifuImageButton4_Click(object sender, EventArgs e)
         {
             var query = from g in dc.Giudicas
@@ -72,7 +72,7 @@ namespace dbUFC
             var results = dc.ExecuteQuery<Atleta>(
             @"select *
               from Atleta 
-              order by Cognome asc");
+              order by Cognome desc");
 
             bunifuCustomDataGrid1.DataSource = results.ToList();
 
@@ -102,7 +102,7 @@ namespace dbUFC
                         };
             bunifuCustomDataGrid1.DataSource = query;
         }
-        
+
         private void bunifuImageButton9_Click(object sender, EventArgs e)
         {
             var query = from A in dc.Atletas
@@ -112,12 +112,13 @@ namespace dbUFC
                          orderby (Convert.ToInt32(grp.FirstOrDefault().R.Vittorie) - Convert.ToInt32(grp.FirstOrDefault().R.Sconfitte)) descending
                          select new
                          {
-                             CodiceTeam = grp.FirstOrDefault().A.CodiceTeam,
+                             Nome = grp.FirstOrDefault().A.Nome,
+                             Cognome = grp.FirstOrDefault().A.Cognome,
                              Positività = Convert.ToInt32(grp.FirstOrDefault().R.Vittorie) - Convert.ToInt32(grp.FirstOrDefault().R.Sconfitte)
                          };
             bunifuCustomDataGrid1.DataSource = query;
         }
-        
+
         private void bunifuImageButton11_Click(object sender, EventArgs e)
         {
             var query = (from A in dc.Atletas
@@ -176,7 +177,7 @@ namespace dbUFC
                         where !(from AT in dc.Atletas
                                 join T in dc.Teams on AT.CodiceTeam equals T.CodiceTeam
                                 select AT.CodiceFiscale).Contains(A.CodiceFiscale)
-                        select A;
+                        select new { CodiceFiscale = A.CodiceFiscale, Nome = A.Nome, Cognome = A.Cognome, A.Categoria.NomeCategoria };
             bunifuCustomDataGrid1.DataSource = query;
         }
 
