@@ -109,7 +109,7 @@ namespace dbUFC
                         join R in dc.Records on A.CodiceFiscale equals R.CodiceFiscaleAtleta
                         select new { A, R } into t1
                         group t1 by t1.A.CodiceFiscale into grp
-                        orderby grp.FirstOrDefault().A.CodiceFiscale ascending
+                        orderby grp.FirstOrDefault().A.CodiceFiscale
                         select new { CFAtleta = grp.FirstOrDefault().A.CodiceFiscale,
                                      Positività = Convert.ToInt32(grp.FirstOrDefault().R.Vittorie) - Convert.ToInt32(grp.FirstOrDefault().R.Sconfitte)
                         };
@@ -142,38 +142,6 @@ namespace dbUFC
             bunifuCustomDataGrid1.DataSource = query;
         }
 
-        private void bunifuImageButton12_Click(object sender, EventArgs e)
-        {
-            var query = from S in dc.Sponsors
-                        select S;
-            bunifuCustomDataGrid2.DataSource = query;
-        }
-
-        private void bunifuImageButton10_Click_1(object sender, EventArgs e)
-        {
-            if ((bunifuCustomDataGrid2.SelectedCells.Count > 1) || (bunifuCustomDataGrid2.SelectedCells.Count == 0))
-            {
-                MessageBox.Show("Selezionare solo una riga.");
-                Close();
-                return;
-            }
-            int selectedrowindex = bunifuCustomDataGrid2.SelectedCells[0].RowIndex;
-
-            DataGridViewRow selectedRow = bunifuCustomDataGrid2.Rows[selectedrowindex];
-
-            string nomeSponsor = Convert.ToString(selectedRow.Cells["NomeSponsor"].Value);
-
-            var query = from T in dc.Teams
-                        join S in dc.SponsorizzazioneTeams on T.CodiceTeam equals S.CodiceTeam into grp
-                        select new { NumeroTeamSponsorizzati = grp.Where(p => p.NomeSponsor == nomeSponsor).Count()};
-            bunifuCustomDataGrid1.DataSource = query;
-        }
-
-        private void FormQueries_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void bunifuImageButton6_Click(object sender, EventArgs e)
         {
             var query = from S in dc.Sponsors
@@ -186,5 +154,55 @@ namespace dbUFC
             bunifuCustomDataGrid1.DataSource = query;
 
         }
+
+        private void bunifuImageButton13_Click(object sender, EventArgs e)
+        {
+            if((bunifuCustomDataGrid3.SelectedCells.Count > 1) || (bunifuCustomDataGrid3.SelectedCells.Count == 0))
+            {
+                MessageBox.Show("Selezionare solo una riga.");
+                Close();
+                return;
+            }
+            int selectedrowindex = bunifuCustomDataGrid3.SelectedCells[0].RowIndex;
+
+            DataGridViewRow selectedRow = bunifuCustomDataGrid3.Rows[selectedrowindex];
+
+            string marca = Convert.ToString(selectedRow.Cells["MarcaGuantini"].Value);
+
+            var query = (from C in dc.CaratteristicheIncontros
+                         where (from CA in dc.CaratteristicheAtletaInIncontros
+                                where CA.Guantini_Marca.Trim() == marca
+                                select CA.CodiceFiscaleAtleta).Contains(C.Sconfitto)
+                         select new { Atleti = C.Sconfitto.Trim() }).Distinct();
+            bunifuCustomDataGrid1.DataSource = query;
+
+        }
+
+        private void bunifuImageButton14_Click(object sender, EventArgs e)
+        {
+            bunifuCustomDataGrid3.DataSource = (from CA in dc.CaratteristicheAtletaInIncontros
+                                               select new { MarcaGuantini = CA.Guantini_Marca }).Distinct();
+        }
+
+        private void bunifuImageButton15_Click(object sender, EventArgs e)
+        {
+            var query = from A in dc.Atletas
+                        where !(from AT in dc.Atletas
+                                join T in dc.Teams on AT.CodiceTeam equals T.CodiceTeam
+                                select AT.CodiceFiscale).Contains(A.CodiceFiscale)
+                        select A;
+            bunifuCustomDataGrid1.DataSource = query;
+        }
+
+        private void bunifuImageButton16_Click(object sender, EventArgs e)
+        {
+            var query = from C in dc.CaratteristicheIncontros
+                        join CA in dc.CaratteristicheAtletaInIncontros on C.CodiceCaratteristicheIncontro
+                        equals CA.CodiceCaratteristicheIncontro
+                        select new { CFAtleta = CA.CodiceFiscaleAtleta, Stato = CA.StatoAtleta, MisuraGuantini = CA.Guantini_Misura,
+                        MarcaGuantini = CA.Guantini_Marca, Vincitore = C.Vincitore, Sconfitto = C.Sconfitto, DataIncontro = C.Data };
+            bunifuCustomDataGrid1.DataSource = query;
+        }
     }
 }
+
