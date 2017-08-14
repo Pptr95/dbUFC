@@ -95,6 +95,7 @@ namespace dbUFC
                         select new
                         {
                             CFAtleta = A.CodiceFiscale,
+                            MatchTotali = Convert.ToInt32(R.Sconfitte) + Convert.ToInt32(R.Vittorie) + Convert.ToInt32(R.Pareggi),
                             Vittorie = R.Vittorie,
                             Sconfitte = R.Sconfitte,
                             Pareggi = R.Pareggi
@@ -170,6 +171,19 @@ namespace dbUFC
 
         private void FormQueries_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void bunifuImageButton6_Click(object sender, EventArgs e)
+        {
+            var query = from S in dc.Sponsors
+                        where !(from ST in dc.SponsorizzazioneTeams
+                                select ST.NomeSponsor).Contains(S.NomeSponsor)
+                        where !(from SI in dc.SponsorizzazioneIncontros
+                                select SI.NomeSponsor).Contains(S.NomeSponsor)
+                        select S;
+
+            bunifuCustomDataGrid1.DataSource = query;
 
         }
     }
