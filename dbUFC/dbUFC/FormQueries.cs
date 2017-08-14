@@ -102,36 +102,22 @@ namespace dbUFC
                         };
             bunifuCustomDataGrid1.DataSource = query;
         }
-
+        
         private void bunifuImageButton9_Click(object sender, EventArgs e)
         {
             var query = from A in dc.Atletas
-                        join R in dc.Records on A.CodiceFiscale equals R.CodiceFiscaleAtleta
-                        select new { A, R } into t1
-                        group t1 by t1.A.CodiceFiscale into grp
-                        orderby grp.FirstOrDefault().A.CodiceFiscale
-                        select new { CFAtleta = grp.FirstOrDefault().A.CodiceFiscale,
-                                     Positività = Convert.ToInt32(grp.FirstOrDefault().R.Vittorie) - Convert.ToInt32(grp.FirstOrDefault().R.Sconfitte)
-                        };
-
-            bunifuCustomDataGrid1.DataSource = query;
-        }
-
-        private void bunifuImageButton10_Click(object sender, EventArgs e)
-        {
-            var query = (from A in dc.Atletas
                          join R in dc.Records on A.CodiceFiscale equals R.CodiceFiscaleAtleta
                          select new { A, R } into t1
-                         group t1 by t1.A.CodiceTeam into grp
+                         group t1 by t1.A.CodiceFiscale into grp
                          orderby (Convert.ToInt32(grp.FirstOrDefault().R.Vittorie) - Convert.ToInt32(grp.FirstOrDefault().R.Sconfitte)) descending
                          select new
                          {
                              CodiceTeam = grp.FirstOrDefault().A.CodiceTeam,
                              Positività = Convert.ToInt32(grp.FirstOrDefault().R.Vittorie) - Convert.ToInt32(grp.FirstOrDefault().R.Sconfitte)
-                         }).Take(1);
+                         };
             bunifuCustomDataGrid1.DataSource = query;
         }
-
+        
         private void bunifuImageButton11_Click(object sender, EventArgs e)
         {
             var query = (from A in dc.Atletas
