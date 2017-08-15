@@ -165,12 +165,6 @@ namespace dbUFC
 
         }
 
-        private void bunifuImageButton14_Click(object sender, EventArgs e)
-        {
-            bunifuCustomDataGrid3.DataSource = (from CA in dc.CaratteristicheAtletaInIncontros
-                                               select new { MarcaGuantini = CA.Guantini_Marca }).Distinct();
-        }
-
         private void bunifuImageButton15_Click(object sender, EventArgs e)
         {
             var query = from A in dc.Atletas
@@ -190,6 +184,39 @@ namespace dbUFC
                         MarcaGuantini = CA.Guantini_Marca, Vincitore = C.Vincitore, Sconfitto = C.Sconfitto, DataIncontro = C.Data };
             bunifuCustomDataGrid1.DataSource = query;
         }
+
+        private void bunifuImageButton10_Click(object sender, EventArgs e)
+        {
+            if ((bunifuCustomDataGrid2.SelectedCells.Count > 1) || (bunifuCustomDataGrid2.SelectedCells.Count == 0))
+            {
+                MessageBox.Show("Selezionare solo una riga.");
+                Close();
+                return;
+            }
+            int selectedrowindex = bunifuCustomDataGrid2.SelectedCells[0].RowIndex;
+
+            DataGridViewRow selectedRow = bunifuCustomDataGrid2.Rows[selectedrowindex];
+
+            string nomeSponsor = Convert.ToString(selectedRow.Cells["NomeSponsor"].Value);
+
+
+            var query = from ST in dc.SponsorizzazioneTeams
+                        join S in dc.Sponsors on ST.NomeSponsor equals S.NomeSponsor
+                        select new { ST, S } into t1
+                        group t1 by t1.S.NomeSponsor into grp
+                        where grp.FirstOrDefault().S.NomeSponsor.Trim() == nomeSponsor
+                        select new { NumeroTeamSponsorizzati = grp.Count() };
+            bunifuCustomDataGrid1.DataSource = query;
+
+        }
+
+        private void FormQueries_Load(object sender, EventArgs e)
+        {
+            bunifuCustomDataGrid2.DataSource = from S in dc.Sponsors
+                                               select S;
+
+            bunifuCustomDataGrid3.DataSource = (from CA in dc.CaratteristicheAtletaInIncontros
+                                                select new { MarcaGuantini = CA.Guantini_Marca }).Distinct();
+        }
     }
 }
-
