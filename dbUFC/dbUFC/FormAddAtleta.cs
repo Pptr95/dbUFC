@@ -96,9 +96,13 @@ namespace dbUFC
             atl.CodiceCategoria = bunifuTextbox7.text.Trim();
             atl.CodiceTeam = bunifuTextbox16.text.Trim();
 
-            if(!(atl.AnnoNascita is int))
+            try
             {
-                MessageBox.Show("Inserire un numero nella data di nascita. Inserimento non riuscito.");
+                int annoNascita = int.Parse(atl.AnnoNascita.Trim());
+
+            } catch(Exception)
+            {
+                MessageBox.Show("Inserire un numero nell'anno di nascita. Inserimento non riuscito.");
                 return;
             }
 
