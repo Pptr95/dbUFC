@@ -201,6 +201,12 @@
     <Compile Include="FormProgrammazioneIncontro.Designer.cs">
       <DependentUpon>FormProgrammazioneIncontro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormViewEntrateEUscitecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewEntrateEUscitecs.Designer.cs">
+      <DependentUpon>FormViewEntrateEUscitecs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="dbUFC.dbml.layout">
@@ -277,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProgrammazioneIncontro.resx">
       <DependentUpon>FormProgrammazioneIncontro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewEntrateEUscitecs.resx">
+      <DependentUpon>FormViewEntrateEUscitecs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

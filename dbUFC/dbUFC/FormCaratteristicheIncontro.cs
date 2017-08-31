@@ -75,7 +75,6 @@ namespace dbUFC
             car.Data = bunifuDatepicker1.Value;
             car.Descrizione = bunifuTextbox5.text.Trim();
             car.Pareggio = bunifuTextbox12.text.Trim();
-            MessageBox.Show("Pareggio:" + car.Pareggio+".");
             car.Sconfitto = bunifuTextbox9.text.Trim();
             car.Vincitore = bunifuTextbox2.text.Trim();
             car.CodiceFiscaleArbitro = bunifuTextbox4.text.Trim();

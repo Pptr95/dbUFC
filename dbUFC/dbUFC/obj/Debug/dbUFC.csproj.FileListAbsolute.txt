@@ -64,3 +64,4 @@ C:\Users\pptr\Desktop\DaMasterizzare\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormAddAt
 C:\Users\pptr\Desktop\DaMasterizzare\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormProgrammazioneIncontro.resources
 C:\Users\pptr\Desktop\DaMasterizzare\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.Properties.Resources.resources
 C:\Users\pptr\Desktop\DaMasterizzare\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.csproj.GenerateResource.Cache
+C:\Users\pptr\Desktop\DaMasterizzare\dbUFC\dbUFC\dbUFC\obj\Debug\dbUFC.FormViewEntrateEUscitecs.resources

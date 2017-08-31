@@ -13,8 +13,8 @@ namespace dbUFC
     public partial class FormEntrataUscita : Form
     {
         readonly dbUFCDataContext dc = new dbUFCDataContext();
-        public const string ENTRATA = "Entrata";
-        public const string USCITA = "Uscita";
+        public const string ENTRATA = "entrata";
+        public const string USCITA = "uscita";
 
         public FormEntrataUscita()
         {
@@ -23,7 +23,6 @@ namespace dbUFC
 
         private void bunifuCustomLabel9_Click(object sender, EventArgs e)
         {
-            //bunifuCustomLabel9.Text = bunifuDatepicker1.Value.ToString("yyyy-MM-dd"); test for date format
             Close();
         }
 
@@ -53,8 +52,8 @@ namespace dbUFC
 
             if((eu.EntrataOUscita != ENTRATA) && (eu.EntrataOUscita != USCITA))
             {
-                MessageBox.Show("Inserire nel campo dell'entrata/uscita la parola 'Entrata' per eseguire un'entrata" + "\n" +
-                    "o 'Uscita' per eseguire un'uscita. Inserimento non riuscito.");
+                MessageBox.Show("Inserire nel campo dell'entrata/uscita la parola 'entrata' per eseguire un'entrata" + "\n" +
+                    "o 'uscita' per eseguire un'uscita. Inserimento non riuscito.");
                 return;
             }
 
@@ -146,6 +145,12 @@ namespace dbUFC
                 }
             }
             return false;
+        }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            FormViewEntrateEUscitecs feu = new FormViewEntrateEUscitecs();
+            feu.Visible = true;
         }
     }
 }
