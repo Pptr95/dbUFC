@@ -69,44 +69,12 @@ namespace dbUFC
             }
             MessageBox.Show("Il nuovo sponsor è stato aggiunto correttamente.");
         }
-        //this is a test to remove instance in database
-        private void bunifuCustomLabel3_Click(object sender, EventArgs e)
-        {
-
-            List<Sponsor> ls = dc.Sponsors.ToList();
-            foreach( Sponsor s in ls)
-            {
-                if (s.NomeSponsor.Trim() == bunifuTextbox1.text.Trim())
-                {
-                    dc.Sponsors.DeleteOnSubmit(s);
-                    try
-                    {
-                        this.dc.SubmitChanges();
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Qualcosa è andato storto. Ricontrollare i dati inseriti. Transazione non effettuta."
-                            + "\n");
-                        Close();
-                        return;
-                    }
-                    MessageBox.Show("Il nuovo sponsor è stato rimosso correttamente.");
-                    return;
-                }
-            }
-            MessageBox.Show("Lo sponsor non è presente.");
-        }
 
         private void bunifuImageButton9_Click(object sender, EventArgs e)
         {
             var query = from S in dc.Sponsors
                         select S;
             bunifuCustomDataGrid1.DataSource = query;
-        }
-
-        private void bunifuImageButton4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
